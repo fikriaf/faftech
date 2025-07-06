@@ -1,0 +1,62 @@
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes dropIn {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.drop-char {
+    display: inline;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+    word-break: break-word;
+}
+
+
+.BtnScale {
+    transition: transform 0.3s ease !important;
+}
+
+.BtnScale:hover {
+    transform: scale(1.05) !important;
+}
+
+.bg-carousel {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  background-color: #0dcaf0;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
