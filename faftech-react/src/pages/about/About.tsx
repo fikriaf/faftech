@@ -1,6 +1,7 @@
 import React from "react";
 import "./about.css";
 import BackgroundCarousel from "../../components/BackgroundCarousel";
+import MyImage from "../../assets/fikri.jpg"
 
 const About: React.FC = () => {
     const categorizedTools = {
@@ -145,7 +146,7 @@ const About: React.FC = () => {
                 <div className="d-flex flex-column flex-md-row justify-content-center align-items-center foto" style={{ fontFamily: "Heebo" }} >
                     <img
                         alt="MyPhoto"
-                        src="../../assets/fikri.jpg"
+                        src={MyImage}
                         style={{ width: "30%" }}
                     />
                     <ul className="d-grid gap-3 list-unstyled ms-3">
