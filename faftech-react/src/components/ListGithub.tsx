@@ -75,7 +75,7 @@ const ListGithubSection: React.FC = () => {
                         <div className="icon mb-3">
                             <img
                                 className="img-fluid"
-                                src="../src/assets/github-logo.png"
+                                src="../assets/github-logo.png"
                                 alt="Icon"
                                 style={{ width: 100 }}
                             />
