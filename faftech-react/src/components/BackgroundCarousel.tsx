@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./BackgroundCarousel.css";
 
 // Import gambar
 import kuantum1 from "../../assets/kuantum1.webp";
