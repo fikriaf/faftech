@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 // Import gambar
-import kuantum1 from "../../assets/kuantum1.webp";
-import kuantum2 from "../../assets/kuantum2.webp";
-import ai1 from "../../assets/ai1.webp";
+import kuantum1 from "../assets/kuantum1.webp";
+import kuantum2 from "../assets/kuantum2.webp";
+import ai1 from "../assets/ai1.webp";
 
 const images = [kuantum1, kuantum2, ai1, kuantum1, kuantum2];
 
