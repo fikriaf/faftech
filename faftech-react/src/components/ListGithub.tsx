@@ -1,5 +1,6 @@
 import React from "react";
 import CategoryGroup from "./CategoryGroup";
+import githubLogo from "../assets/github-logo.png"
 
 const ListGithubSection: React.FC = () => {
     const githubItems = [
@@ -75,7 +76,7 @@ const ListGithubSection: React.FC = () => {
                         <div className="icon mb-3">
                             <img
                                 className="img-fluid"
-                                src="../assets/github-logo.png"
+                                src={githubLogo}
                                 alt="Icon"
                                 style={{ width: 100 }}
                             />

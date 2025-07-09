@@ -11,6 +11,7 @@ import img2 from "../../assets/fikri2.jpg";
 import img3 from "../../assets/ai1.webp";
 import img4 from "../../assets/kuantum1.webp";
 import img5 from "../../assets/kuantum2.webp";
+import fotoHima from "../../assets/fikri5.jpg";
 
 const Index: React.FC = () => {
     const images = [img1, img2, img3, img4, img5];
@@ -182,7 +183,7 @@ const Index: React.FC = () => {
                 <div className="row g-5 align-items-center">
                     <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div className="about-img position-relative overflow-hidden p-5 pe-0">
-                        <img className="img-fluid w-100" src="../assets/fikri5.jpg" alt="Fikri Armia Fahmi" />
+                        <img className="img-fluid w-100" src={fotoHima} alt="Fikri Armia Fahmi" />
                     </div>
                     </div>
                     <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
