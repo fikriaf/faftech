@@ -1,11 +1,38 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Particles from "./Particles";
+import DotGrid from "./DotGrid";
 import { Outlet } from "react-router-dom";
 
 const Layout: React.FC = () => {
     return (
     <div className="layout-container">
+      {/* <div style={{ width: '100%', height: '100%', position: 'absolute' }}>
+      <DotGrid
+        dotSize={2}
+        gap={15}
+        baseColor="#5227FF"
+        activeColor="#5227FF"
+        proximity={120}
+        shockRadius={500}
+        shockStrength={5}
+        resistance={750}
+        returnDuration={1.5}
+      />
+    </div> */}
+      {/* <div style={{ width: '100%', height: '100%', position: 'absolute' }}>
+        <Particles
+          particleColors={['#000', '#000']}
+          particleCount={10000}
+          particleSpread={10}
+          speed={0.5}
+          particleBaseSize={100}
+          moveParticlesOnHover={true}
+          alphaParticles={false}
+          disableRotation={false}
+        />
+      </div> */}
       <div className="bg-zigzag repeat-video-container">
         {[...Array(4)].map((_, i) => (
           <video
@@ -18,7 +45,9 @@ const Layout: React.FC = () => {
             playsInline
           />
         ))}
+        
       </div>
+
 
       <Navbar />
       <div className="main-content">

@@ -361,34 +361,6 @@
     }
 }
 
-.cat-item {
-    transition: box-shadow 0.3s ease;
-}
-
-.cat-item:hover {
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-}
-
-/*** Category ***/
-.cat-item div {
-    background: #FFFFFF;
-    border: 1px #0d6efd;
-    transition: .5s;
-}
-
-.cat-item:hover div {
-    background: #0d6efd;
-    border-color: transparent;
-}
-
-.cat-item div * {
-    transition: .5s;
-}
-
-.cat-item:hover div * {
-    color: #FFFFFF !important;
-}
-
 #category-container {
     display: flex;
     flex-wrap: wrap;

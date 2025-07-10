@@ -1,6 +1,9 @@
 import React from "react";
 import CategoryGroup from "./CategoryGroup";
 import githubLogo from "../assets/github-logo.png"
+import image1 from "../assets/kuantum1.webp"
+import Card from "./Card";
+import "./styles/ListGithub.css"
 
 const ListGithubSection: React.FC = () => {
     const githubItems = [
@@ -72,18 +75,7 @@ const ListGithubSection: React.FC = () => {
                 rel="noopener noreferrer"
                 style={{ textDecoration: "none" }}
                 >
-                    <div className="h-100 rounded p-4">
-                        <div className="icon mb-3">
-                            <img
-                                className="img-fluid"
-                                src={githubLogo}
-                                alt="Icon"
-                                style={{ width: 100 }}
-                            />
-                        </div>
-                        <h4>{item.title}</h4>
-                        <span>{item.desc}</span>
-                    </div>
+                    <Card title={item.title} description={item.desc} img={image1} imgSource={githubLogo} />
                 </a>
             ))}
         </CategoryGroup>

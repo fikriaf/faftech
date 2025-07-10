@@ -1,0 +1,132 @@
+/* From Uiverse.io by Praashoo7 */ 
+/* CodePen Card */
+
+.main {
+    min-height: 15.5rem;
+}
+
+.fl {
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: .2s ease-in-out;
+}
+
+.fl:hover .fullscreen {
+  scale: 1.2;
+}
+
+.fl:hover .fullscreen_svg {
+  fill: white;
+}
+
+.fullscreen {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 5px;
+  background-color: #727890;
+  margin: 1em;
+  margin-right: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .2s ease-in-out;
+  box-shadow: 2px 2px 6px rgba(0,0,0,.4);
+}
+
+.fullscreen_svg {
+    width: 15px;
+    height: 15px;
+    fill: rgb(177, 176, 176);
+    transition: .2s ease-in-out;
+}
+
+.main:hover .fl {
+  opacity: 1;
+  cursor: pointer;
+  margin-right: 0.5em;
+}
+
+.data {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+}
+
+.imgCard img {
+  width: 2.25em;
+  height: 2.25em;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 0.5em;
+  font-family: Montserrat;
+  color: white;
+}
+
+.text_m {
+  font-weight: bold;
+  font-size: 0.1rem;
+}
+
+.text_s {
+  font-size: 0.1rem;
+}
+
+.btns {
+  display: flex;
+  gap: 0.5em;
+  transition: .2s ease-in-out;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5em;
+  height: 1.4em;
+  border-radius: 4px;
+  margin-top: -0.5em;
+  opacity: 0;
+  background-color: #444857;
+  transition: .2s ease-in-out;
+}
+
+.tag_text {
+  font-family: Montserrat;
+  font-size: 0.8em;
+  margin-left: 0.25em;
+  color: white;
+}
+
+.tag_svg {
+  width: 12px;
+  height: 12px;
+  fill: rgb(105, 105, 105);
+}
+
+.tag:hover {
+  background-color: #5A5F73;
+  cursor: pointer;
+}
+
+.main:hover .tag {
+  margin: 0.5em;
+  opacity: 1;
+}
+
+.main:hover .comments {
+  margin-top: 0.5em;
+  opacity: 1;
+}
+
+.main:hover .views {
+  margin-top: 0.5em;
+  opacity: 1;
+}
+
