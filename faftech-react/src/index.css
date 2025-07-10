@@ -49,14 +49,29 @@
 }
 
 .bg-carousel {
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: background-image 1s ease-in-out;
-  background-color: #0dcaf0;
-  color: white;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+    background-color: #0dcaf0;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+body {
+  overflow-y: scroll; /* tetap bisa scroll */
+  scrollbar-width: none;        /* Firefox */
+}
 
+body::-webkit-scrollbar,
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.main-content {
+  min-height: 300px;
+  position: relative;
+  z-index: 0;
+}

@@ -1,0 +1,19 @@
+.detail {
+    overflow: hidden;
+    position: relative;
+}
+
+.panahGo {
+    position: absolute;
+    right: -50%;
+    top: 25%;
+    opacity: 0;
+    transition: all 0.2s ease;
+    z-index: 1;
+}
+
+.detail:hover .panahGo {
+    position: relative;
+    right: 0%;
+    opacity: 1;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import CategoryGroup from "./CategoryGroup";
+import "./styles/ListArticles.css"
 
 const OSCArticleSection: React.FC = () => {
   const oscArticles = [
@@ -53,6 +54,31 @@ const OSCArticleSection: React.FC = () => {
       img: "https://osccdn.medcom.id/images/content/2023/12/30/b2aa67a3214041c52fe36289f65330bc.jpg",
       title: "Perkembangan Kecanggihan AI malah Makin Melemahkan Keamanan Cyber",
     },
+    {
+        title: "Rahasia Loading Website Kilat: Optimasi Gambar dan Media dengan HTML & CSS",
+        img: "https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1634025439/01ja7whg5cv6n2tz5x2cky02sc.jpg",
+        href: "https://kumparan.com/fikri-af/rahasia-loading-website-kilat-optimasi-gambar-dan-media-dengan-html-and-css-23imSyufXmO",
+    },
+    {
+        title: "Comparing FastAPI vs Flask: Framework Python Mana yang Lebih Kuat di Industri?",
+        img: "https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1634025439/01ja7t4y7f1d8dbcjvxk1he3zg.jpg",
+        href: "https://kumparan.com/fikri-af/comparing-fastapi-vs-flask-framework-python-mana-yang-lebih-kuat-di-industri-23ilodDk2ti",
+    },
+    {
+        title: "Skalabilitas Tanpa Batas: Aplikasi Mikroservices dengan Kubernetes dan Docker",
+        img: "https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1634025439/01ja7eqarr4ma6qx0fqtvwm4rw.jpg",
+        href: "https://kumparan.com/fikri-af/skalabilitas-tanpa-batas-aplikasi-mikroservices-dengan-kubernetes-dan-docker-23iiYV5odeK",
+    },
+    {
+        title: "Perihal Deepfake, Data Pengguna Internet di Indonesia Terlalu Rentan?",
+        img: "https://ik.imagekit.io/goodid/gnfi/uploads/articles/large-142342416-futuristic-face-scan-identity-hologram-with-data-and-personal-information-d.jpg?tr=w-730,h-486,fo-center",
+        href: "https://www.goodnewsfromindonesia.id/2023/12/15/perihal-deepfake-data-pengguna-internet-di-indonesia-terlalu-rentan",
+    },
+    {
+        title: "Penting bagi Pengembang Web Pemula Amankan Hak Cipta Intelektual",
+        img: "https://geotimes.id/wp-content/uploads/2017/08/Desain-tanpa-judul-2-3.png",
+        href: "https://geotimes.id/opini/penting-bagi-pengembang-web-pemula-amankan-hak-cipta-intelektual/",
+    }
   ];
   return (
     <CategoryGroup className="kategori-2">
@@ -68,6 +94,7 @@ const OSCArticleSection: React.FC = () => {
             <div className="rounded p-4 h-100 d-grid justify-content-between">
               <div className="icon mb-3">
                 <img className="img-fluid" src={article.img} alt="Icon" />
+                <span className="hover-text bg-dark p-2 py-1">Open</span>
               </div>
               <span>{article.title}</span>
             </div>

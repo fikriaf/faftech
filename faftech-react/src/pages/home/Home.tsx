@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
+import "./Home.css"
 import ListGithubSection from "../../components/ListGithub";
 import ListArticlesection from "../../components/ListArticles";
-import ListOtherArticleSection from "../../components/ListOtherArticles";
 import DropText from "../../components/DropText";
 import img1 from "../../assets/fikri.jpg";
 import img2 from "../../assets/fikri2.jpg";
@@ -51,7 +51,7 @@ const Index: React.FC = () => {
                             <p className="mb-4 pb-2" style={{ fontFamily: "Heebo", fontSize: "1.2rem", textAlign: "justify", fontWeight: "500"}}>
                             I am a passionate and versatile software developer with strong experience in <span className="text-primary">Full-Stack Web Development</span>, <span className="text-primary">AI Engineering</span>, and <span className="text-primary">Data Science</span>. I have developed various web applications using technologies such as React, Laravel, Express, MySQL, MongoDB, PyTorch, and other.
                             </p>
-                            <Link to="/about" className="btn BtnScale btn-primary py-3 px-5 me-3">Read More</Link>
+                            <Link to="/about" className="btn BtnScale detail btn-primary py-3 px-5 me-3">Read More <span className="panahGo">&#8594;</span></Link>
                         </div>
                     </div>
 
@@ -85,7 +85,7 @@ const Index: React.FC = () => {
                             <div className="carousel-nav">
                                 <div className="d-flex flex-column gap-2">
                                     <button
-                                        className="carousel-control-prev bg-primary"
+                                        className="carousel-control-prev BtnScale bg-primary"
                                         type="button"
                                         data-bs-target="#customBootstrapCarousel"
                                         data-bs-slide="prev"
@@ -93,7 +93,7 @@ const Index: React.FC = () => {
                                         <span className="panah left" aria-hidden="true"></span>
                                     </button>
                                     <button
-                                        className="carousel-control-next bg-primary"
+                                        className="carousel-control-next BtnScale bg-primary"
                                         type="button"
                                         data-bs-target="#customBootstrapCarousel"
                                         data-bs-slide="next"
@@ -160,19 +160,10 @@ const Index: React.FC = () => {
                     >
                         <h1 className="mb-3">Artikel [OSC]</h1>
                         <p>
-                        Berikut ini artikel-artikel saya yang sudah publish di media OSC Community
+                        Berikut ini artikel-artikel saya yang sudah publish di media OSC Community, Kumparan, Geotimes, dan GNFI.
                         </p>
                     </div>
                     <ListArticlesection />
-
-                    <hr />
-
-                    {/* List Other Articles */}
-                    <div className="text-center mx-auto mt-5 mb-5 wow fadeInUp" id="lainnya-section" data-wow-delay="0.1s" style={{maxWidth: 700, fontFamily: "Heebo" }}>
-                        <h1 className="mb-3">Artikel [Lainnya]</h1>
-                        <p>Berikut ini artikel-artikel saya yang sudah publish di media Kumparan, Geotimes, dan GNFI.</p>
-                    </div>
-                    <ListOtherArticleSection />
 
                 </div>
             </div>
@@ -202,7 +193,7 @@ const Index: React.FC = () => {
                     <p><i className="fa fa-check text-primary me-3"></i><strong>Artificial Intelligence</strong></p>
                     <p><i className="fa fa-check text-primary me-3"></i><strong>Frontend Development</strong></p>
                     <p><i className="fa fa-check text-primary me-3"></i><strong>Backend Development</strong></p>
-                    <a className="btn BtnScale btn-primary py-3 px-3 mt-3" href="./about/about.php">See The Project</a>
+                    <a className="btn BtnScale detail btn-primary py-3 px-3 mt-3" href="./about/about.php">See The Project <span className="panahGo">&#8594;</span></a>
                     </div>
                 </div>
                 </div>

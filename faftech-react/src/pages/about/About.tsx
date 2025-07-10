@@ -61,194 +61,166 @@ const About: React.FC = () => {
 
     return (
         <>
-        <div className="container-fluid contain d-flex flex-column">
-            <div className="container mt-5 d-grid gap-5">
-                <div className="text-end mb-3 top-sosial">
-                    <a href="mailto:fikriarmia27@gmail.com">
-                        <img
-                        src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"
-                        alt="Email"
-                        />
-                    </a>
-                    <a
-                        href="https://osc.medcom.id/community/author/barayaroas@gmail.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img
-                        src="https://img.shields.io/badge/Blogger-FF5722?style=for-the-badge&logo=blogger&logoColor=white"
-                        alt="Blogger"
-                        />
-                    </a>
-                    <a
-                        href="https://linkedin.com/in/fikri-armia-fahmi-b373b3288"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img
-                        src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
-                        alt="LinkedIn"
-                        />
-                    </a>
-                    <a
-                        href="https://www.instagram.com/fikriaf27"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img
-                        src="https://img.shields.io/badge/Instagram-%23E4405F?style=for-the-badge&logo=Instagram&logoColor=white"
-                        alt="Instagram"
-                        />
-                    </a>
-                    <a
-                        href="https://discord.gg/fighterfire0346"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img
-                        src="https://img.shields.io/badge/Discord-%235865F2?style=for-the-badge&logo=discord&logoColor=white"
-                        alt="Discord"
-                        />
-                    </a>
-                </div>
-
-                <div className="d-grid gap-5 nama">
-                    <h1 className="text-center">
-                        <img
-                        src="https://readme-typing-svg.herokuapp.com/?font=Oswald&size=35&color=0712FFFF&center=true&vCenter=true&width=600&height=70&duration=5000&lines=Hi;+I'm+🅵🅸🅺🆁🅸+🅰🆁🅼🅸🅰+🅵🅰🅷🅼🅸;"
-                        alt="Typing Name"
-                        />
-                    </h1>
-                    <h1 className="text-center">
-                        Hi{' '}
-                        <img
-                        className="tangan"
-                        src="https://user-images.githubusercontent.com/72663882/171687151-bb31c996-c9d2-49c8-b593-734946893b23.gif"
-                        alt="waving hand gif"
-                        width={40}
-                        />
-                        , I'm 🅵🅸🅺🆁🅸 🅰🆁🅼🅸🅰 🅵🅰🅷🅼🅸
-                    </h1>
-                    <h3 className="text-center">
-                        I Studied The Fields of Artificial Intelligence, Backend Development, and Frontend Development
-                    </h3>
-                </div>
-
-                <div className="text-center overflow-hidden">
-                    <img
-                        className="img-fluid"
-                        src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"
-                        style={{ width: "100%" }}
-                        alt="Animated Banner"
-                    />
-                </div>
-
-                <div className="d-flex flex-column flex-md-row justify-content-center align-items-center foto" style={{ fontFamily: "Heebo" }} >
-                    <img
-                        alt="MyPhoto"
-                        src={MyImage}
-                        style={{ width: "30%" }}
-                    />
-                    <ul className="d-grid gap-3 list-unstyled ms-3">
-                        <li>
-                            🔭 I’m currently studying at{' '}
-                            <a href="https://upj.ac.id/" target="_blank" rel="noopener noreferrer">
-                                Universitas Pembangunan Jaya
-                            </a>
-                        </li>
-                        <li>
-                            🌱 I’m currently learning{' '}
-                            <strong>
-                                Python, HTML, CSS, Javascript, Typescript, PHP, C, C++, AHK, SQL
-                            </strong>
-                        </li>
-                        <li>
-                            🤝 I’m looking for help with{' '}
-                            <a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer">
-                                stackoverflow
-                            </a>
-                            ,{' '}
-                            <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">
-                                w3schools
-                            </a>
-                        </li>
-                        <li>
-                            👨‍💻 All of my projects are available at{' '}
-                            <a href="https://github.com/fikriaf" target="_blank" rel="noopener noreferrer">
-                                GitHub
-                            </a>
-                        </li>
-                        <li>
-                            📝 I regularly write articles on{' '}
-                            <a
-                                href="https://osc.medcom.id/community/author/barayaroas@gmail.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                OSC Medcom
-                            </a>
-                        </li>
-                            <li>
-                            💬 Ask me about{' '}
-                            <strong>
-                                Keras, Tensorflow, PyTorch, NLTK, OpenCV, Pygame, Bootstrap,
-                                Node.js, Express.js, Arduino, MySQL, MongoDB
-                            </strong>
-                        </li>
-                        <li>
-                            📫 How to reach me <strong>fikriarmia27@gmail.com</strong>
-                        </li>
-                        <li>
-                            ⚡ Fun fact <strong>I think I overthinking</strong>
-                        </li>
-                    </ul>
-                </div>
-
-                <h2>
-                    <img
-                        src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Technologist.png"
-                        alt="Technologist"
-                        width={30}
-                        height={30}
-                    />{' '}
-                    Connect with me:
-                </h2>
-
-                <div className="container-fluid">
-                    <div className="row justify-content-center">
-                        {[
-                        { name: "Github", href: "https://github.com/fikriaf", icon: "fab fa-github" },
-                        { name: "LinkedIn", href: "https://linkedin.com/in/fikri-armia-fahmi-b373b3288", icon: "fab fa-linkedin-in" },
-                        { name: "Instagram", href: "https://www.instagram.com/fikriaf27", icon: "fab fa-instagram" },
-                        { name: "Blog", href: "https://osc.medcom.id/community/author/barayaroas@gmail.com", icon: "fab fa-blogger" },
-                        { name: "Discord", href: "https://discord.gg/fighterfire0346", icon: "fab fa-discord" },
-                        ].map((item, index) => (
-                        <div className="col-12 col-md-6 col-lg-2 my-2" key={index}>
-                            <a
-                            className={`btn w-100 btn-outline-dark ${index % 2 === 0 ? "bg-secondary text-end" : "text-start"}`}
-                            href={item.href}
+            <div className="container-fluid contain d-flex flex-column">
+                <div className="container mt-5 d-grid gap-5">
+                    <div className="text-end mb-3 top-sosial">
+                        <a href="mailto:fikriarmia27@gmail.com">
+                            <img
+                            src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"
+                            alt="Email"
+                            />
+                        </a>
+                        <a
+                            href="https://osc.medcom.id/community/author/barayaroas@gmail.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            >
-                            <div className="d-flex justify-content-between align-items-center">
-                                <div>{item.name}</div>
-                                <div><i className={item.icon}></i></div>
-                            </div>
-                            </a>
-                        </div>
-                        ))}
+                        >
+                            <img
+                            src="https://img.shields.io/badge/Blogger-FF5722?style=for-the-badge&logo=blogger&logoColor=white"
+                            alt="Blogger"
+                            />
+                        </a>
+                        <a
+                            href="https://linkedin.com/in/fikri-armia-fahmi-b373b3288"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                            src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
+                            alt="LinkedIn"
+                            />
+                        </a>
+                        <a
+                            href="https://www.instagram.com/fikriaf27"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                            src="https://img.shields.io/badge/Instagram-%23E4405F?style=for-the-badge&logo=Instagram&logoColor=white"
+                            alt="Instagram"
+                            />
+                        </a>
+                        <a
+                            href="https://discord.gg/fighterfire0346"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                            src="https://img.shields.io/badge/Discord-%235865F2?style=for-the-badge&logo=discord&logoColor=white"
+                            alt="Discord"
+                            />
+                        </a>
+                    </div>
+
+                    <div className="d-grid gap-5 nama">
+                        <h1 className="text-center">
+                            <img
+                            src="https://readme-typing-svg.herokuapp.com/?font=Oswald&size=35&color=0712FFFF&center=true&vCenter=true&width=600&height=70&duration=5000&lines=Hi;+I'm+🅵🅸🅺🆁🅸+🅰🆁🅼🅸🅰+🅵🅰🅷🅼🅸;"
+                            alt="Typing Name"
+                            />
+                        </h1>
+                        <h1 className="text-center">
+                            Hi{' '}
+                            <img
+                            className="tangan"
+                            src="https://user-images.githubusercontent.com/72663882/171687151-bb31c996-c9d2-49c8-b593-734946893b23.gif"
+                            alt="waving hand gif"
+                            width={40}
+                            />
+                            , I'm 🅵🅸🅺🆁🅸 🅰🆁🅼🅸🅰 🅵🅰🅷🅼🅸
+                        </h1>
+                        <h3 className="text-center">
+                            I Studied The Fields of Artificial Intelligence, Backend Development, and Frontend Development
+                        </h3>
+                    </div>
+
+                    <div className="text-center overflow-hidden">
+                        <img
+                            className="img-fluid"
+                            src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"
+                            style={{ width: "100%" }}
+                            alt="Animated Banner"
+                        />
+                    </div>
+
+                    <div className="d-flex flex-column flex-md-row justify-content-center align-items-center foto" style={{ fontFamily: "Heebo" }} >
+                        <img
+                            alt="MyPhoto"
+                            src={MyImage}
+                            style={{ width: "30%" }}
+                        />
+                        <ul className="d-grid gap-3 list-unstyled ms-3">
+                            <li>
+                                🔭 I’m currently studying at{' '}
+                                <a href="https://upj.ac.id/" target="_blank" rel="noopener noreferrer">
+                                    Universitas Pembangunan Jaya
+                                </a>
+                            </li>
+                            <li>
+                                🌱 I’m currently learning{' '}
+                                <strong>
+                                    Python, HTML, CSS, Javascript, Typescript, PHP, C, C++, AHK, SQL
+                                </strong>
+                            </li>
+                            <li>
+                                🤝 I’m looking for help with{' '}
+                                <a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer">
+                                    stackoverflow
+                                </a>
+                                ,{' '}
+                                <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">
+                                    w3schools
+                                </a>
+                            </li>
+                            <li>
+                                👨‍💻 All of my projects are available at{' '}
+                                <a href="https://github.com/fikriaf" target="_blank" rel="noopener noreferrer">
+                                    GitHub
+                                </a>
+                            </li>
+                            <li>
+                                📝 I regularly write articles on{' '}
+                                <a
+                                    href="https://osc.medcom.id/community/author/barayaroas@gmail.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    OSC Medcom
+                                </a>
+                            </li>
+                                <li>
+                                💬 Ask me about{' '}
+                                <strong>
+                                    Keras, Tensorflow, PyTorch, NLTK, OpenCV, Pygame, Bootstrap,
+                                    Node.js, Express.js, Arduino, MySQL, MongoDB
+                                </strong>
+                            </li>
+                            <li>
+                                📫 How to reach me <strong>fikriarmia27@gmail.com</strong>
+                            </li>
+                            <li>
+                                ⚡ Fun fact <strong>I think I overthinking</strong>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
 
-            <div className="">
-                <BackgroundCarousel />
-                <h2 className="text-center d-block fw-bold w-100 bg-info py-4 mt-5">
-                
-                Bahasa Pemrograman dan Framework
-                </h2>
+                {/* My Education & Career Journey */}
+                <BackgroundCarousel title="My Education & Career Journey" />
+                <div className="w-100 d-flex justify-content-center">
+                    <div
+                    className="rounded"
+                    style={{
+                        width: "0.5rem",
+                        height: "800px",
+                        backgroundColor: "black",
+                    }}
+                    ></div>
+                </div>
 
-                <div className="accordion mx-3 mt-4 shadow" id="toolsAccordion">
+                {/* Skills */}
+                <BackgroundCarousel title="Skills" />
+                <div className="accordion mb-3 mt-4 shadow" id="toolsAccordion">
                     {Object.entries(categorizedTools).map(([category, tools], index) => (
                         <div className="accordion-item" key={category}>
                             <h2 className="accordion-header text-primary" id={`heading-${category}`}>
@@ -290,33 +262,31 @@ const About: React.FC = () => {
                         </div>
                     ))}
                 </div>
-            </div>
 
+                <div>
+                    <h2 className="text-center d-block fw-bold w-100 bg-image bg-primary position-relative overflow-hidden py-4 mt-5">
+                        Skill Analyze
+                    </h2>
 
-            <div>
-                <h2 className="text-center d-block fw-bold w-100 bg-image bg-primary position-relative overflow-hidden py-4 mt-5">
-                    Skill Analyze
-                </h2>
-
-                <div className="text-center stat mb-5">
-                    <img
-                        className="lang"
-                        src="https://github-readme-mwendwa.vercel.app/api/top-langs/?username=fikriaf&layout=compact&count_private=true&theme=blue-green&title_color=00b3ff"
-                        alt="Top languages"
-                    />
-                    <div>
+                    <div className="text-center stat mb-5">
                         <img
-                        src="https://bad-apple-github-readme.vercel.app/api?username=fikriaf&show_icons=true&count_private=true&line_height=25&icon_color=00b3ff&theme=blue-green&title_color=00b3ff"
-                        alt="Fikri's github stats"
+                            className="lang"
+                            src="https://github-readme-mwendwa.vercel.app/api/top-langs/?username=fikriaf&layout=compact&count_private=true&theme=blue-green&title_color=00b3ff"
+                            alt="Top languages"
                         />
-                        <img
-                        src="https://streak-stats.demolab.com/?user=fikriaf&count_private=true&theme=blue-green&title_color=00b3ff"
-                        alt="Fikri's current streak"
-                        />
+                        <div>
+                            <img
+                            src="https://bad-apple-github-readme.vercel.app/api?username=fikriaf&show_icons=true&count_private=true&line_height=25&icon_color=00b3ff&theme=blue-green&title_color=00b3ff"
+                            alt="Fikri's github stats"
+                            />
+                            <img
+                            src="https://streak-stats.demolab.com/?user=fikriaf&count_private=true&theme=blue-green&title_color=00b3ff"
+                            alt="Fikri's current streak"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </>
     );
 };

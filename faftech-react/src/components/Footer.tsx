@@ -17,11 +17,11 @@ const Footer: React.FC = () => {
                 </div>
                 {/* Kolom Kanan */}
                 <div className="col-lg-6 col-md-6 d-flexbox w-100 justify-content-end align-items-center">
-                <a className="btn btn-outline-light btn-social me-2" href="https://github.com/fikriaf" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-                <a className="btn btn-outline-light btn-social me-2" href="https://www.instagram.com/fikriaf27" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
-                <a className="btn btn-outline-light btn-social me-2" href="https://linkedin.com/in/fikri-armia-fahmi-b373b3288" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
-                <a className="btn btn-outline-light btn-social me-2" href="https://osc.medcom.id/community/author/barayaroas@gmail.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-blogger"></i></a>
-                <a className="btn btn-outline-light btn-social me-2" href="https://discord.gg/halomasbuang" target="_blank" rel="noopener noreferrer"><i className="fab fa-discord"></i></a>
+                <a className="btn btn-outline-light btn-social me-2 BtnScale" href="https://github.com/fikriaf" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+                <a className="btn btn-outline-light btn-social me-2 BtnScale" href="https://www.instagram.com/fikriaf27" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+                <a className="btn btn-outline-light btn-social me-2 BtnScale" href="https://linkedin.com/in/fikri-armia-fahmi-b373b3288" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
+                <a className="btn btn-outline-light btn-social me-2 BtnScale" href="https://osc.medcom.id/community/author/barayaroas@gmail.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-blogger"></i></a>
+                <a className="btn btn-outline-light btn-social me-2 BtnScale" href="https://discord.gg/halomasbuang" target="_blank" rel="noopener noreferrer"><i className="fab fa-discord"></i></a>
                 </div>
             </div>
             <div className="text-wrap mt-3">
