@@ -4,45 +4,6 @@
     --dark: #0E2E50;
 }
 
-/* Bungkus semua halaman */
-.layout-container {
-    position: relative;
-    z-index: 0;
-    min-height: 100%;
-
-}
-.bg-zigzag {
-  position: absolute;
-  top: -5%;
-  left: 0;
-  width: 100%;
-  height: 105%;
-  z-index: -1;
-  pointer-events: none;
-  overflow: hidden;
-
-  mask-image: url('/zigzag-bg-no.png');
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
-  mask-size: 100% 110%;
-
-  -webkit-mask-image: url('/zigzag-bg-no.png');
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  -webkit-mask-size: contain;
-  -webkit-mask-size: 100% 110%;
-
-  transform: scaleX(-1);
-}
-
-.video-bg {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-}
-
-
 /*** Button ***/
 .back-to-top {
     position: fixed;

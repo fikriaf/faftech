@@ -6,6 +6,7 @@ import "./Home.css"
 import ListGithubSection from "../../components/ListGithub";
 import ListArticlesection from "../../components/ListArticles";
 import DropText from "../../components/DropText";
+import TextPressure from "../../components/TextPressure";
 import img1 from "../../assets/fikri.jpg";
 import img2 from "../../assets/fikri2.jpg";
 import img3 from "../../assets/ai1.webp";
@@ -42,13 +43,37 @@ const Index: React.FC = () => {
                         <div className="px-3">
                             <h1 className="head-1 mb-3 d-grid w-100" style={{ fontFamily: "Heebo", fontWeight: 800 }}>
                                 <div className="d-md-block d-flex align-items-center justify-content-center gap-2">
-                                    Hello <img src="https://user-images.githubusercontent.com/72663882/171687151-bb31c996-c9d2-49c8-b593-734946893b23.gif" width={30} alt="" />
+                                    <div style={{position: 'relative'}}>
+                                    <TextPressure
+                                        text="Hello!"
+                                        flex={true}
+                                        alpha={false}
+                                        stroke={false}
+                                        width={true}
+                                        weight={true}
+                                        italic={true}
+                                        textColor="#000"
+                                        strokeColor="#ff0000"
+                                        minFontSize={20}
+                                    />
+                                    </div>
                                 </div>
-                                <div>
+                                <div style={{
+                                    backdropFilter: 'blur(10px)',
+                                    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+                                    padding: '0.5rem',
+                                    borderRadius: '0.5rem',
+                                    borderBottom: "2px solid"
+                                }}>
                                     I'm <span ref={el} style={{ whiteSpace: "pre" }} />
                                 </div>
                             </h1>
-                            <p className="mb-4 pb-2" style={{ fontFamily: "Heebo", fontSize: "1.2rem", textAlign: "justify", fontWeight: "500"}}>
+                            <p className="mb-4 pb-2" style={{ fontFamily: "Heebo", fontSize: "1.2rem", textAlign: "justify", fontWeight: "500",
+                                backdropFilter: 'blur(10px)',
+                                backgroundColor: 'rgba(255, 255, 255, 0.3)',
+                                padding: '0.5rem',
+                                borderRadius: '0.5rem'
+                            }}>
                             I am a passionate and versatile software developer with strong experience in <span className="text-primary">Full-Stack Web Development</span>, <span className="text-primary">AI Engineering</span>, and <span className="text-primary">Data Science</span>. I have developed various web applications using technologies such as React, Laravel, Express, MySQL, MongoDB, PyTorch, and other.
                             </p>
                             <Link to="/about" className="btn BtnScale detail btn-primary py-3 px-5 me-3">Read More <span className="panahGo">&#8594;</span></Link>
@@ -64,7 +89,7 @@ const Index: React.FC = () => {
                                     className={`carousel-item ${index === 0 ? 'active' : ''}`}
                                 >
                                     <div className="custom-carousel-item">
-                                        <img src={img} className="img-fluid" alt={`Slide ${index + 1}`} />
+                                        <img src={img} className="img-fluid w-100" alt={`Slide ${index + 1}`} />
                                     </div>
                                 </div>
                                 ))}
