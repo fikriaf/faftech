@@ -1,6 +1,7 @@
 import React from "react";
 import "./about.css";
 import BackgroundCarousel from "../../components/BackgroundCarousel";
+import CurvedLoop from "../../components/CurvedLoop";
 import MyImage from "../../assets/fikri.jpg"
 
 const About: React.FC = () => {
@@ -129,9 +130,17 @@ const About: React.FC = () => {
                             />
                             , I'm 🅵🅸🅺🆁🅸 🅰🆁🅼🅸🅰 🅵🅰🅷🅼🅸
                         </h1>
-                        <h3 className="text-center">
-                            I Studied The Fields of Artificial Intelligence, Backend Development, and Frontend Development
-                        </h3>
+
+                        <div className=" text-dark">
+                            <CurvedLoop
+                            marqueeText="I Studied The Fields of ✦ Artificial Intelligence ✦ Backend Development ✦ Frontend Development I Studied The Fields of ✦ Artificial Intelligence ✦ Backend Development ✦ Frontend Development"
+                            speed={5}
+                            curveAmount={0}
+                            direction="left"
+                            interactive={true}
+                            className="text-dark"
+                            />
+                        </div>
                     </div>
 
                     <div className="text-center overflow-hidden">
