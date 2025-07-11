@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo-no-bg.png";
 import profileImg from "../assets/profile.png";
 import { Play, Pause, SkipBack, SkipForward, Music } from "lucide-react";
+import GlareHover from "./GlareHover";
 
 const Navbar: React.FC = () => {
     return (
@@ -29,15 +30,22 @@ const Navbar: React.FC = () => {
                                 <li className="nav-item"><Link to="/about" className="nav-link py-3">ABOUT</Link></li>
                                 <li className="nav-item"><Link to="/project" className="nav-link py-3">PROJECT</Link></li>
                                 <li className="nav-item"><Link to="/contact" className="nav-link py-3">CONTACT</Link></li>
-                                <li className="tambahane text-center" style={{ fontFamily: "Verdana, Geneva, Tahoma, sans-serif" }}><a className="btn btn-outline-light" href="/admin/login">VIEW DATABASE</a></li>
                             </ul>
                         </div>
                         <span className="tambahan-nav" style={{ position: "absolute", right: "-15px", top: 0, bottom: 0, width: "30px", background: "inherit", transform: "skewX(-20deg)", zIndex: 0 }}></span>
                     </nav>
                     <div className="nav-profile d-flex gap-1 p-0 m-0">
                         <nav className="navbar navbar-expand-lg navbar-profile navbar-dark bg-transparent p-0 d-grid gap-1" style={{ transform: "skew(-20deg)" }}>
-                            <a href="/admin/login" className="btn btn-danger rounded-0 px-4 py-0"><div className="mt-1 ms-1" style={{ transform: "skew(20deg)", fontSize: "20px", fontWeight: 600 }}>ADMIN</div></a>
-                            <a href="/admin/login" className="btn btn-light rounded-0 py-0"><div className="mt-1 ms-1" style={{ transform: "skew(20deg)", fontSize: "20px", fontWeight: 600 }}>CRUD</div></a>
+                            <a href="/admin/login" className="btn btn-danger btn-glare rounded-0 px-4 py-0">
+                                <div className="mt-1 me-4" style={{ transform: "skew(20deg)", fontSize: "20px", fontWeight: 600 }}>
+                                    ADMIN
+                                </div>
+                            </a>
+                            <a href="/admin/login" className="btn btn-light btn-glare rounded-0 py-0">
+                                <div className="mt-1 ms-1" style={{ transform: "skew(20deg)", fontSize: "20px", fontWeight: 600 }}>
+                                    CRUD
+                                </div>
+                            </a>
                         </nav>
                         <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-0 ms-3">
                             <a href="#" className="dropdown-toggle ps-1 pe-3" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false" style={{ zIndex: 999 }}>

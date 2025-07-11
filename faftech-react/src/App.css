@@ -54,6 +54,41 @@
 .navbarnya {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
+.btn-glare {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glare::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  transition: none;
+}
+
+.btn-glare:hover::before {
+  animation: glare-slide 1s linear forwards;
+}
+
+@keyframes glare-slide {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
 .nav-bar {
     position: relative;
     margin-top: 35px;

@@ -11,9 +11,15 @@
     aspect-ratio: 100 / 12;
     overflow: visible;
     display: block;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
     letter-spacing: 5px;
     text-transform: uppercase;
     line-height: 1;
+}
+
+@media screen and (max-width: 480px) {
+    .curved-loop-svg {
+        font-size: 5rem;
+    }
 }

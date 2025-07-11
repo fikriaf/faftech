@@ -2,7 +2,9 @@ import React from "react";
 import "./about.css";
 import BackgroundCarousel from "../../components/BackgroundCarousel";
 import CurvedLoop from "../../components/CurvedLoop";
-import MyImage from "../../assets/fikri.jpg"
+import MyImage from "../../assets/fikri2.jpg"
+import MyImageNoBg from "../../assets/fikri2-Photoroom.png"
+import ProfileCard from "../../components/ProfileCard";
 
 const About: React.FC = () => {
     const categorizedTools = {
@@ -131,9 +133,9 @@ const About: React.FC = () => {
                             , I'm 🅵🅸🅺🆁🅸 🅰🆁🅼🅸🅰 🅵🅰🅷🅼🅸
                         </h1>
 
-                        <div className=" text-dark">
+                        <div className="mx-3 text-dark">
                             <CurvedLoop
-                            marqueeText="I Studied The Fields of ✦ Artificial Intelligence ✦ Backend Development ✦ Frontend Development I Studied The Fields of ✦ Artificial Intelligence ✦ Backend Development ✦ Frontend Development"
+                            marqueeText="I Studied The Fields of ✦ Artificial Intelligence ✦ Backend Development ✦ Frontend Development"
                             speed={5}
                             curveAmount={0}
                             direction="left"
@@ -153,12 +155,27 @@ const About: React.FC = () => {
                     </div>
 
                     <div className="d-flex flex-column flex-md-row justify-content-center align-items-center foto" style={{ fontFamily: "Heebo" }} >
-                        <img
-                            alt="MyPhoto"
-                            src={MyImage}
-                            style={{ width: "30%" }}
+                        <ProfileCard
+                        name="Fikri Armia Fahmi"
+                        title="Full-Stack Web & AI Engineer"
+                        handle="fikriaf"
+                        status="Online"
+                        contactText="Contact Me"
+                        avatarUrl={MyImageNoBg}
+                        iconUrl={MyImage}
+                        showUserInfo={true}
+                        enableTilt={true}
+                        onContactClick={() => console.log('Contact clicked')}
                         />
-                        <ul className="d-grid gap-3 list-unstyled ms-3">
+                        <ul className="d-grid gap-3 list-unstyled ms-3" style={{
+                            backdropFilter: 'blur(10px)',
+                            backgroundColor: 'rgba(255, 255, 255, 0.3)',
+                            padding: '0.5rem',
+                            borderRadius: '0.5rem',
+                            borderBottom: "2px solid #0d6efd",
+                            borderTop: "2px solid #0d6efd",
+                            minHeight: "26rem"
+                        }}>
                             <li>
                                 🔭 I’m currently studying at{' '}
                                 <a href="https://upj.ac.id/" target="_blank" rel="noopener noreferrer">
@@ -232,9 +249,9 @@ const About: React.FC = () => {
                 <div className="accordion mb-3 mt-4 shadow" id="toolsAccordion">
                     {Object.entries(categorizedTools).map(([category, tools], index) => (
                         <div className="accordion-item" key={category}>
-                            <h2 className="accordion-header text-primary" id={`heading-${category}`}>
+                            <h2 className="accordion-header" id={`heading-${category}`}>
                                 <button
-                                className="accordion-button border-0 bg-primary collapsed fw-bold"
+                                className="accordion-button border-0 text-light bg-primary collapsed fw-bold"
                                 type="button"
                                 data-bs-toggle="collapse"
                                 data-bs-target={`#collapse-${category}`}

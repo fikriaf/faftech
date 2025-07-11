@@ -7,6 +7,7 @@ import ListGithubSection from "../../components/ListGithub";
 import ListArticlesection from "../../components/ListArticles";
 import DropText from "../../components/DropText";
 import TextPressure from "../../components/TextPressure";
+import RotatingText from "../../components/RotatingText";
 import img1 from "../../assets/fikri.jpg";
 import img2 from "../../assets/fikri2.jpg";
 import img3 from "../../assets/ai1.webp";
@@ -141,8 +142,7 @@ const Index: React.FC = () => {
                                 <select className="form-select border-0 py-3">
                                     <option selected>Select Category</option>
                                     <option value="1">Github</option>
-                                    <option value="2">Article [OSC]</option>
-                                    <option value="3">Article [Lainnya]</option>
+                                    <option value="2">Article</option>
                                 </select>
                             </div>
                             </div>
@@ -158,13 +158,31 @@ const Index: React.FC = () => {
                 <div className="container">
                     {/* List Github Repo */}
                     <div
-                    className="text-center mx-auto mb-5 wow fadeInUp"
+                    className="text-center w-100 mx-auto mb-5 wow fadeInUp"
                     id="github-section"
                     data-wow-delay="0.1s"
-                    style={{ maxWidth: 800, fontFamily: "Heebo" }}
+                    style={{ fontFamily: "Heebo",
+                        backdropFilter: 'blur(10px)',
+                        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+                        padding: '0.5rem',
+                        borderRadius: '0.5rem',
+                        borderBottom: "2px solid #0d6efd"
+                    }}
                     >
+                        
                         <h1 className="mb-3" style={{ fontWeight: 600 }}>
-                            Github
+                            Github <RotatingText
+                            texts={['React', 'Laravel', 'Pytorch', 'Express', 'MongoDB', 'MySQL']}
+                            mainClassName="px-2 sm:px-2 md:px-3 bg-primary d-inline-flex text-light overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded rounded-lg"
+                            staggerFrom={"last"}
+                            initial={{ y: "100%" }}
+                            animate={{ y: 0 }}
+                            exit={{ y: "-120%" }}
+                            staggerDuration={0.025}
+                            splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                            transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                            rotationInterval={2000}
+                            />
                         </h1>
                         <p>
                             Berikut ini beberapa proyek yang saya kembangkan dan publikasikan di
@@ -178,12 +196,31 @@ const Index: React.FC = () => {
                     
                     {/* List Articles */}
                     <div
-                        className="text-center mx-auto mt-5 mb-5 wow fadeInUp"
+                        className="text-center w-100 mx-auto mt-5 mb-5 wow fadeInUp"
                         id="osc-article-section"
                         data-wow-delay="0.1s"
-                        style={{ maxWidth: 600, fontFamily: "Heebo" }}
+                        style={{ fontFamily: "Heebo",
+                            backdropFilter: 'blur(10px)',
+                            backgroundColor: 'rgba(255, 255, 255, 0.3)',
+                            padding: '0.5rem',
+                            borderRadius: '0.5rem',
+                            borderBottom: "2px solid #0d6efd"
+                        }}
                     >
-                        <h1 className="mb-3">Artikel [OSC]</h1>
+                        <h1 className="mb-3">
+                            Articles <RotatingText
+                            texts={['OSC', 'Kumparan', 'Geotimes', 'GNFI']}
+                            mainClassName="px-2 sm:px-2 md:px-3 bg-primary d-inline-flex text-light overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded rounded-lg"
+                            staggerFrom={"last"}
+                            initial={{ y: "100%" }}
+                            animate={{ y: 0 }}
+                            exit={{ y: "-120%" }}
+                            staggerDuration={0.025}
+                            splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                            transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                            rotationInterval={2000}
+                            />
+                        </h1>
                         <p>
                         Berikut ini artikel-artikel saya yang sudah publish di media OSC Community, Kumparan, Geotimes, dan GNFI.
                         </p>
