@@ -26,7 +26,7 @@
 .carousel .carousel-nav {
     position: absolute;
     top: 50%;
-    left: -25px;
+    left: -1.5rem;
     transform: translateY(-50%);
     z-index: 1;
 }
@@ -64,5 +64,8 @@
     .bg-zigzag {
         position: fixed;
         top: 1%;
+    }
+    .carousel .carousel-nav {
+        left: 0;
     }
 }

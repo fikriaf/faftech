@@ -142,7 +142,7 @@ const Index: React.FC = () => {
                                 ))}
                             </div>
                             <div className="carousel-nav">
-                                <div className="d-flex flex-column gap-2">
+                                <div className="d-flex flex-md-column gap-2 justify-content-between">
                                     <button
                                         className="carousel-control-prev BtnScale bg-primary"
                                         type="button"
