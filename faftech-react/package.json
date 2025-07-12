@@ -23,7 +23,8 @@
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.3",
     "styled-components": "^6.1.19",
-    "typed.js": "^2.1.0"
+    "typed.js": "^2.1.0",
+    "zustand": "^5.0.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",

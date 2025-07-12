@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { usePlayerStore } from "./UsePlayerStore";
+import LibraryModal from "./LibraryModal";
 import logo from "../assets/logo-no-bg.png";
 import profileImg from "../assets/profile.png";
 import { getMusicList, play, pause, next, prev, audio } from "../services/music";
@@ -18,17 +20,25 @@ function formatTime(seconds: number) {
 const Navbar: React.FC = () => {
 
     const { currentTrack, currentTime, duration, progressPercent, musicList } = useMusicPlayer(audio);
-    const [isPlaying, setIsPlaying] = useState(false);
+    const isPlaying = usePlayerStore((state) => state.isPlaying);
+    const setIsPlaying = usePlayerStore((state) => state.setIsPlaying);
+
 
     const handleMusic = async (parameter: string) => {
         if (parameter === 'playANDpause') {
             if (isPlaying) {
                 audio.pause();
             } else {
-                play();
+                if (!audio.src) {
+                    play();
+                } else {
+                    audio.play().catch(() => {
+                    play();
+                    });
+                }
             }
             setIsPlaying(!isPlaying);
-            
+
         } else if (parameter === 'next') {
             setIsPlaying(true)
             next();
@@ -41,6 +51,7 @@ const Navbar: React.FC = () => {
 
     return (
         <div className="container-fluid nav-bar bg-transparent" style={{zIndex: "999999"}}>
+            <LibraryModal musicList={musicList} />
             <div className="total-navbar">
                 <div className="container-fluid d-flex gap-1 px-0 navbarnya" style={{ fontFamily: "Teko", letterSpacing: "3px", fontSize: "1.5rem" }}>
                     <nav className="navbar navbar-expand-lg navbar-utama navbar-dark bg-dark py-0 px-3 w-100 me-3">
@@ -138,7 +149,14 @@ const Navbar: React.FC = () => {
                                                 </div>
 
                                                 <div className="icon-control-group d-flex justify-content-between text-center mt-3">
-                                                    <a href="/music/library" className="btn btn-outline-dark w-100 btn-rounded btn-md" style={{ fontFamily: "Heebo" }}>Library</a>
+                                                    <button
+                                                className="btn btn-outline-dark w-100 btn-rounded btn-md"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#libraryModal"
+                                                style={{ fontFamily: "Heebo" }}
+                                                >
+                                                Library
+                                                </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -152,7 +170,6 @@ const Navbar: React.FC = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };
