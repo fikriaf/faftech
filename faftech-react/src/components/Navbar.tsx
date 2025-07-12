@@ -2,17 +2,30 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo-no-bg.png";
 import profileImg from "../assets/profile.png";
+import { getMusicList, play, next, prev, audio } from "../services/music";
+import { useMusicPlayer } from "./MusicPlayer";
 import { Play, Pause, SkipBack, SkipForward, Music } from "lucide-react";
 import GlareHover from "./GlareHover";
 import AnimatedContent from "./AnimateContent";
 import "./styles/Navbar.css"
 import { useEffect } from 'react';
 
+function formatTime(seconds: number) {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs.toString().padStart(2, "0")}`;
+}
+
 const Navbar: React.FC = () => {
+    const { currentTrack, currentTime, duration, progressPercent } = useMusicPlayer(audio);
+
+    const handlePlay = async () => {
+        play();
+    };
+
 
     return (
         <div className="container-fluid nav-bar bg-transparent" style={{zIndex: "999999"}}>
-            
             <div className="total-navbar">
                 <div className="container-fluid d-flex gap-1 px-0 navbarnya" style={{ fontFamily: "Teko", letterSpacing: "3px", fontSize: "1.5rem" }}>
                     <nav className="navbar navbar-expand-lg navbar-utama navbar-dark bg-dark py-0 px-3 w-100 me-3">
@@ -69,22 +82,33 @@ const Navbar: React.FC = () => {
                                                     <img src={profileImg} className="rounded-circle img-fluid" style={{ width: "100px" }} alt="profile" />
                                                 </div>
                                                 
-                                                <p className="text-muted mb-3" style={{ fontSize: "0.9rem" }}>“Reflections - Ambient Mix”</p>
+                                                <p className="text-muted mb-3" style={{ fontSize: "0.9rem" }}>
+  {currentTrack?.title || "Tidak ada lagu"}
+</p>
 
-                                                <div className="progress my-2" style={{ height: "4px", backgroundColor: "#dee2e6" }}>
-                                                    <div className="progress-bar" role="progressbar" style={{ width: "45%", backgroundColor: "#343a40" }}></div>
-                                                </div>
+<div className="progress my-2" style={{ height: "4px", backgroundColor: "#dee2e6" }}>
+  <div
+    className="progress-bar"
+    role="progressbar"
+    style={{
+      width: `${progressPercent}%`,
+      backgroundColor: "#343a40",
+    }}
+  ></div>
+</div>
 
-                                                <p className="text-muted m-0 p-0" style={{ fontSize: "0.75rem" }}>01:24 / 03:20</p>
+<p className="text-muted m-0 p-0" style={{ fontSize: "0.75rem" }}>
+  {formatTime(currentTime)} / {formatTime(duration)}
+</p>
 
                                                 <div className="icon-control-group d-flex justify-content-center align-items-center gap-3 mt-1">
-                                                    <button className="btn btn-light border-0">
+                                                    <button onClick={prev} className="btn btn-light border-0">
                                                         <SkipBack size={20} />
                                                     </button>
-                                                    <button className="btn btn-dark rounded-circle" style={{ width: "45px", height: "45px" }}>
+                                                    <button onClick={handlePlay} className="btn btn-dark rounded-circle" style={{ width: "45px", height: "45px" }}>
                                                         <Play size={22} color="#fff" />
                                                     </button>
-                                                    <button className="btn btn-light border-0">
+                                                    <button onClick={next} className="btn btn-light border-0">
                                                         <SkipForward size={20} />
                                                     </button>
                                                 </div>

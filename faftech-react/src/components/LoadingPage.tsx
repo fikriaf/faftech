@@ -70,7 +70,7 @@ const StyledWrapper = styled.div`
     animation: honeycomb 2.1s infinite backwards;
     background: #242424ff;
     height: 12px;
-    margin-top: 0.1rem;
+    margin-top: 6px;
     position: absolute;
     width: 24px;
   }
@@ -85,12 +85,12 @@ const StyledWrapper = styled.div`
   }
 
   .honeycomb div:after {
-    top: -6px;
+    top: -5px;
     border-bottom: 6px solid #242424ff;
   }
 
   .honeycomb div:before {
-    bottom: -6px;
+    bottom: -5px;
     border-top: 6px solid #242424ff;
   }
 
