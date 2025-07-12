@@ -14,18 +14,23 @@ const Card: React.FC<CardProps> = ({title, description, img, imgSource, imgTools
     return (
         <StyledWrapper>
             <div className="main">
-                <div className="card w-100">
-                    <img width="100%" height="100%" src={img} alt="sfsf" />
+                <div className="w-100">
+                    <img src={img} alt="demo" style={{
+                        width: '100%',
+                        aspectRatio: '16 / 9',
+                        objectFit: 'cover',
+                        display: 'block'
+                    }} />
                 </div>
-                <div className="data ms-1">
+                <div className="data ms-2 mt-2">
                     <div className="imgCard">
-                        <img className='p-1' src={imgSource} alt="" />
+                        <img src={imgSource} alt="" />
                     </div>
                     <div className="text-dark d-flex align-items-center ms-2">
                         <div className="text_m">{title}</div>
                     </div>
                 </div>
-                <hr className='mx-2 text-dark' />
+                <hr className='mx-2 my-2 text-dark' />
                 <div className="text_s text-center px-1" style={{minHeight: "2rem"}}>{description}</div>
                 <div className="btns">
                     <div className="tag bg-light">

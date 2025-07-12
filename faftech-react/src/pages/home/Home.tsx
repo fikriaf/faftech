@@ -112,7 +112,7 @@ const Index: React.FC = () => {
 
                     <div className="col-md-6 animated fadeIn">
                         <div id="customBootstrapCarousel" className="carousel slide" data-bs-ride="carousel">
-                            <FadeContent blur={false} duration={100} easing="ease-out" initialOpacity={0}>
+                            {/* <FadeContent blur={false} duration={100} easing="ease-out" initialOpacity={0}> */}
                                 <div className="carousel-inner">
                                     
                                     {images.map((img, index) => (
@@ -127,7 +127,7 @@ const Index: React.FC = () => {
                                     ))}
                                     
                                 </div>
-                            </FadeContent>
+                            {/* </FadeContent> */}
                             <div className="carousel-indicators">
                                 {images.map((_, index) => (
                                 <button

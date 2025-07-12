@@ -73,7 +73,7 @@ const ListGithubSection: React.FC = () => {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ textDecoration: "none" }}
+                style={{ textDecoration: "none", minHeight: "18.3rem" }}
                 >
                     <Card title={item.title} description={item.desc} img={image1} imgSource={githubLogo} />
                 </a>

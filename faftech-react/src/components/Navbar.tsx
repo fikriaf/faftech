@@ -65,20 +65,19 @@ const Navbar: React.FC = () => {
                                         <div className="col-md-12 col-xl-12">
                                         <div className="card" style={{ borderRadius: "15px", border: "none", backgroundColor: "#f8f9fa" }}>
                                             <div className="card-body text-center text-dark">
-                                                <div className="mt-3 mb-4">
+                                                <div className="mt-2 mb-4">
                                                     <img src={profileImg} className="rounded-circle img-fluid" style={{ width: "100px" }} alt="profile" />
                                                 </div>
                                                 
-                                                <h5 className="mb-1 px-3" style={{ fontWeight: 600 }}>Now Playing</h5>
                                                 <p className="text-muted mb-3" style={{ fontSize: "0.9rem" }}>“Reflections - Ambient Mix”</p>
 
                                                 <div className="progress my-2" style={{ height: "4px", backgroundColor: "#dee2e6" }}>
                                                     <div className="progress-bar" role="progressbar" style={{ width: "45%", backgroundColor: "#343a40" }}></div>
                                                 </div>
 
-                                                <p className="text-muted" style={{ fontSize: "0.75rem" }}>01:24 / 03:20</p>´
+                                                <p className="text-muted m-0 p-0" style={{ fontSize: "0.75rem" }}>01:24 / 03:20</p>
 
-                                                <div className="icon-control-group d-flex justify-content-center align-items-center gap-3 my-3">
+                                                <div className="icon-control-group d-flex justify-content-center align-items-center gap-3 mt-1">
                                                     <button className="btn btn-light border-0">
                                                         <SkipBack size={20} />
                                                     </button>
@@ -90,9 +89,8 @@ const Navbar: React.FC = () => {
                                                     </button>
                                                 </div>
 
-                                                <div className="d-flex justify-content-between text-center mt-3 mb-2">
-                                                    <a href="/music/library" className="btn btn-outline-dark w-100 btn-rounded btn-md editnya" style={{ fontFamily: "Heebo" }}>Library</a>
-                                                    <a href="/account/logout" className="btn btn-outline-dark w-100 btn-rounded btn-md logoutnya" style={{ fontFamily: "Heebo" }}>Logout</a>
+                                                <div className="icon-control-group d-flex justify-content-between text-center mt-3">
+                                                    <a href="/music/library" className="btn btn-outline-dark w-100 btn-rounded btn-md" style={{ fontFamily: "Heebo" }}>Library</a>
                                                 </div>
                                             </div>
                                         </div>

@@ -1,4 +1,5 @@
 import { Suspense, lazy } from 'react';
+import Loader from './components/LoadingPage';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import './App.css';
@@ -13,7 +14,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 function App() {
   const location = useLocation();
   return (
-    <Suspense fallback={<div className="loading-screen">Loading halaman...</div>}>
+    <Suspense fallback={<Loader/>}>
       <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route element={<Layout />}>

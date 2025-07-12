@@ -1,9 +1,7 @@
 /* From Uiverse.io by Praashoo7 */ 
 /* CodePen Card */
 
-.main {
-    min-height: 15.5rem;
-}
+
 
 .fl {
   display: flex;
@@ -18,27 +16,6 @@
 
 .fl:hover .fullscreen_svg {
   fill: white;
-}
-
-.fullscreen {
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 5px;
-  background-color: #727890;
-  margin: 1em;
-  margin-right: 0.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: .2s ease-in-out;
-  box-shadow: 2px 2px 6px rgba(0,0,0,.4);
-}
-
-.fullscreen_svg {
-    width: 15px;
-    height: 15px;
-    fill: rgb(177, 176, 176);
-    transition: .2s ease-in-out;
 }
 
 .main:hover .fl {
