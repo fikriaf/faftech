@@ -70,7 +70,7 @@ const StyledWrapper = styled.div`
     animation: honeycomb 2.1s infinite backwards;
     background: #242424ff;
     height: 12px;
-    margin-top: 6px;
+    margin-top: 0.1rem;
     position: absolute;
     width: 24px;
   }
