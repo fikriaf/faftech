@@ -13,7 +13,6 @@ export function useMusicPlayer(audio: HTMLAudioElement) {
         try {
         const list = await getMusicList();
         setMusicList(list);
-        console.log("🎵 Daftar lagu:", list);
         } catch (err) {
         console.error("❌ Gagal ambil daftar lagu:", err);
         }

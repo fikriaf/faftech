@@ -4,6 +4,7 @@ import { play, audio } from "../services/music";
 import "./styles/LibraryModal.css";
 import { usePlayerStore } from "./UsePlayerStore";
 import { useMusicPlayer } from "./MusicPlayer";
+import { ListMusic } from "lucide-react";
 
 type Music = {
     id: number;
@@ -13,9 +14,10 @@ type Music = {
     duration: string;
 };
 
-const isDJ = (title: string) => title.toLowerCase().includes("ssstik");
+const isDJ = (title: string) => title.toLowerCase().includes("ssstik") || title.toLowerCase().includes("snaptik") || title.toLowerCase().includes("musicaldown");
 
 const LibraryModal: React.FC<{ musicList: Music[] }> = ({ musicList }) => {
+    const [showDropdown, setShowDropdown] = useState(false)
     const { currentTrack } = useMusicPlayer(audio);
     const setIsPlaying = usePlayerStore((state) => state.setIsPlaying);
     const [filter, setFilter] = useState<"all" | "dj" | "song">("all");
@@ -29,22 +31,38 @@ const LibraryModal: React.FC<{ musicList: Music[] }> = ({ musicList }) => {
     return createPortal(
         <div className="modal fade" id="libraryModal" tabIndex={-1} aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
-            <div className="modal-content library-modal bg-dark text-light">
+            <div className="modal-content library-modal pb-4 bg-dark text-light">
             <div className="modal-header border-0 align-items-center">
                 <h5 className="modal-title fw-bold">🎧 Music Library</h5>
-                <select
-                className="form-select bg-secondary text-light border-0 w-auto ms-3"
-                value={filter}
-                onChange={(e) => setFilter(e.target.value as any)}
-                style={{ fontSize: "0.85rem" }}
-                >
-                <option value="all">🎶 Semua</option>
-                <option value="song">🎵 Lagu</option>
-                <option value="dj">🎧 DJ (ssstik)</option>
-                </select>
+                <div className="dropdown-hover ms-3">
+                <div className="dropdown-label BtnScale bg-secondary text-light px-3 py-2 rounded">
+                    🎧 Filter: {filter === "all" ? "Semua" : filter === "song" ? "Lagu" : "DJ (ssstik)"}
+                </div>
+
+                <ul className="dropdown-menu-hover list-group bg-dark text-light mt-1 rounded">
+                    <li
+                    className="list-group-item list-group-item-action bg-dark text-light"
+                    onClick={() => setFilter("all")}
+                    >
+                    🎶 Semua
+                    </li>
+                    <li
+                    className="list-group-item list-group-item-action bg-dark text-light"
+                    onClick={() => setFilter("song")}
+                    >
+                    🎵 Lagu
+                    </li>
+                    <li
+                    className="list-group-item list-group-item-action bg-dark text-light"
+                    onClick={() => setFilter("dj")}
+                    >
+                    🎧 DJ
+                    </li>
+                </ul>
+                </div>
                 <button
                 type="button"
-                className="btn-close btn-close-dark btn-dark btn text-light ms-auto"
+                className="btn-close p-2 me-2 btn-close-dark btn-dark btn text-light ms-auto"
                 data-bs-dismiss="modal"
                 aria-label="Close"
                 ></button>
@@ -60,24 +78,28 @@ const LibraryModal: React.FC<{ musicList: Music[] }> = ({ musicList }) => {
                         key={music.id}
                         className={"list-group-item list-hover text-light d-flex justify-content-between align-items-center mx-2 rounded"}
                         onClick={() => {
-                            play(idx),
-                            setIsPlaying(true)
+                            const realIndex = musicList.findIndex(m => m.id === music.id);
+                            play(realIndex);
+                            setIsPlaying(true);
                         }}
+
                         style={{
                         cursor: "pointer",
                         backgroundColor: idx % 2 === 0 ? "#212529" : "#494a4bff", // bg-dark vs bg-secondary
                         }}
                     >
-                        <span className="fw-medium">
+                        <span className="fw-medium col-8">
                         {music.title}
                         {isDJ(music.title) && (
                             <span className="badge bg-warning text-dark ms-2">DJ</span>
                         )}
                         </span>
-                        {currentTrack?.id === music.id && (
-                            <small className="text-success mt-1">🎵 Currently Playing</small>
-                        )}
-                        <small className="text-light">{music.duration}</small>
+                        <span className="text-center col-3">
+                            {currentTrack?.id === music.id && (
+                                <span>🎵</span>
+                            )}
+                        </span>
+                        <small className="text-light col-1">{music.duration}</small>
                     </li>
                     ))}
                 </ul>
