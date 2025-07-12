@@ -7,6 +7,7 @@ type Music = {
 };
 
 const apiUrl = import.meta.env.VITE_API_MUSIC;
+console.log(apiUrl)
 
 let musicList: Music[] = [];
 let currentIndex = 0;
