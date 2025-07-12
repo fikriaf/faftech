@@ -17,12 +17,13 @@ function formatTime(seconds: number) {
 }
 
 const Navbar: React.FC = () => {
+
     const { currentTrack, currentTime, duration, progressPercent } = useMusicPlayer(audio);
 
     const handlePlay = async () => {
+        console.log("▶️ Tombol Play diklik");
         play();
     };
-
 
     return (
         <div className="container-fluid nav-bar bg-transparent" style={{zIndex: "999999"}}>

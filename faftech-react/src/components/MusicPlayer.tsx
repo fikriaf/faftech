@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getCurrentTrack, next } from "../services/music";
+import { getCurrentTrack, getMusicList, next } from "../services/music";
 
 export function useMusicPlayer(audio: HTMLAudioElement) {
     const [currentTime, setCurrentTime] = useState(0);
@@ -7,6 +7,13 @@ export function useMusicPlayer(audio: HTMLAudioElement) {
     const [progressPercent, setProgressPercent] = useState(0);
     const [currentTrack, setCurrentTrack] = useState(getCurrentTrack());
 
+    useEffect(() => {
+    (async () => {
+        const list = await getMusicList();
+        console.log("🎵 Daftar lagu:", list);
+    })();
+    }, []);
+    
     useEffect(() => {
         const update = () => {
             setCurrentTime(audio.currentTime || 0);
