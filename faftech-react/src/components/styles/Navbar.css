@@ -1,0 +1,25 @@
+
+.dropdown-menu.fade {
+    opacity: 0;
+    right: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+    pointer-events: none;
+    display: block !important;
+    position: absolute !important;
+}
+
+.dropdown-menu.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+}
+.dropdown-menu:not(.show) .icon-control-group {
+    display: none !important;
+}
+
+
+
+

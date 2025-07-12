@@ -4,10 +4,15 @@ import logo from "../assets/logo-no-bg.png";
 import profileImg from "../assets/profile.png";
 import { Play, Pause, SkipBack, SkipForward, Music } from "lucide-react";
 import GlareHover from "./GlareHover";
+import AnimatedContent from "./AnimateContent";
+import "./styles/Navbar.css"
+import { useEffect } from 'react';
 
 const Navbar: React.FC = () => {
+
     return (
-        <div className="container-fluid nav-bar bg-transparent">
+        <div className="container-fluid nav-bar bg-transparent" style={{zIndex: "999999"}}>
+            
             <div className="total-navbar">
                 <div className="container-fluid d-flex gap-1 px-0 navbarnya" style={{ fontFamily: "Teko", letterSpacing: "3px", fontSize: "1.5rem" }}>
                     <nav className="navbar navbar-expand-lg navbar-utama navbar-dark bg-dark py-0 px-3 w-100 me-3">
@@ -52,7 +57,7 @@ const Navbar: React.FC = () => {
                                 <img src={profileImg} style={{ width: "30px" }} alt="profile" />
                             </a>
                             <span className="tambahan-nav" style={{ position: "absolute", left: "-15px", top: 0, bottom: 0, width: "50px", background: "inherit", transform: "skewX(-20deg)" }}></span>
-                            <ul className="menu-profile dropdown-menu dropdown-menu-end bg-white" aria-labelledby="profileDropdown">
+                            <ul className="dropdown-menu dropdown-menu-end fade bg-white" aria-labelledby="profileDropdown">
                                 <li>
                                 <section className="bg-white">
                                     <div className="container">
@@ -60,34 +65,35 @@ const Navbar: React.FC = () => {
                                         <div className="col-md-12 col-xl-12">
                                         <div className="card" style={{ borderRadius: "15px", border: "none", backgroundColor: "#f8f9fa" }}>
                                             <div className="card-body text-center text-dark">
-                                            <div className="mt-3 mb-4">
-                                                <img src={profileImg} className="rounded-circle img-fluid" style={{ width: "100px" }} alt="profile" />
-                                            </div>
-                                            <h5 className="mb-1 px-3" style={{ fontWeight: 600 }}>Now Playing</h5>
-                                            <p className="text-muted mb-3" style={{ fontSize: "0.9rem" }}>“Reflections - Ambient Mix”</p>
+                                                <div className="mt-3 mb-4">
+                                                    <img src={profileImg} className="rounded-circle img-fluid" style={{ width: "100px" }} alt="profile" />
+                                                </div>
+                                                
+                                                <h5 className="mb-1 px-3" style={{ fontWeight: 600 }}>Now Playing</h5>
+                                                <p className="text-muted mb-3" style={{ fontSize: "0.9rem" }}>“Reflections - Ambient Mix”</p>
 
-                                            <div className="progress my-2" style={{ height: "4px", backgroundColor: "#dee2e6" }}>
-                                                <div className="progress-bar" role="progressbar" style={{ width: "45%", backgroundColor: "#343a40" }}></div>
-                                            </div>
-                                            <p className="text-muted" style={{ fontSize: "0.75rem" }}>01:24 / 03:20</p>
+                                                <div className="progress my-2" style={{ height: "4px", backgroundColor: "#dee2e6" }}>
+                                                    <div className="progress-bar" role="progressbar" style={{ width: "45%", backgroundColor: "#343a40" }}></div>
+                                                </div>
 
-                                            <div className="d-flex justify-content-center align-items-center gap-3 my-3">
-                                                <button className="btn btn-light border-0">
-                                                <SkipBack size={20} />
-                                                </button>
-                                                <button className="btn btn-dark rounded-circle" style={{ width: "45px", height: "45px" }}>
-                                                <Play size={22} color="#fff" />
-                                                </button>
-                                                <button className="btn btn-light border-0">
-                                                <SkipForward size={20} />
-                                                </button>
-                                            </div>
+                                                <p className="text-muted" style={{ fontSize: "0.75rem" }}>01:24 / 03:20</p>´
 
-                                            <div className="d-flex justify-content-between text-center mt-3 mb-2">
-                                                <a href="/music/library" className="btn btn-outline-dark w-100 btn-rounded btn-md editnya" style={{ fontFamily: "Heebo" }}>Library</a>
-                                                <a href="/account/logout" className="btn btn-outline-dark w-100 btn-rounded btn-md logoutnya" style={{ fontFamily: "Heebo" }}>Logout</a>
-                                            </div>
+                                                <div className="icon-control-group d-flex justify-content-center align-items-center gap-3 my-3">
+                                                    <button className="btn btn-light border-0">
+                                                        <SkipBack size={20} />
+                                                    </button>
+                                                    <button className="btn btn-dark rounded-circle" style={{ width: "45px", height: "45px" }}>
+                                                        <Play size={22} color="#fff" />
+                                                    </button>
+                                                    <button className="btn btn-light border-0">
+                                                        <SkipForward size={20} />
+                                                    </button>
+                                                </div>
 
+                                                <div className="d-flex justify-content-between text-center mt-3 mb-2">
+                                                    <a href="/music/library" className="btn btn-outline-dark w-100 btn-rounded btn-md editnya" style={{ fontFamily: "Heebo" }}>Library</a>
+                                                    <a href="/account/logout" className="btn btn-outline-dark w-100 btn-rounded btn-md logoutnya" style={{ fontFamily: "Heebo" }}>Logout</a>
+                                                </div>
                                             </div>
                                         </div>
                                         </div>
@@ -100,6 +106,7 @@ const Navbar: React.FC = () => {
                     </div>
                 </div>
             </div>
+
         </div>
     );
 };

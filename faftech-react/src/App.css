@@ -10,7 +10,7 @@
     display: none;
     right: 45px;
     bottom: 45px;
-    z-index: 9999999;
+    z-index: 9999999999;
 }
 .btn {
     transition: .5s;
@@ -48,7 +48,7 @@
 }
 
 .header {
-    margin-top: -130px;
+    margin-top: -8rem;
 }
 
 .navbarnya {
@@ -94,7 +94,7 @@
     margin-top: 35px;
     padding: 0 3rem;
     transition: .5s;
-    z-index: 9999;
+    z-index: 99999999;
 }
 .nav-bar.sticky-top {
     position: sticky;
@@ -105,28 +105,6 @@
 
 .navbar-toggler:focus {
     box-shadow: none;
-}
-
-.dropdown-item:hover {
-    background-color: #f1f1f1;
-    color: var(--primary);
-    transform: translateY(-2px);
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
-
-.menu-utama {
-    display: none;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.cuy:hover .menu-utama {
-    display: block; 
-    opacity: 1; 
-    transform: translateY(0); 
-    position: absolute; 
-    z-index: 999;
 }
 
 .breadcrumb {
@@ -162,46 +140,6 @@
     margin-top: 100px;
 }
 
-#customBootstrapCarousel {
-    position: relative;
-}
-
-.carousel .carousel-nav {
-    position: absolute;
-    top: 50%;
-    left: -25px;
-    transform: translateY(-50%);
-    z-index: 10;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    position: static !important;
-    opacity: 1 !important;
-    width: 50px;
-    height: 40px;
-    border-radius: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    transform: skew(-10deg);
-}
-
-.panah {
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-}
-
-.panah.right {
-    transform: rotate(-45deg);
-}
-
-.panah.left {
-    transform: rotate(135deg);
-}
 
 .dropdown-toggle::after {
     display: none !important;
@@ -556,3 +494,17 @@
     transform-origin: right;
 }
 
+.BgBlurNormal {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.BgBlurUnderLine {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border-bottom: 2px solid var(--primary);
+}

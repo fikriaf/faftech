@@ -1,19 +1,29 @@
+import { Suspense, lazy } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import './App.css';
+
 import Layout from './components/Layout';
-import Home from './pages/home/Home';
-import About from './pages/about/About';
-import NotFound from './pages/NotFound';
-import { Routes, Route } from 'react-router-dom';
+
+// lazy pages
+const Home = lazy(() => import('./pages/home/Home'));
+const About = lazy(() => import('./pages/about/About'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
+  const location = useLocation();
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
-        <Route path='/about' element={<About />} />
-      </Route>
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <Suspense fallback={<div className="loading-screen">Loading halaman...</div>}>
+      <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      </AnimatePresence>
+    </Suspense>
   );
 }
 

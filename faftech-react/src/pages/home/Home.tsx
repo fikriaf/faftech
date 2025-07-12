@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import { useEffect, useRef } from "react";
+import PageWrapper from "../../components/PageWrapper";
 import Typed from "typed.js";
 import "./Home.css"
 import ListGithubSection from "../../components/ListGithub";
@@ -8,6 +9,8 @@ import ListArticlesection from "../../components/ListArticles";
 import DropText from "../../components/DropText";
 import TextPressure from "../../components/TextPressure";
 import RotatingText from "../../components/RotatingText";
+import AnimatedContent from "../../components/AnimateContent";
+import FadeContent from "../../components/FadeContent";
 import img1 from "../../assets/fikri.jpg";
 import img2 from "../../assets/fikri2.jpg";
 import img3 from "../../assets/ai1.webp";
@@ -36,7 +39,7 @@ const Index: React.FC = () => {
     }, [])
 
     return (
-        <>
+        <PageWrapper direction="left">
             {/* CONTENT */}
             <div className="container-fluid header bg-transparent p-0">
                 <div className="row g-0 align-items-center flex-column-reverse flex-md-row">
@@ -45,18 +48,31 @@ const Index: React.FC = () => {
                             <h1 className="head-1 mb-3 d-grid w-100" style={{ fontFamily: "Heebo", fontWeight: 800 }}>
                                 <div className="d-md-block d-flex align-items-center justify-content-center gap-2">
                                     <div style={{position: 'relative'}}>
-                                    <TextPressure
-                                        text="Hello!"
-                                        flex={true}
-                                        alpha={false}
-                                        stroke={false}
-                                        width={true}
-                                        weight={true}
-                                        italic={true}
-                                        textColor="#000"
-                                        strokeColor="#ff0000"
-                                        minFontSize={20}
-                                    />
+                                        <AnimatedContent
+                                        distance={150}
+                                        direction="horizontal"
+                                        reverse={true}
+                                        duration={1.2}
+                                        ease="bounce.out"
+                                        initialOpacity={0.2}
+                                        animateOpacity
+                                        scale={1.1}
+                                        threshold={0.2}
+                                        delay={0.3}
+                                        >
+                                        <TextPressure
+                                            text="Hello!"
+                                            flex={true}
+                                            alpha={false}
+                                            stroke={false}
+                                            width={true}
+                                            weight={true}
+                                            italic={true}
+                                            textColor="#000"
+                                            strokeColor="#ff0000"
+                                            minFontSize={80}
+                                        />
+                                        </AnimatedContent>
                                     </div>
                                 </div>
                                 <div style={{
@@ -77,24 +93,41 @@ const Index: React.FC = () => {
                             }}>
                             I am a passionate and versatile software developer with strong experience in <span className="text-primary">Full-Stack Web Development</span>, <span className="text-primary">AI Engineering</span>, and <span className="text-primary">Data Science</span>. I have developed various web applications using technologies such as React, Laravel, Express, MySQL, MongoDB, PyTorch, and other.
                             </p>
-                            <Link to="/about" className="btn BtnScale detail btn-primary py-3 px-5 me-3">Read More <span className="panahGo">&#8594;</span></Link>
+                            <AnimatedContent
+                            distance={5}
+                            direction="vertical"
+                            reverse={true}
+                            duration={1.2}
+                            ease="ease"
+                            initialOpacity={0.2}
+                            animateOpacity
+                            scale={1.1}
+                            threshold={0.2}
+                            delay={0.3}
+                            >
+                            <Link to="/about" className="btn ms-2 BtnScale detail btn-primary py-3 px-5">Read More <span className="panahGo">&#8594;</span></Link>
+                            </AnimatedContent>
                         </div>
                     </div>
 
                     <div className="col-md-6 animated fadeIn">
                         <div id="customBootstrapCarousel" className="carousel slide" data-bs-ride="carousel">
-                            <div className="carousel-inner">
-                                {images.map((img, index) => (
-                                <div
-                                    key={index}
-                                    className={`carousel-item ${index === 0 ? 'active' : ''}`}
-                                >
-                                    <div className="custom-carousel-item">
-                                        <img src={img} className="img-fluid w-100" alt={`Slide ${index + 1}`} />
+                            <FadeContent blur={false} duration={100} easing="ease-out" initialOpacity={0}>
+                                <div className="carousel-inner">
+                                    
+                                    {images.map((img, index) => (
+                                    <div
+                                        key={index}
+                                        className={`carousel-item ${index === 0 ? 'active' : ''}`}
+                                    >
+                                        <div className="custom-carousel-item">
+                                            <img src={img} className="img-fluid w-100" alt={`Slide ${index + 1}`} />
+                                        </div>
                                     </div>
+                                    ))}
+                                    
                                 </div>
-                                ))}
-                            </div>
+                            </FadeContent>
                             <div className="carousel-indicators">
                                 {images.map((_, index) => (
                                 <button
@@ -172,7 +205,7 @@ const Index: React.FC = () => {
                         
                         <h1 className="mb-3" style={{ fontWeight: 600 }}>
                             Github <RotatingText
-                            texts={['React', 'Laravel', 'Pytorch', 'Express', 'MongoDB', 'MySQL']}
+                            texts={['React', 'Laravel', 'PyTorch', 'LLM', 'Express', 'MongoDB', 'MySQL']}
                             mainClassName="px-2 sm:px-2 md:px-3 bg-primary d-inline-flex text-light overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded rounded-lg"
                             staggerFrom={"last"}
                             initial={{ y: "100%" }}
@@ -235,27 +268,28 @@ const Index: React.FC = () => {
                 <div className="container">
                 <div className="row g-5 align-items-center">
                     <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div className="about-img position-relative overflow-hidden p-5 pe-0">
-                        <img className="img-fluid w-100" src={fotoHima} alt="Fikri Armia Fahmi" />
-                    </div>
+                        <div className="about-img position-relative overflow-hidden p-5 pe-0">
+                            <img className="img-fluid w-100" src={fotoHima} alt="Fikri Armia Fahmi" />
+                        </div>
                     </div>
                     <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h1
-                        className="mb-4"
-                        style={{ fontFamily: 'Heebo', fontWeight: 700 }}
-                    >
-                        Nama Saya <strong className="text-primary">Fikri Armia Fahmi</strong>
-                    </h1>
-                    <DropText
-                    text="Saya telah mengembangkan berbagai proyek yang mencakup banyak bidang teknologi, mulai dari kecerdasan buatan, algoritma, hingga platform berbasis web. Proyek-proyek ini bertujuan untuk memberikan solusi praktis, efisien, dan inovatif yang dapat diaplikasikan di berbagai sektor."
-                    className="mb-4"
-                    style={{ textAlign: 'justify' }}
-                    />
-
-                    <p><i className="fa fa-check text-primary me-3"></i><strong>Artificial Intelligence</strong></p>
-                    <p><i className="fa fa-check text-primary me-3"></i><strong>Frontend Development</strong></p>
-                    <p><i className="fa fa-check text-primary me-3"></i><strong>Backend Development</strong></p>
-                    <a className="btn BtnScale detail btn-primary py-3 px-3 mt-3" href="./about/about.php">See The Project <span className="panahGo">&#8594;</span></a>
+                        <h1
+                            className="mb-4 BgBlurUnderLine"
+                            style={{ fontFamily: 'Heebo', fontWeight: 700 }}
+                        >
+                            Saya <strong className="text-primary">Fikri Armia Fahmi</strong>
+                        </h1>
+                        <div className="BgBlurNormal">
+                            <DropText
+                            text="Saya telah mengembangkan berbagai proyek yang mencakup banyak bidang teknologi, mulai dari kecerdasan buatan, algoritma, hingga platform berbasis web. Proyek-proyek ini bertujuan untuk memberikan solusi praktis, efisien, dan inovatif yang dapat diaplikasikan di berbagai sektor."
+                            className="mb-4"
+                            style={{ textAlign: 'justify' }}
+                            />
+                            <p><i className="fa fa-check text-primary me-3"></i><strong>Artificial Intelligence</strong></p>
+                            <p><i className="fa fa-check text-primary me-3"></i><strong>Frontend Development</strong></p>
+                            <p><i className="fa fa-check text-primary me-3"></i><strong>Backend Development</strong></p>
+                        </div>
+                        <a className="btn BtnScale detail btn-primary py-3 px-3 mt-3" href="./about/about.php">See The Project <span className="panahGo">&#8594;</span></a>
                     </div>
                 </div>
                 </div>
@@ -266,7 +300,7 @@ const Index: React.FC = () => {
             <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top">
                 <i className="bi bi-arrow-up"></i>
             </a>
-        </>
+        </PageWrapper>
     );
 };
 

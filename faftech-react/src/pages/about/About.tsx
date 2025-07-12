@@ -1,5 +1,6 @@
 import React from "react";
 import "./about.css";
+import PageWrapper from "../../components/PageWrapper";
 import BackgroundCarousel from "../../components/BackgroundCarousel";
 import CurvedLoop from "../../components/CurvedLoop";
 import MyImage from "../../assets/fikri2.jpg"
@@ -63,7 +64,7 @@ const About: React.FC = () => {
 
 
     return (
-        <>
+        <PageWrapper direction="right">
             <div className="container-fluid contain d-flex flex-column">
                 <div className="container mt-5 d-grid gap-5">
                     <div className="text-end mb-3 top-sosial">
@@ -122,7 +123,7 @@ const About: React.FC = () => {
                             alt="Typing Name"
                             />
                         </h1>
-                        <h1 className="text-center">
+                        <h1 className="text-center BgBlurUnderLine">
                             Hi{' '}
                             <img
                             className="tangan"
@@ -140,7 +141,7 @@ const About: React.FC = () => {
                             curveAmount={0}
                             direction="left"
                             interactive={true}
-                            className="text-dark"
+                            className="text-dark BgBlurNormal"
                             />
                         </div>
                     </div>
@@ -163,8 +164,9 @@ const About: React.FC = () => {
                         contactText="Contact Me"
                         avatarUrl={MyImageNoBg}
                         iconUrl={MyImage}
+                        miniAvatarUrl={MyImage}
                         showUserInfo={true}
-                        enableTilt={true}
+                        enableTilt={false}
                         onContactClick={() => console.log('Contact clicked')}
                         />
                         <ul className="d-grid gap-3 list-unstyled ms-3" style={{
@@ -313,7 +315,7 @@ const About: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </PageWrapper>
     );
 };
 
