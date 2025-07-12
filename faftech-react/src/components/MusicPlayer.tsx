@@ -6,13 +6,20 @@ export function useMusicPlayer(audio: HTMLAudioElement) {
     const [duration, setDuration] = useState(0);
     const [progressPercent, setProgressPercent] = useState(0);
     const [currentTrack, setCurrentTrack] = useState(getCurrentTrack());
+    const [musicList, setMusicList] = useState<any[]>([]);
 
     useEffect(() => {
     (async () => {
+        try {
         const list = await getMusicList();
+        setMusicList(list);
         console.log("🎵 Daftar lagu:", list);
+        } catch (err) {
+        console.error("❌ Gagal ambil daftar lagu:", err);
+        }
     })();
     }, []);
+
     
     useEffect(() => {
         const update = () => {
@@ -37,5 +44,5 @@ export function useMusicPlayer(audio: HTMLAudioElement) {
         };
     }, [audio]);
 
-    return { currentTrack, currentTime, duration, progressPercent };
+    return { currentTrack, currentTime, duration, progressPercent, musicList };
 }

@@ -17,7 +17,6 @@ export const audio = new Audio();
 export async function getMusicList() {
   try {
     const res = await fetch(`${apiUrl}/api/music`);
-    console.log("📡 Fetch URL:", `${apiUrl}/api/music`);
 
     if (!res.ok) {
       console.error("❌ Gagal fetch:", res.status, res.statusText);
@@ -25,7 +24,6 @@ export async function getMusicList() {
     }
 
     const json = await res.json();
-    console.log("📁 Data musik:", json);
     musicList = json;
     return musicList;
   } catch (err) {
@@ -44,7 +42,7 @@ export function play(index: number = currentIndex) {
 
   currentIndex = index;
   audio.src = `${apiUrl}${musicList[currentIndex].url}`;
-  console.log("🎵 Playing:", audio.src);
+  console.log("🎵 Playing:", musicList[currentIndex].title);
 
   audio.play().catch((err) => {
     console.error("❌ Gagal play:", err);

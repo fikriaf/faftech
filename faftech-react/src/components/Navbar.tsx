@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo-no-bg.png";
 import profileImg from "../assets/profile.png";
-import { getMusicList, play, next, prev, audio } from "../services/music";
+import { getMusicList, play, pause, next, prev, audio } from "../services/music";
 import { useMusicPlayer } from "./MusicPlayer";
 import { Play, Pause, SkipBack, SkipForward, Music } from "lucide-react";
 import GlareHover from "./GlareHover";
 import AnimatedContent from "./AnimateContent";
 import "./styles/Navbar.css"
-import { useEffect } from 'react';
 
 function formatTime(seconds: number) {
     const mins = Math.floor(seconds / 60);
@@ -18,11 +17,26 @@ function formatTime(seconds: number) {
 
 const Navbar: React.FC = () => {
 
-    const { currentTrack, currentTime, duration, progressPercent } = useMusicPlayer(audio);
+    const { currentTrack, currentTime, duration, progressPercent, musicList } = useMusicPlayer(audio);
+    const [isPlaying, setIsPlaying] = useState(false);
 
-    const handlePlay = async () => {
-        console.log("▶️ Tombol Play diklik");
-        play();
+    const handleMusic = async (parameter: string) => {
+        if (parameter === 'playANDpause') {
+            if (isPlaying) {
+                audio.pause();
+            } else {
+                play();
+            }
+            setIsPlaying(!isPlaying);
+            
+        } else if (parameter === 'next') {
+            setIsPlaying(true)
+            next();
+        } else if (parameter === 'prev') {
+            setIsPlaying(true)
+            next();
+        }
+        
     };
 
     return (
@@ -67,7 +81,8 @@ const Navbar: React.FC = () => {
                             </a>
                         </nav>
                         <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-0 ms-3">
-                            <a href="#" className="dropdown-toggle ps-1 pe-3" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false" style={{ zIndex: 999 }}>
+                            <a href="#" className="dropdown-toggle ps-1 pe-3" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false"
+                            data-bs-auto-close="outside" style={{ zIndex: 999 }}>
                                 <img src={profileImg} style={{ width: "30px" }} alt="profile" />
                             </a>
                             <span className="tambahan-nav" style={{ position: "absolute", left: "-15px", top: 0, bottom: 0, width: "50px", background: "inherit", transform: "skewX(-20deg)" }}></span>
@@ -84,32 +99,40 @@ const Navbar: React.FC = () => {
                                                 </div>
                                                 
                                                 <p className="text-muted mb-3" style={{ fontSize: "0.9rem" }}>
-  {currentTrack?.title || "Tidak ada lagu"}
-</p>
+                                                    {currentTrack?.title || musicList?.[0]?.title || "Tidak ada lagu"}
+                                                </p>
 
-<div className="progress my-2" style={{ height: "4px", backgroundColor: "#dee2e6" }}>
-  <div
-    className="progress-bar"
-    role="progressbar"
-    style={{
-      width: `${progressPercent}%`,
-      backgroundColor: "#343a40",
-    }}
-  ></div>
-</div>
+                                                <div className="progress my-2" style={{ height: "4px", backgroundColor: "#dee2e6" }}>
+                                                <div
+                                                    className="progress-bar"
+                                                    role="progressbar"
+                                                    style={{
+                                                    width: `${progressPercent}%`,
+                                                    backgroundColor: "#343a40",
+                                                    }}
+                                                ></div>
+                                                </div>
 
-<p className="text-muted m-0 p-0" style={{ fontSize: "0.75rem" }}>
-  {formatTime(currentTime)} / {formatTime(duration)}
-</p>
+                                                <p className="text-muted m-0 p-0" style={{ fontSize: "0.75rem" }}>
+                                                {formatTime(currentTime)} / {formatTime(duration)}
+                                                </p>
 
                                                 <div className="icon-control-group d-flex justify-content-center align-items-center gap-3 mt-1">
-                                                    <button onClick={prev} className="btn btn-light border-0">
+                                                    <button onClick={() => handleMusic('prev')} className="btn btn-light border-0">
                                                         <SkipBack size={20} />
                                                     </button>
-                                                    <button onClick={handlePlay} className="btn btn-dark rounded-circle" style={{ width: "45px", height: "45px" }}>
+                                                    <button
+                                                    onClick={() => handleMusic('playANDpause')}
+                                                    className="btn btn-dark rounded-circle"
+                                                    style={{ width: "45px", height: "45px" }}
+                                                    >
+                                                    {isPlaying ? (
+                                                        <Pause size={22} color="#fff" />
+                                                    ) : (
                                                         <Play size={22} color="#fff" />
+                                                    )}
                                                     </button>
-                                                    <button onClick={next} className="btn btn-light border-0">
+                                                    <button onClick={() => handleMusic('next')} className="btn btn-light border-0">
                                                         <SkipForward size={20} />
                                                     </button>
                                                 </div>
