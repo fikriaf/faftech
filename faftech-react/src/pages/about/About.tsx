@@ -2,6 +2,7 @@ import React from "react";
 import "./about.css";
 import PageWrapper from "../../components/PageWrapper";
 import BackgroundCarousel from "../../components/BackgroundCarousel";
+import ButtonAnimated from "../../components/ButtonAnimated";
 import CurvedLoop from "../../components/CurvedLoop";
 import MyImage from "../../assets/fikri2.jpg"
 import MyImageNoBg from "../../assets/fikri2-Photoroom.png"
@@ -69,45 +70,7 @@ const About: React.FC = () => {
             <div className="container-fluid contain d-flex flex-column">
                 <div className="container mt-5 d-grid gap-5">
                     <div className="text-end mb-3 top-sosial d-flex justify-content-end gap-2 flex-wrap">
-                        <a href="mailto:fikriarmia27@gmail.com" className="btn btn-danger" title="Email">
-                            <FaEnvelope /> Gmail
-                        </a>
-                        <a
-                            href="https://osc.medcom.id/community/author/barayaroas@gmail.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-warning"
-                            title="Blogger"
-                        >
-                            <FaBloggerB /> Blogger
-                        </a>
-                        <a
-                            href="https://linkedin.com/in/fikri-armia-fahmi-b373b3288"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-primary"
-                            title="LinkedIn"
-                        >
-                            <FaLinkedin /> LinkedIn
-                        </a>
-                        <a
-                            href="https://www.instagram.com/fikriaf27"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-danger"
-                            title="Instagram"
-                        >
-                            <FaInstagram /> Instagram
-                        </a>
-                        <a
-                            href="https://discord.gg/fighterfire0346"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-secondary"
-                            title="Discord"
-                        >
-                            <FaDiscord /> Discord
-                        </a>
+                        <ButtonAnimated />
                     </div>
 
                     <div className="d-grid gap-5 nama">

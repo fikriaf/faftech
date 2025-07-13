@@ -6,6 +6,11 @@
 
 }
 
+.bg-lain {
+    top: -5%;
+    z-index: -1;
+}
+
 .bg-zigzag {
     position: absolute;
     top: -5%;

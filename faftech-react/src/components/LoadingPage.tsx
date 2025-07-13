@@ -21,7 +21,7 @@ const Loader: React.FC<LoaderProps> = ({ text = "" }) => {
             <div />
           </div>
         </StyledWrapper>
-        {text && <div className="text-dark mt-4">{text}</div>}
+        {text && <div className="text-dark mt-5">{text}</div>}
       </div>
     </div>
   );

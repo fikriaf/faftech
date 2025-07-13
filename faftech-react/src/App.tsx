@@ -10,6 +10,7 @@ import { audio } from './services/music';
 // lazy pages
 const Home = lazy(() => import('./pages/home/Home'));
 const About = lazy(() => import('./pages/about/About'));
+const Project = lazy(() => import('./pages/project/Project'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
@@ -60,7 +61,7 @@ function App() {
     }, 100);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [musicList]);
 
   const dots = '.'.repeat(dotIndex);
   const isMusicReady = musicList.length > 0;
@@ -76,6 +77,7 @@ function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/project" element={<Project />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

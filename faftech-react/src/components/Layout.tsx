@@ -10,20 +10,19 @@ import "./styles/Layout.css"
 const Layout: React.FC = () => {
     return (
       <div className="layout-container">
-        <div style={{ width: '100%', height: '100%', position: 'absolute' }}>
-        <DotGrid
-          dotSize={2}
-          gap={15}
-          baseColor="#5227FF"
-          activeColor="#5227FF"
-          proximity={120}
-          shockRadius={500}
-          shockStrength={5}
-          resistance={750}
-          returnDuration={1.5}
-        />
-      </div>
-        {/* <div style={{ width: '100%', height: '100%', position: 'absolute' }}>
+        <div className="bg-lain bg-black" style={{ width: '100%', height: '100%', position: 'absolute' }}>
+          {/* <DotGrid
+            dotSize={2}
+            gap={15}
+            baseColor="#5227FF"
+            activeColor="#5227FF"
+            proximity={120}
+            shockRadius={300}
+            shockStrength={5}
+            resistance={750}
+            returnDuration={1.5}
+          /> */}
+{/* 
           <Particles
             particleColors={['#000', '#000']}
             particleCount={10000}
@@ -33,8 +32,9 @@ const Layout: React.FC = () => {
             moveParticlesOnHover={true}
             alphaParticles={false}
             disableRotation={false}
-          />
-        </div> */}
+          /> */}
+        </div>
+
         {/* <div className="bg-zigzag repeat-video-container">
           <FadeContent blur={false} duration={1500} easing="ease-out" initialOpacity={0}>
             {[...Array(4)].map((_, i) => (
