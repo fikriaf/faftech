@@ -95,7 +95,7 @@ const LibraryModal: React.FC<{ musicList: Music[] }> = ({ musicList }) => {
                                 <FaPlay size={15} />
                             )}
                         </span>
-                        <span className="fw-medium col-8">
+                        <span className="fw-medium TitleMusic col-8">
                         {music.title}
                         </span>
                         <span className="text-center col-2">

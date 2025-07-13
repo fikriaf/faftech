@@ -66,4 +66,7 @@ select.form-select {
     max-height: 90vh;
     overflow-y: auto;
   }
+  .TitleMusic {
+    font-size: 0.7rem;
+  }
 }
