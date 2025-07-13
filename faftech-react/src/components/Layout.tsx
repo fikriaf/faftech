@@ -10,7 +10,7 @@ import "./styles/Layout.css"
 const Layout: React.FC = () => {
     return (
       <div className="layout-container">
-        <div className="bg-lain bg-black" style={{ width: '100%', height: '100%', position: 'absolute' }}>
+        <div className="bg-lain bg-light" style={{ width: '100%', height: '100%', position: 'absolute' }}>
           {/* <DotGrid
             dotSize={2}
             gap={15}

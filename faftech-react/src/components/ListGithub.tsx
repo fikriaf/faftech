@@ -21,7 +21,7 @@ const ListGithubSection: React.FC = () => {
         <a
         key={idx}
         className="cat-item d-block bg-light h-100 text-center rounded p-3"
-        href={item.url}
+        href={item.html_url}
         target="_blank"
         rel="noopener noreferrer"
         style={{ textDecoration: "none" }}

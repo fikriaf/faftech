@@ -1,5 +1,5 @@
 export type RepoSimple = {
-  url: string;
+  html_url: string;
   title: string;
   desc: string;
   tags: string[];
@@ -18,7 +18,7 @@ export async function fetchGitHubRepos(username: string): Promise<RepoSimple[]> 
   const data = await res.json();
 
   const result: RepoSimple[] = data.map((repo: any) => ({
-    url: repo.url,
+    html_url: repo.html_url,
     title: repo.name,
     desc: repo.description || "",
     tags: repo.topics || [],
