@@ -36,7 +36,7 @@ const LibraryModal: React.FC<{ musicList: Music[] }> = ({ musicList }) => {
                 <h5 className="modal-title fw-bold">🎧 Music Library</h5>
                 <div className="dropdown-hover ms-3">
                 <div className="dropdown-label BtnScale bg-secondary text-light px-3 py-2 rounded">
-                    🎧 Filter: {filter === "all" ? "Semua" : filter === "song" ? "Lagu" : "DJ (ssstik)"}
+                    🎧 Filter: {filter === "all" ? "Semua" : filter === "song" ? "Lagu" : "DJ"}
                 </div>
 
                 <ul className="dropdown-menu-hover list-group bg-dark text-light mt-1 rounded">

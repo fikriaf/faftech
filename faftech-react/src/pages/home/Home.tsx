@@ -1,9 +1,14 @@
+// 1. Library eksternal
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
-import PageWrapper from "../../components/PageWrapper";
 import Typed from "typed.js";
-import "./Home.css"
+
+// 2. CSS
+import "./Home.css";
+
+// 3. Komponen internal
+import PageWrapper from "../../components/PageWrapper";
 import ListGithubSection from "../../components/ListGithub";
 import ListArticlesection from "../../components/ListArticles";
 import DropText from "../../components/DropText";
@@ -11,12 +16,15 @@ import TextPressure from "../../components/TextPressure";
 import RotatingText from "../../components/RotatingText";
 import AnimatedContent from "../../components/AnimateContent";
 import FadeContent from "../../components/FadeContent";
+
+// 4. Aset (gambar)
 import img1 from "../../assets/fikri.jpg";
 import img2 from "../../assets/fikri2.jpg";
 import img3 from "../../assets/ai1.webp";
 import img4 from "../../assets/kuantum1.webp";
 import img5 from "../../assets/kuantum2.webp";
 import fotoHima from "../../assets/fikri5.jpg";
+
 
 const Index: React.FC = () => {
     const images = [img1, img2, img3, img4, img5];
