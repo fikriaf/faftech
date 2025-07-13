@@ -22,6 +22,3 @@
     transition: .5s;
 }
 
-.cat-item:hover div * {
-    color: #0d6efd !important;
-}

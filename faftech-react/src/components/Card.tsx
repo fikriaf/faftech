@@ -1,26 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
 import "./styles/Card.css"
+import logoGithub from "../assets/github-logo.png"
 
 interface CardProps {
-    title?: string,
-    description?: string,
+    title?: string
+    description?: string
     img?: string
-    imgSource?: string,
+    tags?: any[]
+    imgSource?: string
     imgTools?: string
+    index?: number;
 }
 
-const Card: React.FC<CardProps> = ({title, description, img, imgSource, imgTools}) => {
+const Card: React.FC<CardProps> = ({title, description, img, tags, imgSource, imgTools}) => {
     return (
         <StyledWrapper>
-            <div className="main">
+            <div className="main" style={{minHeight: "15rem"}}>
                 <div className="w-100">
-                    <img src={img} alt="demo" style={{
+                    <img
+                    src={img}
+                    alt="demo"
+                    style={{
                         width: '100%',
                         aspectRatio: '16 / 9',
                         objectFit: 'cover',
-                        display: 'block'
-                    }} />
+                        display: 'block',
+                    }}
+                    onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement;
+                        target.src = logoGithub;
+                    }}
+                    />
                 </div>
                 <div className="data ms-2 mt-2">
                     <div className="imgCard">
@@ -31,12 +42,15 @@ const Card: React.FC<CardProps> = ({title, description, img, imgSource, imgTools
                     </div>
                 </div>
                 <hr className='mx-2 my-2 text-dark' />
-                <div className="text_s text-center px-1" style={{minHeight: "2rem"}}>{description}</div>
-                <div className="btns">
-                    <div className="tag bg-light">
-                        <img className="tag_svg" src={imgTools} />
-                        <span className="tag_text">22</span>
-                    </div>
+                <div className="text_s text-center px-1">{description}</div>
+                <div className='row g-1 p-0 m-0'>
+                    {tags?.map((tag, index) => (
+                        <div className="col-md-4 m-0">
+                            <button className="tag btn btn-secondary w-100 p-0">
+                                <span className="text-light tag_text">{tag}</span>
+                            </button>
+                        </div>
+                    ))}
                 </div>
             </div>
         </StyledWrapper>

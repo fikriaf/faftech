@@ -4,7 +4,7 @@ import { play, audio } from "../services/music";
 import "./styles/LibraryModal.css";
 import { usePlayerStore } from "./UsePlayerStore";
 import { useMusicPlayer } from "./MusicPlayer";
-import { ListMusic } from "lucide-react";
+import { FaPlay, FaPause } from 'react-icons/fa';
 
 type Music = {
     id: number;
@@ -88,13 +88,17 @@ const LibraryModal: React.FC<{ musicList: Music[] }> = ({ musicList }) => {
                         backgroundColor: idx % 2 === 0 ? "#212529" : "#494a4bff", // bg-dark vs bg-secondary
                         }}
                     >
+                        <span className="col-1 p-0 m-0">
+                            {currentTrack?.id === music.id ? (
+                                <FaPause size={15} />
+                            ) : (
+                                <FaPlay size={15} />
+                            )}
+                        </span>
                         <span className="fw-medium col-8">
                         {music.title}
-                        {isDJ(music.title) && (
-                            <span className="badge bg-warning text-dark ms-2">DJ</span>
-                        )}
                         </span>
-                        <span className="text-center col-3">
+                        <span className="text-center col-2">
                             {currentTrack?.id === music.id && (
                                 <span>🎵</span>
                             )}

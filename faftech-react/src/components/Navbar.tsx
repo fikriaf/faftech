@@ -105,10 +105,10 @@ const Navbar: React.FC = () => {
                                         <div className="col-md-12 col-xl-12">
                                         <div className="card" style={{ borderRadius: "15px", border: "none", backgroundColor: "#f8f9fa" }}>
                                             <div className="card-body text-center text-dark">
-                                                <div className="mt-2 mb-4">
+                                                {/* <div className="mt-2 mb-4">
                                                     <img src={profileImg} className="rounded-circle img-fluid" style={{ width: "100px" }} alt="profile" />
                                                 </div>
-                                                
+                                                 */}
                                                 <p className="text-muted mb-3" style={{ fontSize: "0.9rem" }}>
                                                     {currentTrack?.title || musicList?.[0]?.title || "Tidak ada lagu"}
                                                 </p>

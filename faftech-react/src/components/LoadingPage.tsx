@@ -2,12 +2,17 @@ import { div } from 'framer-motion/client';
 import React from 'react';
 import styled from 'styled-components';
 
-const Loader = () => {
+type LoaderProps = {
+  text?: string;
+};
+
+const Loader: React.FC<LoaderProps> = ({ text = "" }) => {
   return (
     <>
-        <div className='w-100 vh-100 d-flex align-items-center justify-content-center'>
+        <div className="w-100 vh-100 d-flex align-items-center justify-content-center">
+          <div className="d-flex flex-column justify-content-center">
             <StyledWrapper>
-            <div className="honeycomb">
+              <div className="honeycomb">
                 <div />
                 <div />
                 <div />
@@ -15,9 +20,12 @@ const Loader = () => {
                 <div />
                 <div />
                 <div />
-            </div>
+              </div>
             </StyledWrapper>
+            <div className="text-dark mt-5">{text}</div>
+          </div>
         </div>
+
     </>
   );
 }
@@ -62,7 +70,9 @@ const StyledWrapper = styled.div`
   .honeycomb {
     height: 24px;
     position: relative;
-    width: 24px;
+    width: 56px; /* atau 60px lebih aman */
+  margin: 0 auto; 
+    
   }
 
   .honeycomb div {
