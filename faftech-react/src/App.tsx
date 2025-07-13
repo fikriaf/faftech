@@ -23,52 +23,44 @@ function App() {
     const onLoad = () => setReady(true);
 
     if (document.readyState === 'complete') {
-        // Sudah selesai loading (misalnya buka dari tab baru)
         setReady(true);
       } else {
-        // Tunggu sampai semua resource benar-benar selesai
         window.addEventListener('load', onLoad);
         
         return () => window.removeEventListener('load', onLoad);
       }
   }, []);
 
-  // 🔁 Update titik setiap 500ms
   useEffect(() => {
     const interval = setInterval(() => {
       setDotIndex(prev => (prev % 3) + 1);
     }, 500);
     return () => clearInterval(interval);
   }, []);
+
   useEffect(() => {
     let current = 0;
     let intervalTime = 600;
-    let timer: ReturnType<typeof setTimeout>;
+    let interval: ReturnType<typeof setInterval>;
 
-    function updateFake() {
-      // Jika data asli sudah datang
+    interval = setInterval(() => {
       if (musicList.length > 0) {
-        // Percepat animasi hingga mencapai jumlah asli
         if (current < musicList.length) {
-          current += Math.ceil((musicList.length - current) / 4); // percepat!
+          current += Math.ceil((musicList.length - current) / 4);
           setFakeLength(current);
-          timer = setTimeout(updateFake, 50); // super cepat
         } else {
+          clearInterval(interval);
           setFakeLength(musicList.length);
         }
       } else {
-        // Kalau masih loading asli, buat fake-nya naik lambat → cepat
         current += 1;
         setFakeLength(current);
-        intervalTime = Math.max(100, intervalTime * 0.9); // semakin cepat
-        timer = setTimeout(updateFake, intervalTime);
+        intervalTime = Math.max(100, intervalTime * 0.9);
       }
-    }
+    }, 100);
 
-    updateFake();
-
-    return () => clearTimeout(timer);
-  }, [musicList]);
+    return () => clearInterval(interval);
+  }, []);
 
   const dots = '.'.repeat(dotIndex);
   const isMusicReady = musicList.length > 0;
