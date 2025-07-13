@@ -6,6 +6,7 @@ import CurvedLoop from "../../components/CurvedLoop";
 import MyImage from "../../assets/fikri2.jpg"
 import MyImageNoBg from "../../assets/fikri2-Photoroom.png"
 import ProfileCard from "../../components/ProfileCard";
+import { FaEnvelope, FaBloggerB, FaLinkedin, FaInstagram, FaDiscord } from 'react-icons/fa';
 
 const About: React.FC = () => {
     const categorizedTools = {
@@ -67,52 +68,45 @@ const About: React.FC = () => {
         <PageWrapper direction="right">
             <div className="container-fluid contain d-flex flex-column">
                 <div className="container mt-5 d-grid gap-5">
-                    <div className="text-end mb-3 top-sosial">
-                        <a href="mailto:fikriarmia27@gmail.com">
-                            <img
-                            src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"
-                            alt="Email"
-                            />
+                    <div className="text-end mb-3 top-sosial d-flex justify-content-end gap-2 flex-wrap">
+                        <a href="mailto:fikriarmia27@gmail.com" className="btn btn-danger" title="Email">
+                            <FaEnvelope /> Gmail
                         </a>
                         <a
                             href="https://osc.medcom.id/community/author/barayaroas@gmail.com"
                             target="_blank"
                             rel="noopener noreferrer"
+                            className="btn btn-warning"
+                            title="Blogger"
                         >
-                            <img
-                            src="https://img.shields.io/badge/Blogger-FF5722?style=for-the-badge&logo=blogger&logoColor=white"
-                            alt="Blogger"
-                            />
+                            <FaBloggerB /> Blogger
                         </a>
                         <a
                             href="https://linkedin.com/in/fikri-armia-fahmi-b373b3288"
                             target="_blank"
                             rel="noopener noreferrer"
+                            className="btn btn-primary"
+                            title="LinkedIn"
                         >
-                            <img
-                            src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
-                            alt="LinkedIn"
-                            />
+                            <FaLinkedin /> LinkedIn
                         </a>
                         <a
                             href="https://www.instagram.com/fikriaf27"
                             target="_blank"
                             rel="noopener noreferrer"
+                            className="btn btn-danger"
+                            title="Instagram"
                         >
-                            <img
-                            src="https://img.shields.io/badge/Instagram-%23E4405F?style=for-the-badge&logo=Instagram&logoColor=white"
-                            alt="Instagram"
-                            />
+                            <FaInstagram /> Instagram
                         </a>
                         <a
                             href="https://discord.gg/fighterfire0346"
                             target="_blank"
                             rel="noopener noreferrer"
+                            className="btn btn-secondary"
+                            title="Discord"
                         >
-                            <img
-                            src="https://img.shields.io/badge/Discord-%235865F2?style=for-the-badge&logo=discord&logoColor=white"
-                            alt="Discord"
-                            />
+                            <FaDiscord /> Discord
                         </a>
                     </div>
 

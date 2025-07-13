@@ -20,17 +20,17 @@ function App() {
   const [fakeLength, setFakeLength] = useState(0);
 
   useEffect(() => {
-  const onLoad = () => setReady(true);
+    const onLoad = () => setReady(true);
 
-  if (document.readyState === 'complete') {
-      // Sudah selesai loading (misalnya buka dari tab baru)
-      setReady(true);
-    } else {
-      // Tunggu sampai semua resource benar-benar selesai
-      window.addEventListener('load', onLoad);
-      
-      return () => window.removeEventListener('load', onLoad);
-    }
+    if (document.readyState === 'complete') {
+        // Sudah selesai loading (misalnya buka dari tab baru)
+        setReady(true);
+      } else {
+        // Tunggu sampai semua resource benar-benar selesai
+        window.addEventListener('load', onLoad);
+        
+        return () => window.removeEventListener('load', onLoad);
+      }
   }, []);
 
   // 🔁 Update titik setiap 500ms
