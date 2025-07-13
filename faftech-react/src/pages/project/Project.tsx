@@ -26,7 +26,7 @@ const Project: React.FC = () => {
                         <TrueFocus
                             sentence="My Project"
                             manualMode={false}
-                            blurAmount={5}
+                            blurAmount={0}
                             borderColor="var(--primary)"
                             animationDuration={2}
                             pauseBetweenAnimations={1}
