@@ -10,7 +10,7 @@ import "./styles/Layout.css"
 const Layout: React.FC = () => {
     return (
       <div className="layout-container">
-        {/* <div style={{ width: '100%', height: '100%', position: 'absolute' }}>
+        <div style={{ width: '100%', height: '100%', position: 'absolute' }}>
         <DotGrid
           dotSize={2}
           gap={15}
@@ -22,7 +22,7 @@ const Layout: React.FC = () => {
           resistance={750}
           returnDuration={1.5}
         />
-      </div> */}
+      </div>
         {/* <div style={{ width: '100%', height: '100%', position: 'absolute' }}>
           <Particles
             particleColors={['#000', '#000']}
@@ -35,7 +35,7 @@ const Layout: React.FC = () => {
             disableRotation={false}
           />
         </div> */}
-        <div className="bg-zigzag repeat-video-container">
+        {/* <div className="bg-zigzag repeat-video-container">
           <FadeContent blur={false} duration={1500} easing="ease-out" initialOpacity={0}>
             {[...Array(4)].map((_, i) => (
               <video
@@ -49,7 +49,7 @@ const Layout: React.FC = () => {
               />
             ))}
           </FadeContent>
-        </div>
+        </div> */}
 
         <Navbar />
         <div className="main-content">
