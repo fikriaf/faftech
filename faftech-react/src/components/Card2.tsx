@@ -62,7 +62,10 @@ const StyledWrapper = styled.div`
         display: flex;
         justify-content: flex-end;
         opacity: 0;
+        top: 0;
+        right: 0;
         transition: .2s ease-in-out;
+        z-index: 2;
     }
 
     .fl:hover .fullscreen {
@@ -278,7 +281,7 @@ const StyledWrapper = styled.div`
         display: flex;
         width: 100%;
         margin-top: -3.5em;
-        height: 10em;
+        height: 13em;
         align-items: center;
         justify-content: center;
         border-radius: 0.5rem;
@@ -288,7 +291,7 @@ const StyledWrapper = styled.div`
     
     .card_content img {
         position: absolute;
-        top: 0;
+        top: 4rem;
         left: 0;
         width: 100%;
         height: 100%;
