@@ -364,7 +364,7 @@ const StyledWrapper = styled.div`
 
         .card_content {
             margin-top: -4em;
-            height: 100%;
+            height: 15.5em;;
         }
     }`;
 
