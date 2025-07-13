@@ -45,7 +45,7 @@ const Card: React.FC<CardProps> = ({title, description, img, tags, imgSource, im
                 <div className="text_s text-center px-1">{description}</div>
                 <div className='row g-1 p-0 m-0'>
                     {tags?.map((tag, index) => (
-                        <div className="col-md-4 m-0">
+                        <div className="col-md-4 col-3 m-0">
                             <button className="tag btn btn-secondary w-100 p-0">
                                 <span className="text-light tag_text">{tag}</span>
                             </button>
