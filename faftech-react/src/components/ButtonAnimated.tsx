@@ -148,6 +148,27 @@ ul {
 .example-2 .icon-content a[data-social="Discord"] .filled,
 .example-2 .icon-content a[data-social="Discord"] ~ .tooltip {
     background-color: var(--secondary);
-}`;
+}
+    
+@media screen and (max-width: 480px) {
+    .example-2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+        gap: 0.2rem;
+        width: 100%;
+        padding: 0;
+    }
+
+    .example-2 .icon-content {
+        width: 100%;
+        margin: 0;
+    }
+
+    .example-2 .icon-content a {
+        width: 100%;  /* agar tombol isi grid penuh */
+        justify-content: center;
+    }
+}
+`;
 
 export default ButtonAnimated;

@@ -58,6 +58,7 @@ const StyledWrapper = styled.div`
     }
 
     .fl {
+        position: absolute;
         display: flex;
         justify-content: flex-end;
         opacity: 0;

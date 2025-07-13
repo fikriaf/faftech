@@ -13,6 +13,14 @@ const Project: React.FC = () => {
             url: "https://gpalytics-two.vercel.app/",
             image: "https://raw.githubusercontent.com/fikriaf/GPAlytics_FrontEnd/main/Preview.png",
             logo: "/logo.webp"
+        },
+        {
+            title: "wekker",
+            category: "Website",
+            tags: ["laravel", "filament", "mysql"],
+            url: "https://wekker.vercel.app",
+            image: "https://github.com/user-attachments/assets/5a729bd5-603c-49b4-b9e8-1f2d95930075",
+            logo: "https://raw.githubusercontent.com/fikriaf/wekker/refs/heads/main/public/wekker_dashboard/sources/logo/WEKKER.png"
         }
     ]
 
