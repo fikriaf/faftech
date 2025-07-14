@@ -17,18 +17,33 @@ const Project: React.FC = () => {
             content: [
                 {
                     name: "Dashboard",
-                    quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae cum itaque quam eveniet tenetur. Nostrum, possimus! Inventore omnis eaque non magnam? Molestias, earum tempore! Porro nam ea consectetur officiis quam? Fuga rem vero eos eius itaque magni libero! Obcaecati quam quia dolor ratione necessitatibus culpa explicabo, est a aliquid sunt numquam nisi consequuntur nostrum cum molestias incidunt odio blanditiis ab.",
+                    quote: "Tampilan dashboard GPAnalytics dirancang untuk memberikan gambaran menyeluruh tentang performa akademik pengguna. Di sisi kiri terdapat sidebar navigasi yang terdiri dari beberapa menu utama: Dashboard sebagai halaman beranda yang menampilkan ringkasan IPK dan IPS; Mahasiswa untuk mengakses data mahasiswa; Update Nilai guna memperbarui nilai akademik; Statistik Akademik untuk menampilkan analisis performa belajar; serta Support Center sebagai pusat bantuan. Di bagian atas dashboard utama, ditampilkan informasi penting seperti IPK terbaru, IPS saat ini, serta prediksi IPK berikutnya, lengkap dengan grafik perkembangan nilai dari semester ke semester. Di bawahnya, pengguna bisa melihat daftar mata kuliah yang sedang diambil beserta proporsi tugas, UTS, dan UAS. Terdapat pula fitur AI Consultant yang siap membantu secara otomatis, seperti membuat jadwal belajar atau menjelaskan konsep tertentu. Selain itu, dashboard juga menampilkan daftar mata kuliah dengan nilai tertinggi dan rekomendasi pembelajaran, yang membantu pengguna untuk fokus pada area pengembangan seperti algoritma dan pemrograman. Antarmukanya bersih, responsif, dan informatif, sangat membantu bagi mahasiswa dalam memantau dan meningkatkan performa akademik mereka.",
                     src: "https://raw.githubusercontent.com/fikriaf/GPAlytics_FrontEnd/main/Preview.png"
                 },
                 {
-                    name: "Dashboard",
-                    quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae cum itaque quam eveniet tenetur. Nostrum, possimus! Inventore omnis eaque non magnam? Molestias, earum tempore! Porro nam ea consectetur officiis quam? Fuga rem vero eos eius itaque magni libero! Obcaecati quam quia dolor ratione necessitatibus culpa explicabo, est a aliquid sunt numquam nisi consequuntur nostrum cum molestias incidunt odio blanditiis ab.",
-                    src: "https://raw.githubusercontent.com/fikriaf/GPAlytics_FrontEnd/main/Preview.png"
+                    name: "Chatbot",
+                    quote: "Fitur AI Chat Consultation menjadi salah satu keunggulan dari dashboard GPAnalytics. Fitur ini memungkinkan pengguna untuk berinteraksi langsung dengan model AI cerdas seperti DeepSeek-R1 70B untuk menjawab pertanyaan seputar pembelajaran, seperti penjelasan konsep AI, pembuatan jadwal belajar, atau analisis performa akademik secara otomatis. Tampilan AI chat ini sederhana dan modern, memberi pengalaman konseling akademik digital yang interaktif dan personal.",
+                    src: "https://raw.githubusercontent.com/fikriaf/GPAlytics_FrontEnd/main/Preview6.png"
                 },
                 {
-                    name: "Dashboard",
-                    quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae cum itaque quam eveniet tenetur. Nostrum, possimus! Inventore omnis eaque non magnam? Molestias, earum tempore! Porro nam ea consectetur officiis quam? Fuga rem vero eos eius itaque magni libero! Obcaecati quam quia dolor ratione necessitatibus culpa explicabo, est a aliquid sunt numquam nisi consequuntur nostrum cum molestias incidunt odio blanditiis ab.",
-                    src: "https://raw.githubusercontent.com/fikriaf/GPAlytics_FrontEnd/main/Preview.png"
+                    name: "Mahasiswa",
+                    quote: "Halaman Mahasiswa dalam GPAnalytics menampilkan informasi pribadi pengguna secara lengkap, termasuk nama, email, NIM, program studi, serta status dan angkatan. Di bagian tengah layar, terdapat ringkasan performa akademik yang terdiri dari IPK semester ini, mata kuliah dengan nilai terbaik, jumlah SKS yang telah ditempuh, dan prediksi tahun kelulusan. Semua informasi ini membantu pengguna untuk memantau progres studinya secara real time dan memahami sejauh mana mereka mendekati kelulusan.",
+                    src: "https://raw.githubusercontent.com/fikriaf/GPAlytics_FrontEnd/main/Preview2.png"
+                },
+                {
+                    name: "Update Nilai",
+                    quote: "Halaman Update Nilai memungkinkan pengguna untuk mengatur sendiri bobot penilaian pada setiap mata kuliah. Komponen penilaian seperti Tugas, UTS, UAS, dan Partisipasi bisa diubah sesuai kebutuhan dengan total bobot 100%. Selain itu, tersedia tabel konversi nilai numerik ke dalam skala IPK (4.0), yang dapat disesuaikan secara fleksibel. Di bagian bawah, riwayat perubahan bobot dan aturan konversi juga ditampilkan untuk menjaga transparansi dan pelacakan perubahan.",
+                    src: "https://raw.githubusercontent.com/fikriaf/GPAlytics_FrontEnd/main/Preview3.png"
+                },
+                {
+                    name: "Statistik Akademik",
+                    quote: "Pada halaman Statistik Akademik, pengguna disuguhkan berbagai data visual terkait perkembangan nilai selama beberapa semester. Grafik utama memperlihatkan tren nilai Tugas, UTS, dan UAS untuk masing-masing semester, disertai rata-rata nilai keseluruhan. Selain itu, bagian atas halaman juga menyajikan ringkasan berupa total mata kuliah, total SKS yang sudah ditempuh, dan nilai rata-rata keseluruhan. Halaman ini membantu mahasiswa untuk melakukan analisis mandiri terhadap performa akademiknya dari waktu ke waktu.",
+                    src: "https://raw.githubusercontent.com/fikriaf/GPAlytics_FrontEnd/main/Preview4.png"
+                },
+                {
+                    name: "Support Center",
+                    quote: "Sementara itu, halaman Support Center dirancang sebagai pusat bantuan interaktif. Di dalamnya terdapat panduan penggunaan aplikasi, penjelasan tentang cara input nilai, melihat grafik IPK, memanfaatkan fitur prediksi akademik, dan memahami rekomendasi yang diberikan oleh sistem. Ada pula bagian FAQ, kebijakan privasi, dan kontak pengembang jika pengguna membutuhkan bantuan lebih lanjut. Semua informasi di halaman ini disusun dengan bahasa yang ramah pengguna untuk mempermudah navigasi dan pemahaman sistem.",
+                    src: "https://raw.githubusercontent.com/fikriaf/GPAlytics_FrontEnd/main/Preview5.png"
                 }
             ]
         },
