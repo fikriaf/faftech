@@ -6,6 +6,7 @@ import logo from "../assets/logo-no-bg.png";
 import profileImg from "../assets/profile.png";
 import { getMusicList, play, pause, next, prev, audio } from "../services/music";
 import { useMusicPlayer } from "./MusicPlayer";
+import ButtonCV from "./ButtonCV";
 import { Play, Pause, SkipBack, SkipForward, Music } from "lucide-react";
 import GlareHover from "./GlareHover";
 import AnimatedContent from "./AnimateContent";
@@ -80,14 +81,14 @@ const Navbar: React.FC = () => {
                     </nav>
                     <div className="nav-profile d-flex gap-1 p-0 m-0">
                         <nav className="navbar navbar-expand-lg navbar-profile navbar-dark bg-transparent p-0 d-grid gap-1" style={{ transform: "skew(-20deg)" }}>
-                            <a href="/admin/login" className="btn btn-danger btn-glare rounded-0 px-4 py-0">
-                                <div className="mt-1 me-4" style={{ transform: "skew(20deg)", fontSize: "20px", fontWeight: 600 }}>
-                                    ADMIN
+                            <a className="btn btn-danger btn-glare rounded-0 px-4 py-0">
+                                <div className="mt-1 me-4" style={{ transform: "skew(20deg)", fontSize: "1.25rem", fontWeight: 600 }}>
+                                    THEME
                                 </div>
                             </a>
-                            <a href="/admin/login" className="btn btn-light btn-glare rounded-0 py-0">
-                                <div className="mt-1 ms-1" style={{ transform: "skew(20deg)", fontSize: "20px", fontWeight: 600 }}>
-                                    CRUD
+                            <a className="btn btn-light rounded-0 py-0">
+                                <div className="mt-1" style={{ transform: "skew(20deg)", fontSize: "1.25rem", fontWeight: 600 }}>
+                                    <ButtonCV />
                                 </div>
                             </a>
                         </nav>

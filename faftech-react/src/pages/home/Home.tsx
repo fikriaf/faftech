@@ -77,7 +77,7 @@ const Index: React.FC = () => {
                                             weight={true}
                                             italic={true}
                                             textColor="#000"
-                                            strokeColor="#ff0000"
+                                            strokeColor="#000"
                                             minFontSize={80}
                                         />
                                         </AnimatedContent>

@@ -12,7 +12,8 @@ const Project: React.FC = () => {
             tags: ["react", "ts", "express", "mongodb"],
             url: "https://gpalytics-two.vercel.app/",
             image: "https://raw.githubusercontent.com/fikriaf/GPAlytics_FrontEnd/main/Preview.png",
-            logo: "/logo.webp",
+            logo: "https://gpalytics-two.vercel.app/assets/logo-B8MVdj6B.png",
+            source: "https://github.com/fikriaf/GPAlytics_FrontEnd",
             content: [
                 {
                     name: "Dashboard",
@@ -32,12 +33,13 @@ const Project: React.FC = () => {
             ]
         },
         {
-            title: "wekker",
+            title: "Wekker",
             category: "Website",
             tags: ["laravel", "filament", "mysql"],
             url: "https://wekker.vercel.app",
             image: "https://github.com/user-attachments/assets/5a729bd5-603c-49b4-b9e8-1f2d95930075",
             logo: "https://raw.githubusercontent.com/fikriaf/wekker/refs/heads/main/public/wekker_dashboard/sources/logo/WEKKER.png",
+            source: "https://github.com/fikriaf/wekker",
             content: [
                 {
                     name: "Dashboard",
@@ -80,7 +82,7 @@ const Project: React.FC = () => {
                             <>
                             <div className="col-md-3 col-6" style={{height: "15rem"}}>
                                 <Card2 title={item.title} category={item.category} content={item.content}
-                                tags={item.tags} img={item.image} url={item.url} logo={item.logo} />
+                                tags={item.tags} img={item.image} url={item.url} logo={item.logo} source={item.source} />
                             </div>
                             </>
                         ))}

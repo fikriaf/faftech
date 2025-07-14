@@ -58,7 +58,7 @@ const colorDesignation = colors.designation ?? "#6b7280";
 const colorTestimony = colors.testimony ?? "#4b5563";
 const colorArrowBg = colors.arrowBackground ?? "#141414";
 const colorArrowFg = colors.arrowForeground ?? "#f1f1f7";
-const colorArrowHoverBg = colors.arrowHoverBackground ?? "#00a6fb";
+const colorArrowHoverBg = colors.arrowHoverBackground ?? "var(--primary)";
 const fontSizeName = fontSizes.name ?? "1.5rem";
 const fontSizeDesignation = fontSizes.designation ?? "0.925rem";
 const fontSizeQuote = fontSizes.quote ?? "1.125rem";
@@ -274,17 +274,19 @@ return (
     </div>
     <style>{`
         .testimonial-container {
-        width: 100%;
-        padding: 2rem;
+            width: 100%;
+            max-height: 100%
+            overflow-x: hidden;
+            padding: 2rem;
         }
         .testimonial-grid {
             display: grid;
             gap: 5rem;
         }
         .image-container {
-        position: relative;
-        width: 100%;
-        perspective: 1000px;
+            position: relative;
+            width: 100%;
+            perspective: 1000px;
         }
         .testimonial-image {
             position: absolute;
@@ -305,16 +307,16 @@ return (
             margin-bottom: 0.25rem;
         }
         .designation {
-        margin-bottom: 2rem;
+            margin-bottom: 2rem;
         }
         .quote {
             height: 11rem;
             overflow-y: auto;
         }
         .arrow-buttons {
-        display: flex;
-        gap: 1.5rem;
-        padding-top: 3rem;
+            display: flex;
+            gap: 1.5rem;
+            padding-top: 3rem;
         }
         .arrow-button {
         width: 2.7rem;
@@ -334,6 +336,8 @@ return (
         @media screen and (max-width: 480px) {
             .testimonial-container {
                 padding-bottom: 0;
+                overflow-x: hidden;
+                padding: 1rem;
             }
             .testimonial-grid {
                 gap: 2rem;

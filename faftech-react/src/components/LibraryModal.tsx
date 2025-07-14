@@ -4,7 +4,8 @@ import { play, audio } from "../services/music";
 import "./styles/LibraryModal.css";
 import { usePlayerStore } from "./UsePlayerStore";
 import { useMusicPlayer } from "./MusicPlayer";
-import { FaPlay, FaPause } from 'react-icons/fa';
+import Loader1 from "./Loader1";
+import { FaPlay, FaPause, FaTimes } from 'react-icons/fa';
 
 type Music = {
     id: number;
@@ -62,15 +63,14 @@ const LibraryModal: React.FC<{ musicList: Music[] }> = ({ musicList }) => {
                 </div>
                 <button
                 type="button"
-                className="btn-close p-2 me-2 btn-close-dark btn-dark btn text-light ms-auto"
+                className="d-flex p-2 me-2 btn-close-dark btn-dark btn text-light ms-auto"
                 data-bs-dismiss="modal"
-                aria-label="Close"
-                ></button>
+                ><FaTimes /></button>
             </div>
             <hr className="p-0 m-0" />
             <div className="modal-body">
                 {filteredMusic.length === 0 ? (
-                <div className="text-center py-4">Tidak ada lagu ditemukan.</div>
+                <div className="text-center py-4"><Loader1/></div>
                 ) : (
                 <ul className="list-group list-group-flush">
                     {filteredMusic.map((music, idx) => (

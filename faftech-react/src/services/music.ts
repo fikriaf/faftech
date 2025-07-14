@@ -23,7 +23,7 @@ export async function getMusicList() {
     }
 
     const json = await res.json();
-    musicList = json;
+    musicList = json.sort((a: Music, b: Music) => a.title.localeCompare(b.title));
     return musicList;
   } catch (err) {
     console.error("💥 Error saat fetch list:", err);

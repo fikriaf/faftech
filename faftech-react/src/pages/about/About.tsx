@@ -73,7 +73,7 @@ const About: React.FC = () => {
                         <ButtonAnimated />
                     </div>
 
-                    <div className="d-grid gap-5 nama">
+                    <div className="d-grid gap-5 nama overflow-x-hidden">
                         <h1 className="text-center">
                             <img
                             src="https://readme-typing-svg.herokuapp.com/?font=Oswald&size=35&color=0712FFFF&center=true&vCenter=true&width=600&height=70&duration=5000&lines=Hi;+I'm+🅵🅸🅺🆁🅸+🅰🆁🅼🅸🅰+🅵🅰🅷🅼🅸;"
@@ -93,9 +93,9 @@ const About: React.FC = () => {
 
                         <div className="mx-3 text-dark">
                             <CurvedLoop
-                            marqueeText="I Studied The Fields of ✦ Artificial Intelligence ✦ Backend Development ✦ Frontend Development"
+                            marqueeText="Artificial Intelligence ✦ Backend Development ✦ Frontend Development ✦"
                             speed={5}
-                            curveAmount={0}
+                            curveAmount={100}
                             direction="left"
                             interactive={true}
                             className="text-dark BgBlurNormal"
@@ -205,12 +205,14 @@ const About: React.FC = () => {
 
                 {/* Skills */}
                 <BackgroundCarousel title="Skills" />
-                <div className="accordion mb-3 mt-4 shadow" id="toolsAccordion">
-                    {Object.entries(categorizedTools).map(([category, tools], index) => (
+                <div className="accordion mb-3 mt-4 mx-5 shadow" id="toolsAccordion">
+                    {Object.entries(categorizedTools).map(([category, tools], index) => {
+                    const isLanguage = category === "languages";
+                    return (
                         <div className="accordion-item" key={category}>
                             <h2 className="accordion-header" id={`heading-${category}`}>
                                 <button
-                                className="accordion-button border-0 text-light bg-primary collapsed fw-bold"
+                                className={`accordion-button border-0 text-light bg-primary fw-bold ${isLanguage ? '' : 'collapsed'}`}
                                 type="button"
                                 data-bs-toggle="collapse"
                                 data-bs-target={`#collapse-${category}`}
@@ -222,7 +224,7 @@ const About: React.FC = () => {
                             </h2>
                             <div
                             id={`collapse-${category}`}
-                            className="accordion-collapse collapse"
+                            className={`accordion-collapse collapse ${isLanguage ? 'show' : ''}`}
                             aria-labelledby={`heading-${category}`}
                             data-bs-parent="#toolsAccordion"
                             >
@@ -236,7 +238,7 @@ const About: React.FC = () => {
                                             <div className="icons">
                                             <img src={tool.icon} alt={tool.name} width={45} height={45} />
                                             </div>
-                                            <p className="mt-1 mb-0" style={{ fontSize: "0.7rem" }}>
+                                            <p className="mt-1 mb-0" style={{ fontSize: "0.5rem" }}>
                                             <strong>{tool.name}</strong>
                                             </p>
                                         </div>
@@ -245,7 +247,7 @@ const About: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                    ))}
+                    )})}
                 </div>
 
                 <div>
