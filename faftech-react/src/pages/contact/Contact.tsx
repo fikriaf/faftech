@@ -5,7 +5,6 @@ import { FaEnvelope, FaWhatsapp, FaGithub, FaLinkedin } from 'react-icons/fa';
 import "./Contact.css";
 
 const Contact: React.FC = () => {
-
   return (
     <PageWrapper direction="right">
         {/* CONTENT */}
@@ -58,7 +57,6 @@ const Contact: React.FC = () => {
                 </div>
                 <FormRGB />
               </div>
-              
             </div>
         </div>
     </PageWrapper>
