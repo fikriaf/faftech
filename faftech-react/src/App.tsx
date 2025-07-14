@@ -11,6 +11,7 @@ import { audio } from './services/music';
 const Home = lazy(() => import('./pages/home/Home'));
 const About = lazy(() => import('./pages/about/About'));
 const Project = lazy(() => import('./pages/project/Project'));
+const Contact = lazy(() => import('./pages/contact/Contact'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
@@ -78,6 +79,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/project" element={<Project />} />
+            <Route path="/contact" element={<Contact />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
