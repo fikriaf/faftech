@@ -1,7 +1,7 @@
 import React from "react";
 import PageWrapper from "../../components/PageWrapper";
 import FormRGB from "../../components/FormRGB";
-import { FaEnvelope, FaWhatsapp, FaMapMarkerAlt, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaWhatsapp, FaGithub, FaLinkedin } from 'react-icons/fa';
 import "./Contact.css";
 
 const Contact: React.FC = () => {
