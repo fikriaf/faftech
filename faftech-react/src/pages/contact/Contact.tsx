@@ -2,7 +2,7 @@ import React from "react";
 import PageWrapper from "../../components/PageWrapper";
 import FormRGB from "../../components/FormRGB";
 import { FaEnvelope, FaWhatsapp, FaGithub, FaLinkedin } from 'react-icons/fa';
-import "./Contact.css";
+import "./contact.css";
 
 const Contact: React.FC = () => {
   return (
