@@ -195,7 +195,7 @@ const Index: React.FC = () => {
                 </div>
             </div>
 
-            <div className="container-xxl py-5">
+            <div className="container-xxl py-3 pt-5">
                 <div className="container">
                     {/* List Github Repo */}
                     <div
@@ -232,42 +232,45 @@ const Index: React.FC = () => {
                         </p>
                     </div>
                     <ListGithubSection />
+                </div>
+            </div>
 
-                    <hr />
-                    
-                    {/* List Articles */}
-                    <div
-                        className="text-center w-100 mx-auto mt-5 mb-5 wow fadeInUp"
-                        id="osc-article-section"
-                        data-wow-delay="0.1s"
-                        style={{ fontFamily: "Heebo",
-                            backdropFilter: 'blur(10px)',
-                            backgroundColor: 'rgba(255, 255, 255, 0.3)',
-                            padding: '0.5rem',
-                            borderRadius: '0.5rem',
-                            borderBottom: "2px solid #0d6efd"
-                        }}
-                    >
-                        <h1 className="mb-3">
-                            Articles <RotatingText
-                            texts={['OSC', 'Kumparan', 'Geotimes', 'GNFI']}
-                            mainClassName="px-2 sm:px-2 md:px-3 bg-primary d-inline-flex text-light overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded rounded-lg"
-                            staggerFrom={"last"}
-                            initial={{ y: "100%" }}
-                            animate={{ y: 0 }}
-                            exit={{ y: "-120%" }}
-                            staggerDuration={0.025}
-                            splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-                            transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                            rotationInterval={2000}
-                            />
-                        </h1>
-                        <p>
-                        Berikut ini artikel-artikel saya yang sudah publish di media OSC Community, Kumparan, Geotimes, dan GNFI.
-                        </p>
+            <div className="bg-white py-4 my-2 pt-2">
+                <div className="container-xxl">
+                    <div className="container">
+                        {/* List Articles */}
+                        <div
+                            className="text-center w-100 mx-auto mt-5 mb-5 wow fadeInUp"
+                            id="osc-article-section"
+                            data-wow-delay="0.1s"
+                            style={{ fontFamily: "Heebo",
+                                backdropFilter: 'blur(10px)',
+                                backgroundColor: 'rgba(255, 255, 255, 0.3)',
+                                padding: '0.5rem',
+                                borderRadius: '0.5rem',
+                                borderBottom: "2px solid #0d6efd"
+                            }}
+                        >
+                            <h1 className="mb-3">
+                                Articles <RotatingText
+                                texts={['OSC', 'Kumparan', 'Geotimes', 'GNFI']}
+                                mainClassName="px-2 sm:px-2 md:px-3 bg-primary d-inline-flex text-light overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded rounded-lg"
+                                staggerFrom={"last"}
+                                initial={{ y: "100%" }}
+                                animate={{ y: 0 }}
+                                exit={{ y: "-120%" }}
+                                staggerDuration={0.025}
+                                splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                                transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                                rotationInterval={2000}
+                                />
+                            </h1>
+                            <p>
+                            Berikut ini artikel-artikel saya yang sudah publish di media OSC Community, Kumparan, Geotimes, dan GNFI.
+                            </p>
+                        </div>
+                        <ListArticlesection />
                     </div>
-                    <ListArticlesection />
-
                 </div>
             </div>
 

@@ -1,11 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import { BiFile } from 'react-icons/bi';
 
 const ButtonCV = () => {
 return (
     <StyledWrapper>
     <div className="download-button bg-transparent">
-        MY CV
+        <div className='d-flex justify-content-center align-items-center gap-1 p-0 m-0'>
+            <BiFile className='mb-1' />
+            <span className='p-0 m-0'> CV</span>
+        </div>
+
         {/* <div className="docs bg-white d-flex align-items-center">
             <span className='p-0 mt-1'>MY CV</span>
         </div> */}
