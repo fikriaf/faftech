@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
         {/* CONTENT */}
         <div className="container-fluid bg-transparent">
             <div className="container my-5">
-              <div className="d-md-flex gap-5 justify-content-center">
+              <div className="d-md-flex d-grid gap-5 justify-content-center">
                 <div className="d-flex flex-column gap-3">
                   <div>
                     <h1>Let's Connect</h1>
