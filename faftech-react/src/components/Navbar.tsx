@@ -8,6 +8,7 @@ import { getMusicList, play, pause, next, prev, audio } from "../services/music"
 import { useMusicPlayer } from "./MusicPlayer";
 import ButtonCV from "./ButtonCV";
 import { Play, Pause, SkipBack, SkipForward, Music } from "lucide-react";
+import { FaMusic } from "react-icons/fa";
 import GlareHover from "./GlareHover";
 import AnimatedContent from "./AnimateContent";
 import "./styles/Navbar.css"
@@ -98,45 +99,43 @@ const Navbar: React.FC = () => {
                                 <img src={profileImg} style={{ width: "30px" }} alt="profile" />
                             </a>
                             <span className="tambahan-nav" style={{ position: "absolute", left: "-15px", top: 0, bottom: 0, width: "50px", background: "inherit", transform: "skewX(-20deg)" }}></span>
-                            <ul className="dropdown-menu dropdown-menu-end fade bg-white" aria-labelledby="profileDropdown">
+                            <ul className="dropdown-menu dropdown-menu-end fade bg-dark" aria-labelledby="profileDropdown">
                                 <li>
-                                <section className="bg-white">
-                                    <div className="container">
+                                <section className="bg-dark">
                                     <div className="row d-flex justify-content-center align-items-center">
                                         <div className="col-md-12 col-xl-12">
-                                        <div className="card" style={{ borderRadius: "15px", border: "none", backgroundColor: "#f8f9fa" }}>
-                                            <div className="card-body text-center text-dark">
+                                        <div className="p-3 bg-dark" style={{ borderRadius: "0.5rem", border: "none" }}>
+                                            <div className="card-body text-center text-light">
                                                 {/* <div className="mt-2 mb-4">
                                                     <img src={profileImg} className="rounded-circle img-fluid" style={{ width: "100px" }} alt="profile" />
                                                 </div>
                                                  */}
-                                                <p className="text-muted mb-3" style={{ fontSize: "0.9rem" }}>
+                                                <p className="text-warning fw-semibold mb-3" style={{ fontSize: "0.7rem", fontFamily: "Heebo", letterSpacing: "1px" }}>
                                                     {currentTrack?.title || musicList?.[0]?.title || "Tidak ada lagu"}
                                                 </p>
 
-                                                <div className="progress my-2" style={{ height: "4px", backgroundColor: "#dee2e6" }}>
+                                                <div className="progress my-2" style={{ height: "5px"}}>
                                                 <div
                                                     className="progress-bar"
                                                     role="progressbar"
                                                     style={{
                                                     width: `${progressPercent}%`,
-                                                    backgroundColor: "#343a40",
                                                     }}
                                                 ></div>
                                                 </div>
 
-                                                <p className="text-muted m-0 p-0" style={{ fontSize: "0.75rem" }}>
+                                                <p className="text-primary m-0 p-0" style={{ fontSize: "0.75rem" }}>
                                                 {formatTime(currentTime)} / {formatTime(duration)}
                                                 </p>
 
                                                 <div className="icon-control-group d-flex justify-content-center align-items-center gap-3 mt-1">
-                                                    <button onClick={() => handleMusic('prev')} className="btn btn-light border-0">
+                                                    <button onClick={() => handleMusic('prev')} className="btn btn-outline-primary border-0">
                                                         <SkipBack size={20} />
                                                     </button>
                                                     <button
                                                     onClick={() => handleMusic('playANDpause')}
-                                                    className="btn btn-dark rounded-circle"
-                                                    style={{ width: "45px", height: "45px" }}
+                                                    className="btn btn-primary p-0 rounded-circle"
+                                                    style={{ width: "2.5rem", height: "2.5rem" }}
                                                     >
                                                     {isPlaying ? (
                                                         <Pause size={22} color="#fff" />
@@ -144,14 +143,14 @@ const Navbar: React.FC = () => {
                                                         <Play size={22} color="#fff" />
                                                     )}
                                                     </button>
-                                                    <button onClick={() => handleMusic('next')} className="btn btn-light border-0">
+                                                    <button onClick={() => handleMusic('next')} className="btn btn-outline-primary border-0">
                                                         <SkipForward size={20} />
                                                     </button>
                                                 </div>
 
                                                 <div className="icon-control-group d-flex justify-content-between text-center mt-3">
                                                     <button
-                                                className="btn btn-outline-dark w-100 btn-rounded btn-md"
+                                                className="btn btn-outline-primary w-100 btn-rounded btn-md"
                                                 data-bs-toggle="modal"
                                                 data-bs-target="#libraryModal"
                                                 style={{ fontFamily: "Heebo" }}
@@ -162,7 +161,6 @@ const Navbar: React.FC = () => {
                                             </div>
                                         </div>
                                         </div>
-                                    </div>
                                     </div>
                                 </section>
                                 </li>

@@ -145,7 +145,7 @@ const StyledWrapper = styled.div`
         width: 100%;
         aspect-ratio: 16 / 11.7;
         height: auto;
-        background-color: rgba(30, 31, 38, 0.575);
+        background-color: var(--secondary);
         border-radius: 0.5rem;
         margin-top: 1rem;
         margin-left: 0.7rem;

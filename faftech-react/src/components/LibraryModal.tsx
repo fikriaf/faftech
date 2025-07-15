@@ -5,7 +5,7 @@ import "./styles/LibraryModal.css";
 import { usePlayerStore } from "./UsePlayerStore";
 import { useMusicPlayer } from "./MusicPlayer";
 import Loader1 from "./Loader1";
-import { FaPlay, FaPause, FaTimes } from 'react-icons/fa';
+import { FaPlay, FaPause, FaTimes, FaMusic } from 'react-icons/fa';
 
 type Music = {
     id: number;
@@ -40,21 +40,21 @@ const LibraryModal: React.FC<{ musicList: Music[] }> = ({ musicList }) => {
                     🎧 Filter: {filter === "all" ? "Semua" : filter === "song" ? "Lagu" : "DJ"}
                 </div>
 
-                <ul className="dropdown-menu-hover list-group bg-dark text-light mt-1 rounded">
+                <ul className="dropdown-menu-hover list-group bg-dark text-light rounded">
                     <li
-                    className="list-group-item list-group-item-action bg-dark text-light"
+                    className="list-group-item m-0 list-group-item-action bg-dark text-light"
                     onClick={() => setFilter("all")}
                     >
                     🎶 Semua
                     </li>
                     <li
-                    className="list-group-item list-group-item-action bg-dark text-light"
+                    className="list-group-item m-0 list-group-item-action bg-dark text-light"
                     onClick={() => setFilter("song")}
                     >
                     🎵 Lagu
                     </li>
                     <li
-                    className="list-group-item list-group-item-action bg-dark text-light"
+                    className="list-group-item m-0 list-group-item-action bg-dark text-light"
                     onClick={() => setFilter("dj")}
                     >
                     🎧 DJ
@@ -88,6 +88,7 @@ const LibraryModal: React.FC<{ musicList: Music[] }> = ({ musicList }) => {
                         backgroundColor: idx % 2 === 0 ? "#212529" : "#494a4bff", // bg-dark vs bg-secondary
                         }}
                     >
+                        <div className={`w-100 row text-center ${currentTrack?.id === music.id ? "text-primary" : "text-light"}`}>
                         <span className="col-1 p-0 m-0">
                             {currentTrack?.id === music.id ? (
                                 <FaPause size={15} />
@@ -95,15 +96,16 @@ const LibraryModal: React.FC<{ musicList: Music[] }> = ({ musicList }) => {
                                 <FaPlay size={15} />
                             )}
                         </span>
-                        <span className="fw-medium TitleMusic col-8">
+                        <span className="fw-medium text-start TitleMusic col-8">
                         {music.title}
                         </span>
                         <span className="text-center col-2">
                             {currentTrack?.id === music.id && (
-                                <span>🎵</span>
+                                <FaMusic />
                             )}
                         </span>
-                        <small className="text-light col-1">{music.duration}</small>
+                        <small className="col-1">{music.duration}</small>
+                        </div>
                     </li>
                     ))}
                 </ul>

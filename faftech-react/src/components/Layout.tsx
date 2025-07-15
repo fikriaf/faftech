@@ -53,7 +53,6 @@ const Layout: React.FC = () => {
         </div> */}
 
         <Navbar />
-        <Breadcrumbs />
         <div className="main-content">
           <Outlet />
         </div>

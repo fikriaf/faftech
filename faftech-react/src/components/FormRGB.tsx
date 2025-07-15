@@ -6,17 +6,17 @@ import InputWrapper from './InputWrapper';
 const FormRGB = () => {
 return (
     <StyledWrapper>
-    <div className="form-container">
+    <div className="form-container h-100">
         <form className="form">
-        <div className="">
-            <label htmlFor="email">Email</label>
-            <InputWrapper placeholder='Type Here' type='email' />
-        </div>
-        <div className="form-group">
-            <label htmlFor="textarea">Type below for question/suggestion</label>
-            <textarea name="textarea" id="textarea" rows={10} cols={50} required defaultValue={""} />
-        </div>
-        <ButtonGlow text='Submit' />
+            <div className="">
+                <label htmlFor="email">Email</label>
+                <InputWrapper placeholder='Type Here' type='email' />
+            </div>
+            <div className="form-group">
+                <label htmlFor="textarea">Type below for question/suggestion</label>
+                <textarea name="textarea" id="textarea" rows={10} cols={50} required defaultValue={""} />
+            </div>
+            <ButtonGlow text='Submit' />
         </form>
     </div>
     </StyledWrapper>
@@ -47,7 +47,8 @@ const StyledWrapper = styled.div`
 .form-container .form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify: space-between;
+    gap: 2rem;
 }
 
 .form-container .form-group {

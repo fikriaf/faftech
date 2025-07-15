@@ -8,15 +8,15 @@ const Contact: React.FC = () => {
   return (
     <PageWrapper direction="right">
         {/* CONTENT */}
-        <div className="container-fluid min-vh-100 bg-transparent">
-            <div className="container my-5">
-              <div className="d-md-flex d-grid gap-5 justify-content-center">
+        <div className="container-fluid p-0 min-vh-100 bg-transparent fw-semibold" style={{fontFamily: "Heebo"}}>
+            <div className="container my-md-5 shadow p-5">
+              <div className="d-md-flex d-grid gap-4 justify-content-center">
                 <div className="d-flex flex-column gap-3">
-                  <div>
+                  <div className="d-grid gap-3">
                     <h1>Let's Connect</h1>
                     <span>I'm always excited to work on new projects and collaborate with amazing people. Feel free to reach out if you have any questions or just want to say hello!</span>
                   </div>
-                  <div className="row g-2 ButtonConnect">
+                  <div className="row g-1 gap-3 ButtonConnect">
                     <a className="col-12 col-sm-6 btn text-danger btn-light d-flex align-items-center gap-4 p-4 shadow"
                     href="mailto:fikriarmia27@gmail.com"
                     >
@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
                         <span>fikriarmia27@gmail.com</span>
                       </div>
                     </a>
-                    <a className="col-12 col-sm-6 btn text-success btn-light d-flex align-items-center gap-4 p-4 shadow"
+                    <a className="col-12 col-sm-5 btn text-success btn-light d-flex align-items-center gap-4 p-4 shadow"
                     href="https://wa.me/62895348505284" target="_blank"
                     >
                       <FaWhatsapp size={30} />
@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
                         <span>wa.me/62895348505284</span>
                       </div>
                     </a>
-                    <a className="col-12 col-sm-6 btn text-dark btn-light d-flex align-items-center gap-4 p-4 shadow"
+                    <a className="col-12 col-sm-5 btn text-dark btn-light d-flex align-items-center gap-4 p-4 shadow"
                     href="https://github.com/fikriaf" target="_blank"
                     >
                       <FaGithub size={30} />
