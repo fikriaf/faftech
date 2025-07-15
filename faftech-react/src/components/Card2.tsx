@@ -55,7 +55,7 @@ const Card: React.FC<CardProps> = ({title, category, tags, img, url, logo, sourc
                     className="fullscreen"
                     href={url} target="_blank" 
                     >
-                    <FaExternalLinkAlt className='text-light' />
+                    <FaExternalLinkAlt size={22} className='text-light' />
                     </a>
                 </div>
                 <div className="card_content"
@@ -93,9 +93,10 @@ const StyledWrapper = styled.div`
     /* CodePen Card */
 
     .card {
-        width: 15em;
+        width: 100%;
+        aspect-ratio: 16 / 9;
         height: auto;
-        border-radius: 7px;
+        border-radius: 0.5rem;
         cursor: pointer;
     }
 
@@ -119,12 +120,12 @@ const StyledWrapper = styled.div`
     }
 
     .fullscreen {
-        width: 1.5em;
-        height: 1.5em;
-        border-radius: 5px;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 0.5rem;
         background-color: #727890;
-        margin: 1em;
-        margin-right: 0.5em;
+        margin: 1rem;
+        margin-right: 0.5rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -133,49 +134,76 @@ const StyledWrapper = styled.div`
     }
 
     .fullscreen_svg {
-        width: 15px;
-        height: 15px;
+        width: 1rem;
+        height: 1rem;
         fill: rgb(177, 176, 176);
         transition: .2s ease-in-out;
     }
 
     .card_back {
         position: absolute;
-        width: 15em;
-        height: 13em;
+        width: 100%;
+        aspect-ratio: 16 / 11.7;
+        height: auto;
         background-color: rgba(30, 31, 38, 0.575);
-        border-radius: 7px;
+        border-radius: 0.5rem;
         margin-top: 1rem;
-        margin-left: 0.7em;
+        margin-left: 0.7rem;
         transition: .2s ease-in-out;
         z-index: -1;
+    }
+    
+    /* The Main Switch */
+
+    .card_content {
+        display: flex;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .card_content img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
     }
 
     .main:hover .card_back {
         margin-top: -0.2rem;
-        margin-left: 0em;
+        margin-left: 0;
         scale: 1.1;
-        height: 15.25em;
+        aspect-ratio: 16 / 14;
+        height: auto;
+        width: 100%;
         cursor: pointer;
     }
 
     .main:hover .fl {
         opacity: 1;
         cursor: pointer;
-        margin-right: 0.5em;
+        margin-right: 0.5rem;
     }
 
     .data {
         display: flex;
         flex-direction: row;
-        margin-top: 1em;
+        margin-top: 1rem;
     }
 
     .img {
-        width: 2.25em;
-        height: 2.25em;
+        width: 13%;
+        aspect-ratio: 1 / 1;
+        height: 13%;
         background-color: #252525;
-        border-radius: 5px;
+        border-radius: 0.5rem;
         overflow: hidden;
     }
 
@@ -195,11 +223,11 @@ const StyledWrapper = styled.div`
 
     .text_m {
         font-weight: bold;
-        font-size: 0.9em;
+        font-size: 1rem;
     }
 
     .text_s {
-        font-size: 0.7em;
+        font-size: 0.8rem;
     }
 
     .btns {
@@ -254,62 +282,28 @@ const StyledWrapper = styled.div`
 
 
 
-    /* The Main Switch */
-
-    .card_content {
-        display: flex;
-        width: 100%;
-        margin-top: -3.5em;
-        height: 13em;
-        align-items: center;
-        justify-content: center;
-        border-radius: 0.5rem;
-        overflow: hidden;
-        position: relative;
-    }
-    
-    .card_content img {
-        position: absolute;
-        top: 4rem;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 1;
-    }
-
     @media (max-width: 480px) {
         .main {
-            transform: scale(0.6);
             transform-origin: left;
         }
 
         .card {
-            width: 17em;
+            width: 100%;
             height: 11.5em;
         }
 
         .card_back {
-            width: 17em;
+            width: 100%;
             height: 15em;
         }
             
         .main:hover .card_back {
+            width: 100%;
             height: 17.5em;
         }
 
-        .fullscreen {
-            width: 2em;
-            height: 2em;
-        }
-
-        .fullscreen_svg {
-            width: 20px;
-            height: 20px;
-        }
-
         .text_m {
-            font-size: 0.9em;
+            font-size: 1rem;
         }
 
         .text_s {
@@ -335,8 +329,8 @@ const StyledWrapper = styled.div`
         }
 
         .card_content {
-            margin-top: -4em;
-            height: 15.5em;;
+            height: 100%;
+            width: 100%;
         }
     }`;
 

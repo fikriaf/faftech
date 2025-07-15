@@ -8,7 +8,7 @@ type LoaderProps = {
 
 const Loader: React.FC<LoaderProps> = ({ text = "" }) => {
   return (
-    <div className="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-white">
+    <div className="position-fixed w-100 h-100 d-flex justify-content-center align-items-center bg-white">
       <div className="d-flex flex-column align-items-center text-center">
         <StyledWrapper>
           <div className="honeycomb">
@@ -60,7 +60,7 @@ const StyledWrapper = styled.div`
   .honeycomb {
     height: 24px;
     position: relative;
-    width: 56px;
+    width: 1rem;
     margin: 0 auto;
   }
 

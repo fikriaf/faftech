@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
   return (
     <PageWrapper direction="right">
         {/* CONTENT */}
-        <div className="container-fluid bg-transparent">
+        <div className="container-fluid min-vh-100 bg-transparent">
             <div className="container my-5">
               <div className="d-md-flex d-grid gap-5 justify-content-center">
                 <div className="d-flex flex-column gap-3">

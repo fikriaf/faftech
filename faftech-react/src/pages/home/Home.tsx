@@ -16,6 +16,7 @@ import TextPressure from "../../components/TextPressure";
 import RotatingText from "../../components/RotatingText";
 import AnimatedContent from "../../components/AnimateContent";
 import FadeContent from "../../components/FadeContent";
+import ButtonAnimated2 from "../../components/ButtonAnimated2";
 
 // 4. Aset (gambar)
 import img1 from "../../assets/fikri.jpg";
@@ -113,7 +114,8 @@ const Index: React.FC = () => {
                             threshold={0.2}
                             delay={0.3}
                             >
-                            <Link to="/about" className="btn ms-2 BtnScale detail btn-primary py-3 px-5">Read More <span className="panahGo">&#8594;</span></Link>
+                            <ButtonAnimated2 text="Read More" link="/about" />
+                            {/* <Link to="/about" className="btn ms-2 BtnScale detail btn-primary py-3 px-5">Read More<span className="panahGo">&#8594;</span></Link> */}
                             </AnimatedContent>
                         </div>
                     </div>
@@ -122,7 +124,6 @@ const Index: React.FC = () => {
                         <div id="customBootstrapCarousel" className="carousel slide" data-bs-ride="carousel">
                             {/* <FadeContent blur={false} duration={100} easing="ease-out" initialOpacity={0}> */}
                                 <div className="carousel-inner">
-                                    
                                     {images.map((img, index) => (
                                     <div
                                         key={index}
@@ -300,7 +301,8 @@ const Index: React.FC = () => {
                             <p><i className="fa fa-check text-primary me-3"></i><strong>Frontend Development</strong></p>
                             <p><i className="fa fa-check text-primary me-3"></i><strong>Backend Development</strong></p>
                         </div>
-                        <a className="btn BtnScale detail btn-primary py-3 px-3 mt-3" href="./about/about.php">See The Project <span className="panahGo">&#8594;</span></a>
+                        <ButtonAnimated2 text="Go Project" link="/project" />
+                        {/* <a className="btn BtnScale detail btn-primary py-3 px-3 mt-3" href="./about/about.php">See The Project <span className="panahGo">&#8594;</span></a> */}
                     </div>
                 </div>
                 </div>

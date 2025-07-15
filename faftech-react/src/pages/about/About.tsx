@@ -7,7 +7,12 @@ import CurvedLoop from "../../components/CurvedLoop";
 import MyImage from "../../assets/fikri2.jpg"
 import MyImageNoBg from "../../assets/fikri2-Photoroom.png"
 import ProfileCard from "../../components/ProfileCard";
+import Card3 from "../../components/Card3";
 import { FaEnvelope, FaBloggerB, FaLinkedin, FaInstagram, FaDiscord } from 'react-icons/fa';
+import { FaCode, FaPuzzlePiece } from 'react-icons/fa';
+import { FiDatabase, FiTool } from 'react-icons/fi';
+import { MdDesignServices } from 'react-icons/md';
+import { FaLaptop } from 'react-icons/fa'
 
 const About: React.FC = () => {
     const categorizedTools = {
@@ -205,51 +210,57 @@ const About: React.FC = () => {
 
                 {/* Skills */}
                 <BackgroundCarousel title="Skills" />
-                <div className="accordion mb-3 mt-4 mx-5 shadow" id="toolsAccordion">
-                    {Object.entries(categorizedTools).map(([category, tools], index) => {
-                    const isLanguage = category === "languages";
-                    return (
-                        <div className="accordion-item" key={category}>
-                            <h2 className="accordion-header" id={`heading-${category}`}>
-                                <button
-                                className={`accordion-button border-0 text-light bg-primary fw-bold ${isLanguage ? '' : 'collapsed'}`}
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target={`#collapse-${category}`}
-                                aria-expanded="false"
-                                aria-controls={`collapse-${category}`}
+                <div className="container d-flex my-5 justify-content-center">
+                    <div className="row gap-md-5 gap-3 d-flex justify-content-center">
+                        <Card3 />
+                    </div>
+                </div>
+                <div className="bg-white py-4">
+                    <div className="accordion mb-3 mt-4 mx-5 shadow" id="toolsAccordion">
+                        {Object.entries(categorizedTools).map(([category, tools], index) => {
+                        const isLanguage = category === "languages";
+                        return (
+                            <div className="accordion-item" key={category}>
+                                <h2 className="accordion-header" id={`heading-${category}`}>
+                                    <button
+                                    className={`accordion-button border-0 text-light bg-primary fw-bold ${isLanguage ? '' : 'collapsed'}`}
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target={`#collapse-${category}`}
+                                    aria-expanded="false"
+                                    aria-controls={`collapse-${category}`}
+                                    >
+                                    {category.charAt(0).toUpperCase() + category.slice(1)}
+                                    </button>
+                                </h2>
+                                <div
+                                id={`collapse-${category}`}
+                                className={`accordion-collapse collapse ${isLanguage ? 'show' : ''}`}
+                                aria-labelledby={`heading-${category}`}
+                                data-bs-parent="#toolsAccordion"
                                 >
-                                {category.charAt(0).toUpperCase() + category.slice(1)}
-                                </button>
-                            </h2>
-                            <div
-                            id={`collapse-${category}`}
-                            className={`accordion-collapse collapse ${isLanguage ? 'show' : ''}`}
-                            aria-labelledby={`heading-${category}`}
-                            data-bs-parent="#toolsAccordion"
-                            >
-                                <div className="accordion-body border border-info">
-                                    <div className="row">
-                                        {tools.map((tool, i) => (
-                                        <div
-                                            key={i}
-                                            className="col-sm-1 col-3 skill bg-white d-grid align-items-center text-center py-2 border tool"
-                                        >
-                                            <div className="icons">
-                                            <img src={tool.icon} alt={tool.name} width={45} height={45} />
+                                    <div className="accordion-body border border-info">
+                                        <div className="row">
+                                            {tools.map((tool, i) => (
+                                            <div
+                                                key={i}
+                                                className="col-sm-1 col-3 skill bg-white d-grid align-items-center text-center py-2 border tool"
+                                            >
+                                                <div className="icons">
+                                                <img src={tool.icon} alt={tool.name} width={45} height={45} />
+                                                </div>
+                                                <p className="mt-1 mb-0" style={{ fontSize: "0.5rem" }}>
+                                                <strong>{tool.name}</strong>
+                                                </p>
                                             </div>
-                                            <p className="mt-1 mb-0" style={{ fontSize: "0.5rem" }}>
-                                            <strong>{tool.name}</strong>
-                                            </p>
+                                            ))}
                                         </div>
-                                        ))}
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    )})}
+                        )})}
+                    </div>
                 </div>
-
                 <div>
                     <h2 className="text-center d-block fw-bold w-100 bg-image bg-primary position-relative overflow-hidden py-4 mt-5">
                         Skill Analyze

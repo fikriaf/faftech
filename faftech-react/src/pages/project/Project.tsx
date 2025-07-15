@@ -2,6 +2,7 @@ import React from "react";
 import PageWrapper from "../../components/PageWrapper";
 import Card2 from "../../components/Card2";
 import TrueFocus from "../../components/TrueFocus";
+import "./Project.css"
 
 const Project: React.FC = () => {
 
@@ -78,8 +79,8 @@ const Project: React.FC = () => {
     return (
         <PageWrapper direction="left">
             {/* CONTENT */}
-            <div className="container-fluid bg-transparent">
-                <div className="container my-5">
+            <div className="container-fluid min-vh-100 bg-transparent mb-5">
+                <div className="container-fluid indukProject">
                     {/* Heading */}
                     <div className="" style={{ width: "100%" }}>
                         <TrueFocus
@@ -92,10 +93,10 @@ const Project: React.FC = () => {
                         />
                     </div>
                     {/* Card */}
-                    <div className="mt-5 row g-md-3">
+                    <div className="mt-5 row g-md-5 cardProject">
                         {listProjects.map((item, idx) => (
                             <>
-                            <div className="col-md-3 col-6" style={{height: "15rem"}}>
+                            <div className="col-md-4 col-12" style={{height: "15rem", margin: "5rem 0"}}>
                                 <Card2 title={item.title} category={item.category} content={item.content}
                                 tags={item.tags} img={item.image} url={item.url} logo={item.logo} source={item.source} />
                             </div>

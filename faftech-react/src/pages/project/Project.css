@@ -1,0 +1,14 @@
+.indukProject {
+    margin: 5rem 0 !important;
+}
+
+.cardProject {
+    margin: 0 7rem;
+}
+
+@media screen and (max-width: 480px) {
+    .cardProject {
+        margin: 0;
+    }
+    
+}

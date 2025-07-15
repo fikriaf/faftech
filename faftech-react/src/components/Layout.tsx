@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Particles from "./Particles";
 import DotGrid from "./DotGrid";
 import { Outlet } from "react-router-dom";
+import Breadcrumbs from "./Breadcrumbs";
 import FadeContent from "./FadeContent";
 import "./styles/Layout.css"
 
@@ -52,6 +53,7 @@ const Layout: React.FC = () => {
         </div> */}
 
         <Navbar />
+        <Breadcrumbs />
         <div className="main-content">
           <Outlet />
         </div>

@@ -1,0 +1,5 @@
+.breadcrumb-item.active::before {
+    padding: 0 0;
+    padding-right: 0.5rem;
+    margin: 0;
+}

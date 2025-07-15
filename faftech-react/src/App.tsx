@@ -68,7 +68,7 @@ function App() {
   const isMusicReady = musicList.length > 0;
 
   if (!ready || !isMusicReady)
-    return <Loader text={`Initialyzing [${fakeLength}]${dots}`} />;
+    return <Loader text={`Initialyzing${dots} [${fakeLength}]`} />;
 
 
   return (

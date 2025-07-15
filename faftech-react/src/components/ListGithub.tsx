@@ -20,7 +20,7 @@ const ListGithubSection: React.FC = () => {
     ...githubItems.map((item, idx) => (
         <a
         key={idx}
-        className="cat-item d-block bg-light h-100 text-center rounded p-3"
+        className="cat-item d-block bg-white h-100 text-center rounded p-3"
         href={item.html_url}
         target="_blank"
         rel="noopener noreferrer"
@@ -38,7 +38,7 @@ const ListGithubSection: React.FC = () => {
     )),
     <a
         key="other"
-        className="cat-item d-block bg-light h-100 text-center rounded p-3"
+        className="cat-item d-block bg-white h-100 text-center rounded p-3"
         href="https://github.com/fikriaf?tab=repositories"
         target="_blank"
         rel="noopener noreferrer"
