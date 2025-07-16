@@ -9,6 +9,16 @@ import { useMusicPlayer } from "./MusicPlayer";
 import ButtonCV from "./ButtonCV";
 import { Play, Pause, SkipBack, SkipForward, Music } from "lucide-react";
 import { FaMusic } from "react-icons/fa";
+import {
+  RiAlbumFill,     // Ikon album
+  RiMusic2Fill,    // Musik
+  RiPlayList2Fill, // Playlist penuh
+  RiEqualizerFill, // Equalizer
+} from "react-icons/ri";
+
+import {
+  MdLibraryMusic,  // Ikon perpustakaan musik
+} from "react-icons/md";
 import GlareHover from "./GlareHover";
 import AnimatedContent from "./AnimateContent";
 import "./styles/Navbar.css"
@@ -114,9 +124,9 @@ const Navbar: React.FC = () => {
                                                     {currentTrack?.title || musicList?.[0]?.title || "Tidak ada lagu"}
                                                 </p>
 
-                                                <div className="progress my-2" style={{ height: "5px"}}>
+                                                <div className="progress bg-light my-2" style={{ height: "5px"}}>
                                                 <div
-                                                    className="progress-bar"
+                                                    className="progress-bar rounded-pill"
                                                     role="progressbar"
                                                     style={{
                                                     width: `${progressPercent}%`,
@@ -150,12 +160,12 @@ const Navbar: React.FC = () => {
 
                                                 <div className="icon-control-group d-flex justify-content-between text-center mt-3">
                                                     <button
-                                                className="btn btn-outline-primary w-100 btn-rounded btn-md"
+                                                className="btn btn-outline-primary d-flex align-items-center gap-1 justify-content-center w-100 btn-rounded btn-md"
                                                 data-bs-toggle="modal"
                                                 data-bs-target="#libraryModal"
                                                 style={{ fontFamily: "Heebo" }}
                                                 >
-                                                Library
+                                                <MdLibraryMusic size={25} /> Library
                                                 </button>
                                                 </div>
                                             </div>
