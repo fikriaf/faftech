@@ -282,6 +282,9 @@ const About: React.FC = () => {
                             alt="Fikri's current streak"
                             />
                         </div>
+                        <div>
+                            <img src="https://camo.githubusercontent.com/6dae8c63f51b9e31403614ae50f1cb8c1bbeaf5d095ce43b4c72f7fa1e2a7122/68747470733a2f2f6769746875622d726561646d652d61637469766974792d67726170682e76657263656c2e6170702f67726170683f757365726e616d653d66696b72696166267468656d653d72656163742d6461726b" alt="" />
+                        </div>
                     </div>
                 </div>
             </div>
