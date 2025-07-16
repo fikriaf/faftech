@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
                             <ul className="dropdown-menu dropdown-menu-end fade bg-dark" aria-labelledby="profileDropdown">
                                 <li>
                                 <section className="bg-dark">
-                                    <div className="row d-flex justify-content-center align-items-center">
+                                    <div className="d-flex justify-content-center align-items-center">
                                         <div className="col-md-12 col-xl-12">
                                         <div className="p-3 bg-dark" style={{ borderRadius: "0.5rem", border: "none" }}>
                                             <div className="card-body text-center text-light">
