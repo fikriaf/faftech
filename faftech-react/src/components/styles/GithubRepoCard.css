@@ -18,7 +18,7 @@ transform: translateY(-2px);
 .repo-link {
 color: #0366d6;
 text-decoration: none;
-font-weight: 600;
+font-weight: 600 !important;
 display: inline-block;
 word-break: break-word;
 margin-right: 1rem;

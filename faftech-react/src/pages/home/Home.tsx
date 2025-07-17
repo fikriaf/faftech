@@ -238,7 +238,7 @@ const Index: React.FC = () => {
                 </div>
             </div>
 
-            <div className="bg-white py-4 my-2 pt-2">
+            <div className="bg-white py-4 my-2 pt-2 shadow-lg">
                 <div className="container-xxl">
                     <div className="container">
                         {/* List Articles */}
