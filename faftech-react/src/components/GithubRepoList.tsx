@@ -51,16 +51,21 @@ const GitHubRepoList: React.FC<GitHubRepoListProps> = ({ username }) => {
     return (
         <div className="github-carousel-wrapper d-grid justify-content-between position-relative">
 
-            <div className="row g-3 slide-animation">
-                {getSlideRepos().map((repo) => (
-                <div key={repo.id} className="col-md-4">
-                    <GitHubRepoCard key={repo.id} repo={repo} />
+            <div className="row g-3">
+            {getSlideRepos().map((repo, index) => (
+                <div
+                key={repo.id}
+                className="col-md-4 fade-card"
+                style={{ animationDelay: `${index * 0.1}s` }} // 0.1s jeda per card
+                >
+                <GitHubRepoCard repo={repo} />
                 </div>
-                ))}
+            ))}
             </div>
+
             
             <div className="slide-indicators text-center mt-auto">
-                <button className="carousel-nav left" onClick={handlePrev}>❮</button>
+                <button className="carousel-nav navGithub left" onClick={handlePrev}>❮</button>
                 {Array.from({ length: totalSlides }).map((_, idx) => (
                 <span
                     key={idx}
@@ -68,7 +73,7 @@ const GitHubRepoList: React.FC<GitHubRepoListProps> = ({ username }) => {
                     onClick={() => setCurrentSlide(idx)}
                 ></span>
                 ))}
-                <button className="carousel-nav right" onClick={handleNext}>❯</button>
+                <button className="carousel-nav navGithub right" onClick={handleNext}>❯</button>
             </div>
             
         </div>

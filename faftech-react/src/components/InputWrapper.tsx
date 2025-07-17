@@ -20,7 +20,7 @@ const StyledWrapper = styled.div`
 .textInputWrapper {
     position: relative;
     width: 100%;
-    --accent-color: #a3e583;
+    --accent-color: var(--primary);
 }
 
 .textInputWrapper:before {
