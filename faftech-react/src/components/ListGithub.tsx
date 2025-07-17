@@ -5,6 +5,7 @@ import image1 from "../assets/kuantum1.webp"
 import Card from "./Card";
 import "./styles/ListGithub.css"
 import { fetchGitHubRepos } from "../services/GithubRepo";
+import GitHubRepoCard from "./GithubRepoCard";
 // @ts-ignore
 import type { RepoSimple } from "../services/GithubRepo";
 import { Tags } from "lucide-react";

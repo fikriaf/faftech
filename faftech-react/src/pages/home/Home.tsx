@@ -17,6 +17,7 @@ import RotatingText from "../../components/RotatingText";
 import AnimatedContent from "../../components/AnimateContent";
 import FadeContent from "../../components/FadeContent";
 import ButtonAnimated2 from "../../components/ButtonAnimated2";
+import GitHubRepoList from "../../components/GithubRepoList";
 
 // 4. Aset (gambar)
 import img1 from "../../assets/fikri.jpg";
@@ -232,7 +233,8 @@ const Index: React.FC = () => {
                             aplikasi berbasis AI hingga platform web yang inovatif.
                         </p>
                     </div>
-                    <ListGithubSection />
+                    <GitHubRepoList username="fikriaf" />
+                    {/* <ListGithubSection /> */}
                 </div>
             </div>
 
