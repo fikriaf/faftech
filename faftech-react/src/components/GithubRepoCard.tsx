@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./styles/GitHubRepoCard.css";
+import "./styles/GithubRepoCard.css";
 import { GoStar, GoRepoForked, GoEye } from "react-icons/go";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
