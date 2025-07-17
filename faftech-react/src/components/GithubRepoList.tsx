@@ -49,27 +49,28 @@ const GitHubRepoList: React.FC<GitHubRepoListProps> = ({ username }) => {
     };
 
     return (
-        <div className="github-carousel-wrapper position-relative">
-        <button className="carousel-nav left" onClick={handlePrev}>❮</button>
-        <button className="carousel-nav right" onClick={handleNext}>❯</button>
+        <div className="github-carousel-wrapper d-grid justify-content-between position-relative">
 
-        <div className="row g-3 slide-animation">
-            {getSlideRepos().map((repo) => (
-            <div key={repo.id} className="col-md-4">
-                <GitHubRepoCard key={repo.id} repo={repo} />
+            <div className="row g-3 slide-animation">
+                {getSlideRepos().map((repo) => (
+                <div key={repo.id} className="col-md-4">
+                    <GitHubRepoCard key={repo.id} repo={repo} />
+                </div>
+                ))}
             </div>
-            ))}
-        </div>
-
-        <div className="slide-indicators text-center mt-3">
-            {Array.from({ length: totalSlides }).map((_, idx) => (
-            <span
-                key={idx}
-                className={`indicator-dot ${idx === currentSlide ? "active" : ""}`}
-                onClick={() => setCurrentSlide(idx)}
-            ></span>
-            ))}
-        </div>
+            
+            <div className="slide-indicators text-center mt-auto">
+                <button className="carousel-nav left" onClick={handlePrev}>❮</button>
+                {Array.from({ length: totalSlides }).map((_, idx) => (
+                <span
+                    key={idx}
+                    className={`indicator-dot ${idx === currentSlide ? "active" : ""}`}
+                    onClick={() => setCurrentSlide(idx)}
+                ></span>
+                ))}
+                <button className="carousel-nav right" onClick={handleNext}>❯</button>
+            </div>
+            
         </div>
     );
 };

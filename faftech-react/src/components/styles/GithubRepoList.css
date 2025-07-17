@@ -1,3 +1,7 @@
+.github-carousel-wrapper {
+    height: 43rem;
+}
+
 .carousel-nav {
   position: absolute;
   top: 50%;
@@ -48,7 +52,7 @@
   display: inline-block;
   width: 10px;
   height: 10px;
-  margin: 0 5px;
+  margin: 1rem 5px;
   background-color: #ccc;
   border-radius: 50%;
   cursor: pointer;
@@ -57,4 +61,29 @@
 
 .indicator-dot.active {
   background-color: #007bff;
+}
+
+@media screen and (max-width: 480px) {
+    .carousel-nav {
+        position: absolute;
+        top: 100%;
+        transform: translateY(-60%);
+        z-index: 5;
+        background-color: var(--primary);
+        border: none;
+        color: white;
+        font-size: 2rem;
+        padding: 0 0.8rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .carousel-nav.left {
+        left: 0;
+    }
+
+    .carousel-nav.right {
+        right: 0;
+    }
 }
