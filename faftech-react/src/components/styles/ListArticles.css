@@ -16,7 +16,8 @@
 
 .textMax2Line {
   display: -webkit-box;
-  -webkit-line-clamp: 2;       /* jumlah maksimum baris */
+  -webkit-line-clamp: 2;
+  line-clamp: 1;      /* jumlah maksimum baris */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
