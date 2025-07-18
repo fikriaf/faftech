@@ -95,12 +95,14 @@ select.form-select {
   cursor: pointer;
 }
 
+
 @media screen and (max-width: 480px) {
   .modal-body {
     max-height: 90vh;
     overflow-y: auto;
   }
-  .TitleMusic {
-    font-size: 0.7rem;
+  .actionModal div {
+    width: max-content;
   }
+
 }

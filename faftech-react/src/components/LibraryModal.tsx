@@ -46,19 +46,23 @@ const LibraryModal: React.FC<{ musicList: Music[] }> = ({ musicList }) => {
                     <div className={`modal-content-flip-inner ${showUploadForm ? "flip" : ""}`}>
                         {/* sisi depan */}
                         <div className="modal-content library-modal pb-4 bg-dark text-light">
-                            <div className="modal-header d-flex justify-content-between gap-3 border-0 align-items-center">
+                            <div className="modal-header modalHead d-flex justify-content-between gap-3 border-0 align-items-center">
                                 <span className="modal-title fw-bold">🎧 Music Library</span>
-                                {/* <button
-                                className="btn btn-sm btn-primary"
-                                onClick={() => setShowUploadForm(true)}
-                                >
-                                + Tambah Lagu
-                                </button> */}
-
-                                <ButtonMiring />
-                                <div className="dropdown-hover">
-                                    <div className="dropdown-label BtnScale bg-secondary text-light px-3 py-2 rounded rounded-sm">
-                                        🎧 Filter: {filter === "all" ? "Semua" : filter === "song" ? "Lagu" : "DJ"}
+                                
+                                <button
+                                type="button"
+                                className="d-flex p-2 me-2 btn-close-dark btn-dark btn text-light ms-auto"
+                                data-bs-dismiss="modal"
+                                ><FaTimes /></button>
+                            </div>
+                            <hr className="p-0 m-0" />
+                            <div className="actionModal position-relative d-flex justify-content-between px-4 py-2">
+                                <div className="dropdown-hover d-flex">
+                                    <div className="d-flex align-items-center">
+                                        <div>Filter :</div>
+                                        <div className="dropdown-label BtnScale px-2 text-primary rounded rounded-sm">
+                                            {filter === "all" ? "Semua" : filter === "song" ? "Lagu" : "DJ"}
+                                        </div>
                                     </div>
                                     <ul className="dropdown-menu-hover list-group bg-dark text-light rounded">
                                         <li
@@ -81,13 +85,8 @@ const LibraryModal: React.FC<{ musicList: Music[] }> = ({ musicList }) => {
                                         </li>
                                     </ul>
                                 </div>
-                                <button
-                                type="button"
-                                className="d-flex p-2 me-2 btn-close-dark btn-dark btn text-light ms-auto"
-                                data-bs-dismiss="modal"
-                                ><FaTimes /></button>
+                                <div><ButtonMiring /></div>
                             </div>
-                            <hr className="p-0 m-0" />
                             <div className="modal-body">
                                 <div className="library-flip-wrapper">
                                     <div className={`library-flip-inner ${showUploadForm ? "flip" : ""}`}>
@@ -109,7 +108,7 @@ const LibraryModal: React.FC<{ musicList: Music[] }> = ({ musicList }) => {
 
                                                     style={{
                                                     cursor: "pointer",
-                                                    backgroundColor: idx % 2 === 0 ? "#212529" : "#494a4bff", // bg-dark vs bg-secondary
+                                                    backgroundColor: idx % 2 === 0 ? "#494a4bff" : "#212529", // bg-dark vs bg-secondary
                                                     }}
                                                 >
                                                     <div className={`w-100 row px-0 mx-0 text-center d-flex justify-content-between align-items-center ${currentTrack?.id === music.id ? "text-primary" : "text-light"}`}>

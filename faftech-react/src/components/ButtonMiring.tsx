@@ -24,7 +24,7 @@ const StyledWrapper = styled.div`
     display: block;
     position: relative;
     padding: 0.4rem 1rem;
-    font-size: 18px;
+    font-size: 1rem;
     background: transparent;
     cursor: pointer;
     user-select: none;

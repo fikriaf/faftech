@@ -18,6 +18,7 @@ import AnimatedContent from "../../components/AnimateContent";
 import FadeContent from "../../components/FadeContent";
 import ButtonAnimated2 from "../../components/ButtonAnimated2";
 import GitHubRepoList from "../../components/GithubRepoList";
+import ButtonCool from "../../components/ButtonCool";
 
 // 4. Aset (gambar)
 import img1 from "../../assets/fikri.jpg";
@@ -115,7 +116,8 @@ const Index: React.FC = () => {
                             threshold={0.2}
                             delay={0.3}
                             >
-                            <ButtonAnimated2 text="Read More" link="/about" />
+                            {/* <ButtonAnimated2 text="Read More" link="/about" /> */}
+                            <ButtonCool text="READ MORE" link="/about" />
                             {/* <Link to="/about" className="btn ms-2 BtnScale detail btn-primary py-3 px-5">Read More<span className="panahGo">&#8594;</span></Link> */}
                             </AnimatedContent>
                         </div>

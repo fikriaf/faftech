@@ -54,7 +54,7 @@ const StyledWrapper = styled.div`
 .download {
     position: absolute;
     top: -0.05rem;
-    left: -0.6rem;
+    left: -0.8rem;
     display: flex;
     justify-content: center;
     align-items: center;

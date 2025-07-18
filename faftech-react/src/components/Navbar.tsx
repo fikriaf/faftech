@@ -7,6 +7,7 @@ import profileImg from "../assets/profile.png";
 import { getMusicList, play, pause, next, prev, audio } from "../services/music";
 import { useMusicPlayer } from "./MusicPlayer";
 import ButtonCV from "./ButtonCV";
+import ToolTip from "./ToolTip";
 import { Play, Pause, SkipBack, SkipForward, Music } from "lucide-react";
 import { FaMusic } from "react-icons/fa";
 import {
@@ -35,6 +36,14 @@ const Navbar: React.FC = () => {
     const isPlaying = usePlayerStore((state) => state.isPlaying);
     const setIsPlaying = usePlayerStore((state) => state.setIsPlaying);
 
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
 
     const handleMusic = async (parameter: string) => {
         if (parameter === 'playANDpause') {
@@ -56,7 +65,7 @@ const Navbar: React.FC = () => {
             next();
         } else if (parameter === 'prev') {
             setIsPlaying(true)
-            next();
+            prev();
         }
         
     };
@@ -80,14 +89,49 @@ const Navbar: React.FC = () => {
                         >
                             <span className="navbar-toggler-icon"></span>
                         </button>
-                        <div className="navbar-collapse collapse" id="navbarCollapse">
-                            <ul className="navbar-nav ms-auto gap-4">
-                                <li className="nav-item"><Link to="/" className="nav-link py-3">HOME</Link></li>
-                                <li className="nav-item"><Link to="/about" className="nav-link py-3">ABOUT</Link></li>
-                                <li className="nav-item"><Link to="/project" className="nav-link py-3">PROJECT</Link></li>
-                                <li className="nav-item"><Link to="/contact" className="nav-link py-3">CONTACT</Link></li>
-                            </ul>
-                        </div>
+                        {isMobile ? (
+                            <div className="navbar-collapse collapse" id="navbarCollapse">
+                                <ul className="navbar-nav ms-auto gap-4">
+                                    <li className="nav-item">
+                                        <Link to="/" className="nav-link py-3">HOME</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link to="/about" className="nav-link py-3">ABOUT</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link to="/project" className="nav-link py-3">PROJECT</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link to="/contact" className="nav-link py-3">CONTACT</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        ) : (
+                            <div className="navbar-collapse collapse" id="navbarCollapse">
+                                <ul className="navbar-nav ms-auto gap-4">
+                                    <li className="nav-item">
+                                        <ToolTip text="Return to the main page">
+                                        <Link to="/" className="nav-link py-3">HOME</Link>
+                                        </ToolTip>
+                                    </li>
+                                    <li className="nav-item">
+                                        <ToolTip text="Learn more about me">
+                                        <Link to="/about" className="nav-link py-3">ABOUT</Link>
+                                        </ToolTip>
+                                    </li>
+                                    <li className="nav-item">
+                                        <ToolTip text="Explore my best works and projects">
+                                        <Link to="/project" className="nav-link py-3">PROJECT</Link>
+                                        </ToolTip>
+                                    </li>
+                                    <li className="nav-item">
+                                        <ToolTip text="Get in touch with me">
+                                        <Link to="/contact" className="nav-link py-3">CONTACT</Link>
+                                        </ToolTip>
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
                         <span className="tambahan-nav" style={{ position: "absolute", right: "-15px", top: 0, bottom: 0, width: "30px", background: "inherit", transform: "skewX(-20deg)", zIndex: 0 }}></span>
                     </nav>
                     <div className="nav-profile d-flex gap-1 p-0 m-0">
@@ -97,11 +141,11 @@ const Navbar: React.FC = () => {
                                     THEME
                                 </div>
                             </a>
-                            <a className="btn btn-light rounded-0 py-0">
+                            <button className="btn btn-light rounded-0 py-0">
                                 <div className="mt-1" style={{ transform: "skew(20deg)", fontSize: "1.25rem", fontWeight: 600 }}>
                                     <ButtonCV />
                                 </div>
-                            </a>
+                            </button>
                         </nav>
                         <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-0 ms-3">
                             <a href="#" className="dropdown-toggle ps-1 pe-3" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false"

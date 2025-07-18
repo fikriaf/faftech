@@ -123,14 +123,14 @@ const StyledWrapper = styled.div`
         width: 2rem;
         height: 2rem;
         border-radius: 0.5rem;
-        background-color: #727890;
+        background-color: var(--primary);
         margin: 1rem;
         margin-right: 0.5rem;
         display: flex;
         align-items: center;
         justify-content: center;
         transition: .2s ease-in-out;
-        box-shadow: 2px 2px 6px rgba(0,0,0,.4);
+        box-shadow: 2px 2px 6px rgba(0,0,0,.8);
     }
 
     .fullscreen_svg {
