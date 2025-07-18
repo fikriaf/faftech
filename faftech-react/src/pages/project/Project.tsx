@@ -96,7 +96,7 @@ const Project: React.FC = () => {
                     <div className="mt-5 row g-md-5 cardProject">
                         {listProjects.map((item, idx) => (
                             <>
-                            <div className="col-md-4 col-12" style={{height: "15rem", margin: "5rem 0"}}>
+                            <div className="col-md-4 col-12 listProject" style={{height: "15rem", margin: "5rem 0"}}>
                                 <Card2 title={item.title} category={item.category} content={item.content}
                                 tags={item.tags} img={item.image} url={item.url} logo={item.logo} source={item.source} />
                             </div>

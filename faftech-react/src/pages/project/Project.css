@@ -10,5 +10,8 @@
     .cardProject {
         margin: 0;
     }
+    .listProject {
+        margin: 2.5rem 0 !important;
+    }
     
 }
