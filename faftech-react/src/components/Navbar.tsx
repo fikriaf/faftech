@@ -156,7 +156,7 @@ const Navbar: React.FC = () => {
                                 {isPlaying ? (
                                     <AnimateMusic />
                                 ):(
-                                    <div className="border border-primary py-0 px-1 rounded"><BiMusic /></div>
+                                    <div className="border border-primary py-0 px-2 rounded"><BiMusic /></div>
                                 )}
                             </a>
                             <span className="tambahan-nav" style={{ position: "absolute", left: "-15px", top: 0, bottom: 0, width: "50px", background: "inherit", transform: "skewX(-20deg)" }}></span>
