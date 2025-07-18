@@ -8,6 +8,7 @@ import { getMusicList, play, pause, next, prev, audio } from "../services/music"
 import { useMusicPlayer } from "./MusicPlayer";
 import ButtonCV from "./ButtonCV";
 import ToolTip from "./ToolTip";
+import AnimateMusic from "./AnimateMusic";
 import { Play, Pause, SkipBack, SkipForward, Music } from "lucide-react";
 import { FaMusic } from "react-icons/fa";
 import {
@@ -150,7 +151,11 @@ const Navbar: React.FC = () => {
                         <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-0 ms-3">
                             <a href="#" className="dropdown-toggle ps-1 pe-3" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false"
                             data-bs-auto-close="outside" style={{ zIndex: 999 }}>
-                                <img src={profileImg} style={{ width: "30px" }} alt="profile" />
+                                {isPlaying ? (
+                                    <AnimateMusic />
+                                ):(
+                                    <img src={profileImg} style={{ width: "30px" }} alt="profile" />
+                                )}
                             </a>
                             <span className="tambahan-nav" style={{ position: "absolute", left: "-15px", top: 0, bottom: 0, width: "50px", background: "inherit", transform: "skewX(-20deg)" }}></span>
                             <ul className="dropdown-menu dropdown-menu-end fade bg-dark" aria-labelledby="profileDropdown">
