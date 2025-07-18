@@ -32,6 +32,7 @@ const StyledWrapper = styled.div`
     padding: 11px 33px;
     text-decoration: none;
     font-size: 25px;
+    font-weight: 550;
     color: white;
     background: var(--primary);
     transition: 1s;

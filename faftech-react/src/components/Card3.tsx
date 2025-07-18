@@ -1,6 +1,6 @@
+import React, { useState, useEffect, useRef } from 'react';
 import { div } from "framer-motion/client";
 import FadeInOnScroll from "./FadeInOnScroll";
-import React from "react";
 import {
   FaCode,
   FaServer,
@@ -21,7 +21,7 @@ const Card3 = () => {
             child: [
                 {
                     name: "React",
-                    percent: 90
+                    percent: 95
                 },
                 {
                     name: "Laravel",
@@ -124,6 +124,37 @@ const Card3 = () => {
             ]
         }
     ]
+    const barRefs = useRef<HTMLDivElement[]>([]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+            const bar = entry.target as HTMLDivElement;
+            const percent = bar.dataset.percent;
+
+            if (entry.isIntersecting && percent) {
+                bar.style.transition = "width 1.5s ease-out";
+                bar.style.width = percent;
+            } else {
+                // reset ke 0% saat elemen keluar viewport
+                bar.style.transition = "none"; // reset tanpa animasi
+                bar.style.width = "0%";
+            }
+            });
+        },
+        { threshold: 0.3 }
+        );
+
+        barRefs.current.forEach((bar) => {
+        if (bar) observer.observe(bar);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
+    barRefs.current = [];
+    
     return(
         <>
             {CardItems.map((item,idx) => (
@@ -134,30 +165,22 @@ const Card3 = () => {
                         <h5 className="p-0 m-0">{item.title}</h5>
                     </div>
                     <div className="d-grid gap-2">
-                        <div className="row1">
-                            <div className="d-flex justify-content-between">
-                                <span>{item.child?.[0].name}</span>
-                                <span>{item.child?.[0].percent}%</span>
+                        {[...Array(3)].map((_, idx) => (
+                            <div key={idx} className={`row${idx+1}`}>
+                                <div className="d-flex justify-content-between">
+                                    <span>{item.child?.[idx].name}</span>
+                                    <span>{item.child?.[idx].percent}%</span>
+                                </div>
+                                <div
+                                    className="border linePercent border-0 mt-2 border-secondary rounded-pill"
+                                    data-percent={`${item.child?.[idx].percent}%`}
+                                    ref={(el) => {
+                                        if (el) barRefs.current.push(el);
+                                    }}
+                                />
                             </div>
-                            <div className="border linePercent w-100 border-0 mt-2 border-secondary rounded-pill"
-                            style={{ "--percent": `${item.child?.[0].percent}%` } as React.CSSProperties} />
-                        </div>
-                        <div className="row2">
-                            <div className="d-flex justify-content-between">
-                                <span>{item.child?.[1].name}</span>
-                                <span>{item.child?.[1].percent}%</span>
-                            </div>
-                            <div className="border linePercent w-100 border-0 mt-2 border-secondary rounded-pill"
-                            style={{ "--percent": `${item.child?.[1].percent}%` } as React.CSSProperties} />
-                        </div>
-                        <div className="row3">
-                            <div className="d-flex justify-content-between">
-                                <span>{item.child?.[2].name}</span>
-                                <span>{item.child?.[2].percent}%</span>
-                            </div>
-                            <div className="border linePercent w-100 border-0 mb-2 mt-2 border-secondary rounded-pill"
-                            style={{ "--percent": `${item.child?.[2].percent}%` } as React.CSSProperties} />
-                        </div>
+                        ))}
+                        
                     </div>
                 </div>
                 </FadeInOnScroll>

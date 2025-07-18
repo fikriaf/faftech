@@ -24,6 +24,8 @@ import {
 import GlareHover from "./GlareHover";
 import AnimatedContent from "./AnimateContent";
 import "./styles/Navbar.css"
+import { BiMusic } from "react-icons/bi";
+import { div } from "framer-motion/client";
 
 function formatTime(seconds: number) {
     const mins = Math.floor(seconds / 60);
@@ -154,7 +156,7 @@ const Navbar: React.FC = () => {
                                 {isPlaying ? (
                                     <AnimateMusic />
                                 ):(
-                                    <img src={profileImg} style={{ width: "30px" }} alt="profile" />
+                                    <div className="border border-primary py-0 px-1 rounded"><BiMusic /></div>
                                 )}
                             </a>
                             <span className="tambahan-nav" style={{ position: "absolute", left: "-15px", top: 0, bottom: 0, width: "50px", background: "inherit", transform: "skewX(-20deg)" }}></span>
