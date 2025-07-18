@@ -101,7 +101,7 @@ const StyledWrapper = styled.div`
 .textInputWrapper:focus-within .textInput,
 .textInputWrapper .textInput:focus,
 .textInputWrapper .textInput:active {
-    background-color: #353535;
+    background-color: transparent;
 }
 
 .textInputWrapper:focus-within .textInput::placeholder {

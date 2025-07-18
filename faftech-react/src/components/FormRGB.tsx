@@ -14,7 +14,7 @@ return (
             </div>
             <div className="form-group">
                 <label htmlFor="textarea">Type below for question/suggestion</label>
-                <textarea name="textarea" id="textarea" rows={10} cols={50} required defaultValue={""} />
+                <textarea name="textarea" id="textarea" placeholder='Apakah akan ditambah fitur AI?' rows={10} cols={50} required defaultValue={""} />
             </div>
             <ButtonGlow text='Submit' />
         </form>

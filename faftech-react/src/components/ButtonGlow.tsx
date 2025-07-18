@@ -35,9 +35,8 @@ button {
     color: #ffffff;
     background: #008cff;
     border: 1px solid #008cff;
-    text-shadow: 0 0 2px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-    box-shadow: 0 0 2px #008cff, 0 0 10px #008cff, 0 0 10px #008cff,
-    0 0 20px #008cff;
+    box-shadow: 0 0 2px #008cff, 0 0 5px #008cff, 0 0 5px #008cff,
+    0 0 10px #008cff;
 }`;
 
 export default ButtonGlow;
