@@ -1,6 +1,6 @@
 # 🚀 faftech-react
 
-**Full-Stack Web Portfolio** built with **Vite** + **React** + **Express** + **TypeScript** + **Bootstrap** + **CSS**, forming the frontend layer of the broader [faftech](https://github.com/fikriaf/faftech) system. Developed by **Fikri Armia Fahmi**, a passionate developer from UPN Jaya focused on AI, backend, and frontend development.
+**Full-Stack Web Portfolio** built with **Vite** + **React** + **Express** + **TypeScript** + **Bootstrap** + **CSS**, forming the frontend layer of the broader [faftech](https://github.com/fikriaf/faftech) system. Developed by **Fikri Armia Fahmi**, a passionate developer focused on AI, backend, and frontend development.
 
 ## 📦 Key Features
 - ⚡ Built with Vite for ultra-fast bundling and hot reloads.
