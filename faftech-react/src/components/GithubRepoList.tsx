@@ -49,7 +49,7 @@ const GitHubRepoList: React.FC<GitHubRepoListProps> = ({ username }) => {
     };
 
     return (
-        <div className="github-carousel-wrapper d-grid justify-content-between position-relative">
+        <div className="github-carousel-wrapper min-h-100 d-flex flex-column position-relative">
 
             <div className="row g-3">
             {getSlideRepos().map((repo, index) => (

@@ -1,24 +1,7 @@
-.cat-item {
-    position: relative;
-    overflow: hidden;
+.hover-text {
+  opacity: 0;
+  transition: opacity 0.2s;
 }
-
-.cat-item .hover-text {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8); /* atau pakai bg-dark dari Bootstrap */
-    color: white;
-    font-size: 0.75rem;
-    border-radius: 4px;
-    opacity: 0;
-    transition: all 0.3s ease;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.cat-item:hover .hover-text {
-    top: 30%;
-    opacity: 1;
+.icon:hover .hover-text {
+  opacity: 1;
 }

@@ -6,7 +6,7 @@ transition: box-shadow 0.3s ease, transform 0.3s ease;
 min-height: 12rem;
 margin: auto;
 cursor: pointer;
-overflow: hidden; /* tambahkan untuk kontrol konten */
+overflow: hidden;
 }
 
 
@@ -23,7 +23,7 @@ display: inline-block;
 word-break: break-word;
 margin-right: 1rem;
 white-space: normal;
-max-width: 100%; /* pastikan cukup ruang */
+max-width: 100%; 
 }
 
 

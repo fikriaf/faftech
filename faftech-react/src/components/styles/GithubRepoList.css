@@ -22,16 +22,16 @@
 }
 
 .fade-card {
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fadeInCard 0.5s ease forwards;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInCard 0.5s ease forwards;
 }
 
 @keyframes fadeInCard {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .navGithub.left {
@@ -78,6 +78,9 @@
 }
 
 @media screen and (max-width: 480px) {
+    .github-carousel-wrapper {
+        height: 100%;
+    }
     .navGithub {
         position: absolute;
         top: 100%;
