@@ -6,14 +6,14 @@ import InputWrapper from './InputWrapper';
 const FormRGB = () => {
 return (
     <StyledWrapper>
-    <div className="form-container h-100">
+    <div className="form-container h-100 w-100">
         <form className="form">
             <div className="">
                 <label htmlFor="email">Email</label>
                 <InputWrapper placeholder='Type Here' type='email' />
             </div>
             <div className="form-group">
-                <label htmlFor="textarea">Type below for question/suggestion</label>
+                <label htmlFor="textarea" className='text-light'>Question/Suggestion</label>
                 <textarea name="textarea" id="textarea" placeholder='Apakah akan ditambah fitur AI?' rows={10} cols={50} required defaultValue={""} />
             </div>
             <ButtonGlow text='Submit' />
@@ -30,7 +30,7 @@ const StyledWrapper = styled.div`
                 linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
     border: 2px solid transparent;
     padding: 32px 24px;
-    font-size: 14px;
+    font-size: 1rem;
     font-family: inherit;
     color: white;
     display: flex;
@@ -62,7 +62,7 @@ const StyledWrapper = styled.div`
     margin-bottom: 5px;
     color: #717171;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 1rem;
 }
 
 .form-container .form-group input {
