@@ -8,13 +8,36 @@ import MyImage from "../../assets/fikri2.jpg"
 import MyImageNoBg from "../../assets/fikri2-Photoroom.png"
 import ProfileCard from "../../components/ProfileCard";
 import Card3 from "../../components/Card3";
-import { FaEnvelope, FaBloggerB, FaLinkedin, FaInstagram, FaDiscord } from 'react-icons/fa';
-import { FaCode, FaPuzzlePiece } from 'react-icons/fa';
-import { FiDatabase, FiTool } from 'react-icons/fi';
-import { MdDesignServices } from 'react-icons/md';
-import { FaLaptop } from 'react-icons/fa'
+import DarkVeil from "../../components/DarkVeil";
+
+import {
+    FaCode,
+    FaServer,
+    FaDatabase,
+    FaTools,
+    FaPencilRuler,
+    FaDesktop
+} from 'react-icons/fa';
 
 const About: React.FC = () => {
+    const bgLogo = [
+    "#fd7e14", // oranye terang (Bootstrap orange)
+    "#198754", // hijau stabil (Bootstrap success)
+    "#dc3545", // merah tajam (Bootstrap danger)
+    "#0dcaf0", // cyan cerah (Bootstrap info)
+    "#6f42c1",  // ungu gelap (Bootstrap purple)
+    "#20c997"
+    ]
+
+    const logoCategory = [
+        <FaCode />,
+        <FaDesktop />,
+        <FaDatabase />,
+        <FaTools />,
+        <FaPencilRuler />,
+        <FaServer />
+    ]
+    
     const categorizedTools = {
         languages: [
             { name: "Python", icon: "https://techstack-generator.vercel.app/python-icon.svg" },
@@ -201,7 +224,7 @@ const About: React.FC = () => {
                     <div
                     className="rounded"
                     style={{
-                        width: "0.5rem",
+                        width: "0.3rem",
                         height: "800px",
                         backgroundColor: "black",
                     }}
@@ -215,22 +238,59 @@ const About: React.FC = () => {
                         <Card3 />
                     </div>
                 </div>
-                <div className="bg-white py-4">
-                    <div className="accordion mb-3 mt-4 mx-5 shadow" id="toolsAccordion">
+                <div className="position-relative" style={{maxHeight: "40rem"}}>
+                    {/* Bg-hook */}
+                    {/* <div style={{ width: '100%', height: '100%', position: 'absolute', zIndex: 0, backgroundSize: 'cover' }}>
+                        <DarkVeil
+                        />
+                    </div> */}
+                    <div className="accordion bg-transparent mb-3 mt-4 mx-5 shadow shadow-lg position-relative overflow-hidden" id="toolsAccordion">
+                        {/* Video background */}
+                        {/* <video
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            className="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+                            style={{ zIndex: 0, opacity: 0.3 }} // kamu bisa atur opacity sesuka hati
+                        >
+                            <source src="/path/to/your-video.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video> */}
+
+                        {/* bg-image */}
+                        {/* <div
+                            className="position-absolute top-0 start-0 w-100 h-100"
+                            style={{
+                            backgroundImage: `url('/logo.webp')`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            opacity: 0.3,
+                            zIndex: 0,
+                            height: "fit-content",
+                            }}
+                        ></div> */}
+
+                        
                         {Object.entries(categorizedTools).map(([category, tools], index) => {
                         const isLanguage = category === "languages";
                         return (
-                            <div className="accordion-item" key={category}>
-                                <h2 className="accordion-header" id={`heading-${category}`}>
+                            <div className="accordion-item bg-transparent" key={category}>
+                                <h2 className="accordion-header bg-transparent" id={`heading-${category}`}>
                                     <button
-                                    className={`accordion-button border-0 text-light bg-primary fw-bold ${isLanguage ? '' : 'collapsed'}`}
+                                    className={`d-flex align-items-center gap-2 accordion-button border-0 bg-transparent shadow-none text-primary p-3 fw-semibold ${isLanguage ? '' : 'collapsed'}`}
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target={`#collapse-${category}`}
                                     aria-expanded="false"
                                     aria-controls={`collapse-${category}`}
                                     >
-                                    {category.charAt(0).toUpperCase() + category.slice(1)}
+                                        <div className="d-flex align-items-center text-white"
+                                        style={{padding: "1rem", backgroundColor: bgLogo?.[index]}}
+                                        >
+                                            {logoCategory?.[index]}
+                                        </div>
+                                        {category.charAt(0).toUpperCase() + category.slice(1)}
                                     </button>
                                 </h2>
                                 <div
@@ -239,12 +299,12 @@ const About: React.FC = () => {
                                 aria-labelledby={`heading-${category}`}
                                 data-bs-parent="#toolsAccordion"
                                 >
-                                    <div className="accordion-body border border-info">
+                                    <div className="accordion-body border-top">
                                         <div className="row">
                                             {tools.map((tool, i) => (
                                             <div
                                                 key={i}
-                                                className="col-sm-1 col-3 skill bg-white d-grid align-items-center text-center py-2 border tool"
+                                                className="col-sm-1 col-3 skill d-grid align-items-center text-center py-2 tool"
                                             >
                                                 <div className="icons">
                                                 <img src={tool.icon} alt={tool.name} width={45} height={45} />

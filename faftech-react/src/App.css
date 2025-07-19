@@ -8,6 +8,28 @@
     --primary: #0d6efd;
     --light: #f8f9fa;
     --dark: #212529;
+
+
+    --color-primary-dark-solid: #0b3e85;  /* Fallback warna solid */
+    --color-primary-dark-start: #0d6efd;  /* Bootstrap primary */
+    --color-primary-dark-end: #093c9c;    /* versi gelapnya (manual tone-down) */
+    /* === GRADIENT REUSABLE === */
+    --bg-gradient-primary-dark: linear-gradient(135deg, var(--color-primary-dark-start), var(--color-primary-dark-end));
+    --text-gradient-primary-dark: var(--bg-gradient-primary-dark);
+    /* --text-gradient-primary-dark: linear-gradient(135deg, var(--color-primary-dark-start), var(--color-primary-dark-end)); */
+
+}
+
+.bg-gradient-primary-dark {
+    background-color: var(--bg-gradient-primary-dark) !important;
+}
+
+.text-gradient-primary-dark {
+    background: var(--text-gradient-primary-dark);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 /*** Button ***/
@@ -378,7 +400,7 @@
     left: -50%;
     width: 100%;
     height: 100%;
-    background: #0d6efd;
+    background: var(--bg-gradient-primary-dark);
     transform: skew(20deg);
     z-index: 1;
 }

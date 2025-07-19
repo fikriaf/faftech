@@ -87,7 +87,7 @@ const Card: React.FC<CardProps> = ({title, category, tags, img, url, logo, sourc
                 >
                     <img src={img} alt="image" />
                 </div>
-                <div className="card_back" />
+                <div className="card_back" style={{background: "linear-gradient(135deg, #0d6efd, #093c9c)"}} />
                 </div>
                 <div className="data">
                 <div className="img">
@@ -175,7 +175,6 @@ const StyledWrapper = styled.div`
         width: 100%;
         aspect-ratio: 16 / 11.7;
         height: auto;
-        background-color: var(--primary);
         border-radius: 0.5rem;
         margin-top: 1rem;
         margin-left: 0.7rem;

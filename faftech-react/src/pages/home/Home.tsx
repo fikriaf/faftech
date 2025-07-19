@@ -178,7 +178,7 @@ const Index: React.FC = () => {
                 </div>
             </div>
             {/* SECTION SEARCH */}
-            <div className="container-fluid bg-primary wow fadeIn" data-wow-delay="0.1s" style={{ padding: "35px" }}>
+            <div className="container-fluid " data-wow-delay="0.1s" style={{ padding: "35px" , background: "linear-gradient(135deg, #0d6efd, #093c9c)"}}>
                 <div className="container">
                     <div className="row g-2">
                         <div className="col-md-10">
@@ -293,7 +293,7 @@ const Index: React.FC = () => {
                             className="mb-4 BgBlurUnderLine"
                             style={{ fontFamily: 'Heebo', fontWeight: 700 }}
                         >
-                            Saya <strong className="text-primary">Fikri Armia Fahmi</strong>
+                            Saya <strong className="text-gradient-primary-dark glow-primary">Fikri Armia Fahmi</strong>
                         </h1>
                         <div className="BgBlurNormal">
                             <DropText

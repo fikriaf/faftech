@@ -3,6 +3,10 @@
     position: relative;
 }
 
+.bg-gradient-primary-dark {
+    background-color: var(--bg-gradient-primary-dark) !important;
+}
+
 .panahGo {
     position: absolute;
     right: -50%;
