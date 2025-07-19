@@ -13,7 +13,7 @@ const Project: React.FC = () => {
             tags: ["react", "typescript", "express", "fast-api", "python"],
             url: "https://ai-vision-web.vercel.app/",
             image: "https://raw.githubusercontent.com/fikriaf/AI-Vision-Web/main/Preview.png",
-            logo: "",
+            logo: "https://ai-vision-web.vercel.app/logo.png",
             source: "AI-Vision-Web",
             content: [
                 {

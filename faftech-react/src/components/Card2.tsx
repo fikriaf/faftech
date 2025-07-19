@@ -4,6 +4,7 @@ import CarouselModal from './CarouselModal';
 import CircularTestimonials from './CircularTestimonial';
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaGithub } from 'react-icons/fa';
+import myLogo from '../assets/logo.webp';
 export interface CardProps {
     title: string;
     category: string;
@@ -90,7 +91,7 @@ const Card: React.FC<CardProps> = ({title, category, tags, img, url, logo, sourc
                 </div>
                 <div className="data">
                 <div className="img">
-                    <img src={logo} alt="image" />
+                    <img src={logo?? myLogo} alt="image" />
                 </div>
                 <div className='d-flex justify-content-between w-100'>
                     <div className="text">
@@ -228,9 +229,7 @@ const StyledWrapper = styled.div`
     }
 
     .img {
-        width: 13%;
-        aspect-ratio: 1 / 1;
-        height: 13%;
+        width: 3rem;
         background-color: #252525;
         border-radius: 0.5rem;
         overflow: hidden;
@@ -239,6 +238,7 @@ const StyledWrapper = styled.div`
     .img img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
     }
 
     .text {
@@ -337,11 +337,6 @@ const StyledWrapper = styled.div`
 
         .text_s {
             font-size: 0.7em;
-        }
-
-        .img {
-            width: 2.5em;
-            height: 2.5em;
         }
 
         .tags {
