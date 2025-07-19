@@ -6,6 +6,7 @@ import './App.css';
 import Layout from './components/Layout';
 import { useMusicPlayer } from './components/MusicPlayer';
 import { audio } from './services/music';
+import { useDeviceStore } from './services/useDeviceStore';
 
 // lazy pages
 const Home = lazy(() => import('./pages/home/Home'));
@@ -15,6 +16,18 @@ const Contact = lazy(() => import('./pages/contact/Contact'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
+
+  useEffect(() => {
+      const checkMobile = () => {
+      const current = window.innerWidth <= 480
+      useDeviceStore.getState().setIsMobile(current)
+      }
+
+      checkMobile()
+      window.addEventListener("resize", checkMobile)
+      return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
   const location = useLocation();
   const [ready, setReady] = useState(false);
   const [dotIndex, setDotIndex] = useState(1);
@@ -69,7 +82,6 @@ function App() {
 
   if (!ready || !isMusicReady)
     return <Loader text={`Initialyzing${dots} [${fakeLength}]`} />;
-
 
   return (
     <Suspense fallback={<Loader />}>

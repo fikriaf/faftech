@@ -10,7 +10,7 @@ import ButtonCV from "./ButtonCV";
 import ToolTip from "./ToolTip";
 import AnimateMusic from "./AnimateMusic";
 import { Play, Pause, SkipBack, SkipForward, Music } from "lucide-react";
-import useMobileDetection from "./useMobileDetection";
+import { useDeviceStore } from "../services/useDeviceStore";
 
 import {
   RiAlbumFill,     // Ikon album
@@ -40,8 +40,8 @@ const Navbar: React.FC = () => {
     const isPlaying = usePlayerStore((state) => state.isPlaying);
     const setIsPlaying = usePlayerStore((state) => state.setIsPlaying);
 
-    const isMobile = useMobileDetection();
-
+    const isMobile = useDeviceStore((s) => s.isMobile)
+    
     const handleMusic = async (parameter: string) => {
         if (parameter === 'playANDpause') {
             if (isPlaying) {
