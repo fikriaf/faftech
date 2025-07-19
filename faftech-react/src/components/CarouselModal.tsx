@@ -50,7 +50,7 @@ const CarouselModal: React.FC<CarouselModalProps> = ({
                         <a className="btn btn-dark " href={url_source} target="_blank">
                             <FaGithub />  Source
                         </a>
-                        <a className="btn btn-outline-primary" href={url_html} target="_blank"><FaExternalLinkAlt /></a>
+                        <a className="btn btn-outline-primary" href={url_html} target="_blank"><FaExternalLinkAlt /> Demo</a>
                         <button
                             className="carousel-modal-close"
                             onClick={onClose}

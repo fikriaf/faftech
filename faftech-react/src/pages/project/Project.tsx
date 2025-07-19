@@ -8,13 +8,44 @@ const Project: React.FC = () => {
 
     const listProjects = [
         {
+            title: "AI Vision",
+            category: "Website | AI",
+            tags: ["react", "typescript", "express", "fast-api", "python"],
+            url: "https://ai-vision-web.vercel.app/",
+            image: "https://raw.githubusercontent.com/fikriaf/AI-Vision-Web/main/Preview.png",
+            logo: "",
+            source: "AI-Vision-Web",
+            content: [
+                {
+                    name: "Frontend Components",
+                    quote: "CameraFeed: Handles webcam access and real-time video streaming. ControlPanel: Configuration interface for detection parameters and model settings. PerformanceMetrics: Real-time system performance monitoring. UI Components: Complete Shadcn/ui component library for consistent interface.",
+                    src: "https://raw.githubusercontent.com/fikriaf/AI-Vision-Web/main/Preview.png"
+                },
+                {
+                    name: "Backend Services",
+                    quote: "Halaman Update Nilai memungkinkan pengguna untuk mengatur sendiri bobot penilaian pada setiap mata kuliah. Komponen penilaian seperti Tugas, UTS, UAS, dan Partisipasi bisa diubah sesuai kebutuhan dengan total bobot 100%. Selain itu, tersedia tabel konversi nilai numerik ke dalam skala IPK (4.0), yang dapat disesuaikan secara fleksibel. Di bagian bawah, riwayat perubahan bobot dan aturan konversi juga ditampilkan untuk menjaga transparansi dan pelacakan perubahan.",
+                    src: "https://raw.githubusercontent.com/fikriaf/AI-Vision-Web/main/image.png"
+                },
+                {
+                    name: "Frontend Architecture",
+                    quote: "Framework: React 18 with TypeScript. Build Tool: Vite for fast development and optimized builds. UI Framework: Shadcn/ui components built on Radix UI primitives. Styling: Tailwind CSS with CSS variables for theming. State Management: TanStack Query for server state management. Routing: Wouter for lightweight client-side routing.",
+                    src: "https://raw.githubusercontent.com/fikriaf/AI-Vision-Web/main/Preview.png"
+                },
+                {
+                    name: "Backend Architecture",
+                    quote: "Primary Backend: Node.js with Express server. AI Processing: Separate Python FastAPI service for YOLO model inference. Communication: WebSocket connections for real-time data streaming. Session Management: In-memory storage with plans for database integration.",
+                    src: "https://raw.githubusercontent.com/fikriaf/AI-Vision-Web/main/image.png"
+                },
+            ]
+        },
+        {
             title: "GPALytics",
             category: "Website",
-            tags: ["react", "ts", "express", "mongodb"],
+            tags: ["react", "typescript", "express", "mongodb"],
             url: "https://gpalytics-two.vercel.app/",
             image: "https://raw.githubusercontent.com/fikriaf/GPAlytics_FrontEnd/main/Preview.png",
             logo: "https://gpalytics-two.vercel.app/assets/logo-B8MVdj6B.png",
-            source: "https://github.com/fikriaf/GPAlytics_FrontEnd",
+            source: "GPAlytics_FrontEnd",
             content: [
                 {
                     name: "Dashboard",
@@ -55,7 +86,7 @@ const Project: React.FC = () => {
             url: "https://wekker.vercel.app",
             image: "https://github.com/user-attachments/assets/5a729bd5-603c-49b4-b9e8-1f2d95930075",
             logo: "https://raw.githubusercontent.com/fikriaf/wekker/refs/heads/main/public/wekker_dashboard/sources/logo/WEKKER.png",
-            source: "https://github.com/fikriaf/wekker",
+            source: "wekker",
             content: [
                 {
                     name: "Dashboard",

@@ -16,7 +16,7 @@ const GitHubRepoList: React.FC<GitHubRepoListProps> = ({ username }) => {
         try {
             const res = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=100`, {
             headers: {
-            Authorization: `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`, // ganti dengan tokenmu
+            Authorization: `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`,
             },
         });
         const data = await res.json();

@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import CarouselModal from './CarouselModal';
 import CircularTestimonials from './CircularTestimonial';
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub } from 'react-icons/fa';
 export interface CardProps {
     title: string;
     category: string;
@@ -17,6 +18,28 @@ export interface CardProps {
 const Card: React.FC<CardProps> = ({title, category, tags, img, url, logo, source, content}) => {
 
     const [showModal, setShowModal] = useState(false);
+    const [infoRepo, setInfoRepo] = useState<any>([]);
+
+    useEffect(() => {
+        const fetchRepo = async () => {
+            try {
+                const res = await fetch(`https://api.github.com/repos/fikriaf/${source}`);
+                const data = await res.json();
+                setInfoRepo(data);
+            } catch (err) {
+                console.error(err);
+            }
+        };
+
+        fetchRepo();
+            
+    }, [source]);
+
+    const updatedDate = new Date(infoRepo.updated_at).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+    });
 
     return (
         <>
@@ -26,7 +49,7 @@ const Card: React.FC<CardProps> = ({title, category, tags, img, url, logo, sourc
             onClose={() => setShowModal(false)}
             title={title}
             url_html={url}
-            url_source={source}
+            url_source={`https://github.com/fikriaf/${source}`}
             >
                 <CircularTestimonials
                     testimonials={content || []}
@@ -69,9 +92,15 @@ const Card: React.FC<CardProps> = ({title, category, tags, img, url, logo, sourc
                 <div className="img">
                     <img src={logo} alt="image" />
                 </div>
-                <div className="text">
-                    <div className="text_m">{title}</div>
-                    <div className="text_s">{category}</div>
+                <div className='d-flex justify-content-between w-100'>
+                    <div className="text">
+                        <div className="text_m">{title}</div>
+                        <div className="text_s">{category}</div>
+                    </div>
+                    <div className='d-flex flex-column'>
+                        <div className='ms-auto text-white' style={{fontSize: "0.7rem"}}>Last updated: {updatedDate}</div>
+                        <a href={`https://github.com/fikriaf/${source}`} target='_blank' className='btn btn-dark btn-sm py-0 px-1 m-0 ms-auto' style={{ width: "fit-content" }}><FaGithub /> source</a>
+                    </div>
                 </div>
                 </div>
                 <div className='d-flex gap-1'>
