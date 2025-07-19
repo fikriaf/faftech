@@ -236,17 +236,9 @@ return (
                     ease: "easeInOut",
                     delay: 0.025 * i,
                     }}
-                    style={{ display: "inline-block", whiteSpace: 'pre-line' }}
+                    style={{ display: "inline-block" }}
                 >
-                    {word.includes("\n") ? (
-                    <>
-                        {word.replace("\n", "")}
-                        <br />
-                    </>
-                    ) : (
-                    word
-                    )}
-                    &nbsp;
+                    {word}&nbsp;
                 </motion.span>
                 ))}
             </motion.p>
