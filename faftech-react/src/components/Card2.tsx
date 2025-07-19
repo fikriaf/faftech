@@ -99,8 +99,8 @@ const Card: React.FC<CardProps> = ({title, category, tags, img, url, logo, sourc
                         <div className="text_s">{category}</div>
                     </div>
                     <div className='d-flex flex-column'>
-                        <div className='ms-auto text-white' style={{fontSize: "0.7rem"}}>Last updated: {updatedDate}</div>
-                        <a href={`https://github.com/fikriaf/${source}`} target='_blank' className='btn btn-dark btn-sm py-0 px-1 m-0 ms-auto' style={{ width: "fit-content" }}><FaGithub /> source</a>
+                        <div className='ms-auto text-white' style={{fontSize: "0.7rem"}}>Updated {updatedDate}</div>
+                        <a href={`https://github.com/fikriaf/${source}`} target='_blank' className='btn btn-dark btn-sm py-0 px-1 m-0 ms-auto' style={{ width: "fit-content" }}><FaGithub /> Source</a>
                     </div>
                 </div>
                 </div>
