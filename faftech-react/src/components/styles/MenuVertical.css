@@ -18,6 +18,7 @@
     right: 0 !important;
     border-radius: 0.5rem 0 0 0.5rem;
 }
+
 .menu-item .icon {
     width: 3rem;
     height: 3rem;
@@ -62,6 +63,14 @@
 
 @media screen and (max-width: 480px) {
     .vertical-menu-container {
-        right: 1rem;
+        right: 0;
+    }
+    .vertical-menu-container.scrolled {
+        right: -3rem !important;
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+    
+    .vertical-menu-container.scrolled.showMenu {
+        right: 0 !important;
     }
 }
