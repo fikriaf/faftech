@@ -33,10 +33,6 @@ const MenuVertical: React.FC = () => {
 
     const [show, setShow] = useState(true);
 
-    const toggleElement = () => {
-        setShow((prev) => !prev);
-    };
-
     return (
         <>
             <ConsultationModal show={showModal} onClose={() => setShowModal(false)} />
