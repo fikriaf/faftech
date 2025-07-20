@@ -154,14 +154,14 @@ const About: React.FC = () => {
                         enableTilt={false}
                         onContactClick={() => console.log('Contact clicked')}
                         />
-                        <ul className="d-grid gap-3 list-unstyled ms-3" style={{
+                        <ul className="d-grid shadow shadow-lg gap-3 mt-3 list-unstyled ms-3" style={{
                             backdropFilter: 'blur(10px)',
                             backgroundColor: 'rgba(255, 255, 255, 0.3)',
                             padding: '0.5rem',
                             borderRadius: '0.5rem',
                             borderBottom: "2px solid #0d6efd",
                             borderTop: "2px solid #0d6efd",
-                            minHeight: "26rem"
+                            minHeight: "27.5rem"
                         }}>
                             <li>
                                 🔭 I’m currently studying at{' '}
@@ -278,14 +278,15 @@ const About: React.FC = () => {
                             <div className="accordion-item bg-transparent" key={category}>
                                 <h2 className="accordion-header bg-transparent" id={`heading-${category}`}>
                                     <button
-                                    className={`d-flex align-items-center gap-2 accordion-button border-0 bg-transparent shadow-none text-primary p-3 fw-semibold ${isLanguage ? '' : 'collapsed'}`}
+                                    className={`d-flex align-items-center gap-2 accordion-button border-0 bg-transparent shadow-none text-primary p-3 ${isLanguage ? '' : 'collapsed'}`}
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target={`#collapse-${category}`}
                                     aria-expanded="false"
                                     aria-controls={`collapse-${category}`}
+                                    style={{fontSize: "1.5rem", fontFamily: "Heebo", fontWeight: "600"}}
                                     >
-                                        <div className="d-flex align-items-center text-white"
+                                        <div className="d-flex align-items-center text-white rounded"
                                         style={{padding: "1rem", backgroundColor: bgLogo?.[index]}}
                                         >
                                             {logoCategory?.[index]}

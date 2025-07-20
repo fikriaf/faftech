@@ -31,6 +31,89 @@
     background-clip: text;
     color: transparent;
 }
+.bg-javascript  { background-color: #f7df1e; }
+.color-javascript  { color: #323330; }
+
+.bg-typescript  { background-color: #3178c6; }
+.color-typescript  { color: #ffffff; }
+
+.bg-python  { background-color: #3776ab; }      /* Biru dari bagian bawah logo */
+.color-python  { color: #ffde57; }              /* Kuning dari bagian atas logo */
+
+.bg-java  { background-color: #007396; }
+.color-java  { color: #ea2d2e; }
+
+.bg-cplusplus  { background-color: #00599c; }
+.color-cplusplus  { color: #f34b7d; }
+
+.bg-c  { background-color: #555555; }
+.color-c  { color: #a8b9cc; }
+
+.bg-csharp  { background-color: #239120; }
+.color-csharp  { color: #9b4f96; }
+
+.bg-go  { background-color: #00add8; }
+.color-go  { color: #ffffff; }
+
+.bg-rust  { background-color: #000000; }
+.color-rust  { color: #dea584; }
+
+.bg-php  { background-color: #777bb4; }
+.color-php  { color: #ffffff; }
+
+.bg-ruby  { background-color: #cc342d; }
+.color-ruby  { color: #ffffff; }
+
+.bg-kotlin  { background-color: #0095d5; }
+.color-kotlin  { color: #ffb300; }
+
+.bg-swift  { background-color: #f05138; }
+.color-swift  { color: #ffffff; }
+
+.bg-dart  { background-color: #0175c2; }
+.color-dart  { color: #13b9fd; }
+
+.bg-perl  { background-color: #39457e; }
+.color-perl  { color: #ffffff; }
+
+.bg-scala  { background-color: #dc322f; }
+.color-scala  { color: #ffffff; }
+
+.bg-r  { background-color: #276dc3; }
+.color-r  { color: #ffffff; }
+
+.bg-haskell  { background-color: #5e5086; }
+.color-haskell  { color: #8d79af; }
+
+.bg-lua  { background-color: #000080; }
+.color-lua  { color: #ffffff; }
+
+.bg-elixir  { background-color: #4e2a8e; }
+.color-elixir  { color: #ffffff; }
+
+.bg-erlang  { background-color: #a90533; }
+.color-erlang  { color: #ffffff; }
+
+.bg-gnubash  { background-color: #89e051; }
+.color-gnubash  { color: #000000; }
+
+.bg-mathworks  { background-color: #0076a8; }
+.color-mathworks  { color: #f88909; }
+
+.bg-fortran  { background-color: #734f96; }
+.color-fortran  { color: #ffffff; }
+
+.bg-gnu  { background-color: #a42e2b; }
+.color-gnu  { color: #ffffff; }
+
+.bg-html { background-color: #e34c26; }
+.color-html { color: #ffffff; }
+
+.bg-css { background-color: #264de4; }
+.color-css { color: #ffffff; }
+
+.color-blade { color: #f9322c; }
+.bg-blade { background-color: #fef2f2; }
 
 /*** Button ***/
 .back-to-top {

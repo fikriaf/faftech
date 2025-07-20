@@ -96,7 +96,7 @@ const Index: React.FC = () => {
                                     I'm <span ref={el} style={{ whiteSpace: "pre" }} />
                                 </div>
                             </h1>
-                            <p className="mb-4 pb-2" style={{ fontFamily: "Heebo", fontSize: "1.2rem", textAlign: "justify", fontWeight: "500",
+                            <p className="mb-4 pb-2" style={{ fontFamily: "Heebo", fontSize: "clamp(1rem, 2vw, 1.2rem)", textAlign: "justify", fontWeight: "500",
                                 backdropFilter: 'blur(10px)',
                                 backgroundColor: 'rgba(255, 255, 255, 0.3)',
                                 padding: '0.5rem',

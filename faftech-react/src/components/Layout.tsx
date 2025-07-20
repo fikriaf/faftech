@@ -6,6 +6,8 @@ import DotGrid from "./DotGrid";
 import { Outlet } from "react-router-dom";
 import Breadcrumbs from "./Breadcrumbs";
 import FadeContent from "./FadeContent";
+import MenuVertical from "./MenuVertical";
+
 import "./styles/Layout.css"
 
 const Layout: React.FC = () => {
@@ -54,6 +56,7 @@ const Layout: React.FC = () => {
 
         <Navbar />
         <div className="main-content">
+          <MenuVertical />
           <Outlet />
         </div>
         <Footer />

@@ -1,0 +1,66 @@
+.vertical-menu-container {
+    position: fixed;
+    top: 50%;
+    right: 3rem;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    backdrop-filter: blur(10px);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: rgba(133, 133, 133, 0.3) !important;
+    z-index: 99999999;
+    transition: right 0.4s ease;
+}
+
+.vertical-menu-container.scrolled {
+    right: 0 !important;
+}
+.menu-item .icon {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transform: scale(1);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-item .icon.amber:hover {
+    background-color: #ffc107 !important;
+    transform: scale(1.1);
+}
+.menu-item .icon.emerald:hover {
+    background-color: #20c997 !important;
+    transform: scale(1.1);
+}
+.menu-item .icon.crimson:hover {
+    background-color: #dc3545!important;
+    transform: scale(1.1);
+}
+
+.menu-item .label {
+    right: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    padding: 0.25rem 0.5rem;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
+.menu-item .label.show {
+right: 5rem;
+opacity: 1;
+transform: translateX(0);
+}
+
+@media screen and (max-width: 480px) {
+    .vertical-menu-container {
+        right: 1rem;
+    }
+}

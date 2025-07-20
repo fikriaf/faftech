@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./styles/GithubRepoCard.css";
 import { GoStar, GoRepoForked, GoEye } from "react-icons/go";
 import { FaExternalLinkAlt } from "react-icons/fa";
-
+import { LanguageIcon, type LanguageName } from "./LanguageIcon";
+import { LicenseIcon } from "./LicenseIcon";
 interface GitHubRepoCardProps {
 repo: any;
 }
@@ -22,6 +23,18 @@ const updatedDate = new Date(repo.updated_at).toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",
 });
+
+const normalizeText = (lang: string): LanguageName | undefined => {
+  const lower = lang.toLowerCase();
+
+  const map: Record<string, LanguageName> = {
+    "c++": "cplusplus",
+    "jupyter notebook": "python",
+    "bash": "gnubash",
+  };
+
+  return map[lower] || (lower as LanguageName);
+};
 
 return (
     <div className="card github-repo-card shadow-sm">
@@ -72,10 +85,18 @@ return (
         {/* Extra info */}
         <div className="d-flex flex-wrap gap-1 small text-secondary mb-2">
         {repo.language && (
-            <span className="badge bg-secondary py-1">{repo.language}</span>
+            <span className={`d-flex align-items-center gap-1 badge py-2 m-0
+                bg-${normalizeText(repo.language)?? 'secondary'}
+                color-${normalizeText(repo.language) ?? 'dark'}`}
+            >
+                <LanguageIcon language={normalizeText(repo.language)!}/> {repo.language}
+            </span>
         )}
         {repo.license?.name && (
-            <span className="badge bg-info text-dark">{repo.license.name}</span>
+            <span className="d-flex align-items-center gap-1 badge bg-info text-dark py-2 m-0">
+                <LicenseIcon licenseText={normalizeText(repo.license.name)!} />
+                {repo.license.name}
+            </span>
         )}
         </div>
 
