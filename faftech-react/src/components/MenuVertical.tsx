@@ -31,7 +31,7 @@ const MenuVertical: React.FC = () => {
         { icon: <FaCog size={25} />, label: "SETTING", bg: "crimson", modal: () => setShowModal(true) },
     ];
 
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(false);
 
     return (
         <>
@@ -40,7 +40,7 @@ const MenuVertical: React.FC = () => {
             <div className={`vertical-menu-container ${scrolled ? "scrolled" : ""} ${show ? 'showMenu' : ''}`}>
                 {!show && (
                     <div
-                        className="text-dark d-md-none position-absolute"
+                        className="text-dark bg-primary d-md-none position-absolute"
                         style={{ zIndex: 999999999, right: '3.7rem', top: '0', fontSize: '2rem', cursor: 'pointer', width: "0.5rem", height: "100%", backgroundColor: "blue" }}
                         onClick={() => setShow(true)}
                     >
@@ -50,7 +50,7 @@ const MenuVertical: React.FC = () => {
 
                     {show && (
                     <div
-                        className="text-dark d-md-none position-absolute"
+                        className="text-dark bg-primary d-md-none position-absolute"
                         style={{ zIndex: 999999999, right: '3.7rem', top: '0', fontSize: '2rem', cursor: 'pointer', width: "0.5rem", height: "100%", backgroundColor: "blue" }}
                         onClick={() => setShow(false)}
                     >
@@ -58,7 +58,7 @@ const MenuVertical: React.FC = () => {
                     </div>
                 )}
                 <div
-                    className="text-dark position-absolute"
+                    className="text-dark bg-primary position-absolute d-md-block d-none"
                     style={{ zIndex: 999999999, right: '0', top: '0', fontSize: '2rem', cursor: 'pointer', width: "0.2rem", height: "100%", backgroundColor: "blue" }}
                 >
                     {''}
