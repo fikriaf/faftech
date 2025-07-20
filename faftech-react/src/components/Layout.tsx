@@ -53,10 +53,10 @@ const Layout: React.FC = () => {
             ))}
           </FadeContent>
         </div> */}
-
+        
         <Navbar />
+        <MenuVertical />
         <div className="main-content">
-          <MenuVertical />
           <Outlet />
         </div>
         <Footer />

@@ -276,7 +276,7 @@ const About: React.FC = () => {
                         const isLanguage = category === "languages";
                         return (
                             <div className="accordion-item bg-transparent" key={category}>
-                                <h2 className="accordion-header bg-transparent" id={`heading-${category}`}>
+                                <h2 className="accordion-header bg-transparent shadow shadow-bottom" id={`heading-${category}`}>
                                     <button
                                     className={`d-flex align-items-center gap-2 accordion-button border-0 bg-transparent shadow-none text-primary p-3 ${isLanguage ? '' : 'collapsed'}`}
                                     type="button"
@@ -349,6 +349,10 @@ const About: React.FC = () => {
                     </div>
                 </div>
             </div>
+            {/* Back to Top */}
+            <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top">
+                <i className="bi bi-arrow-up"></i>
+            </a>
         </PageWrapper>
     );
 };

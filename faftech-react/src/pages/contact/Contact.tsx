@@ -59,6 +59,10 @@ const Contact: React.FC = () => {
               </div>
             </div>
         </div>
+        {/* Back to Top */}
+        <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top">
+            <i className="bi bi-arrow-up"></i>
+        </a>
     </PageWrapper>
   )
 }

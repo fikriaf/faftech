@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <div className="container-fluid nav-bar bg-transparent" style={{zIndex: "999999"}}>
+        <div className="container-fluid nav-bar bg-transparent" style={{zIndex: "99"}}>
             <LibraryModal musicList={musicList} />
             <div className="total-navbar">
                 <div className="container-fluid d-flex gap-1 px-0 navbarnya" style={{ fontFamily: "Teko", letterSpacing: "3px", fontSize: "1.5rem" }}>
