@@ -46,42 +46,47 @@ function App() {
       }
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setDotIndex(prev => (prev % 3) + 1);
-    }, 500);
-    return () => clearInterval(interval);
-  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setDotIndex(prev => (prev % 3) + 1);
+  //   }, 500);
+  //   return () => clearInterval(interval);
+  // }, []);
 
-  useEffect(() => {
-    let current = 0;
-    let intervalTime = 600;
-    let interval: ReturnType<typeof setInterval>;
+  // useEffect(() => {
+  //   let current = 0;
+  //   let intervalTime = 600;
+  //   let interval: ReturnType<typeof setInterval>;
 
-    interval = setInterval(() => {
-      if (musicList.length > 0) {
-        if (current < musicList.length) {
-          current += Math.ceil((musicList.length - current) / 4);
-          setFakeLength(current);
-        } else {
-          clearInterval(interval);
-          setFakeLength(musicList.length);
-        }
-      } else {
-        current += 1;
-        setFakeLength(current);
-        intervalTime = Math.max(100, intervalTime * 0.9);
-      }
-    }, 100);
+  //   interval = setInterval(() => {
+  //     if (musicList.length) {
+  //       if (current < musicList.length) {
+  //         current += Math.ceil((musicList.length - current) / 4);
+  //         setFakeLength(current);
+  //       } else {
+  //         clearInterval(interval);
+  //         setFakeLength(musicList.length);
+  //       }
+  //     } else {
+  //       if (current == 5) {
+  //         clearInterval(interval);
+  //       }
+  //       current += 1;
+  //       setFakeLength(current);
+  //       intervalTime = Math.max(100, intervalTime * 0.9);
+  //     }
+  //   }, 100);
 
-    return () => clearInterval(interval);
-  }, [musicList]);
+  //   return () => clearInterval(interval);
+  // }, [musicList]);
 
   const dots = '.'.repeat(dotIndex);
   const isMusicReady = musicList.length > 0;
 
-  if (!ready || !isMusicReady)
-    return <Loader text={`Initialyzing${dots} [${fakeLength}]`} />;
+  // if (!ready || !isMusicReady)
+  //   return <Loader text={`Initialyzing${dots} [${fakeLength}]`} />;
+  if (!ready)
+    return <Loader text={`Initialyzing${dots}`} />
 
   return (
     <Suspense fallback={<Loader />}>

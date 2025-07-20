@@ -166,7 +166,7 @@ const Navbar: React.FC = () => {
                                                 </div>
                                                  */}
                                                 <p className="text-warning fw-semibold mb-3" style={{ fontSize: "0.7rem", fontFamily: "Heebo", letterSpacing: "1px" }}>
-                                                    {currentTrack?.title || musicList?.[0]?.title || "Tidak ada lagu"}
+                                                    {currentTrack?.title || musicList?.[0]?.title || "<Server Maintenance>"}
                                                 </p>
 
                                                 <div className="progress bg-light my-2" style={{ height: "5px"}}>
