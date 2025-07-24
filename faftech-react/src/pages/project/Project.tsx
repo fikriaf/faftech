@@ -90,18 +90,23 @@ const Project: React.FC = () => {
             content: [
                 {
                     name: "Dashboard",
-                    quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae cum itaque quam eveniet tenetur. Nostrum, possimus! Inventore omnis eaque non magnam? Molestias, earum tempore! Porro nam ea consectetur officiis quam? Fuga rem vero eos eius itaque magni libero! Obcaecati quam quia dolor ratione necessitatibus culpa explicabo, est a aliquid sunt numquam nisi consequuntur nostrum cum molestias incidunt odio blanditiis ab.",
-                    src: "https://github.com/user-attachments/assets/5a729bd5-603c-49b4-b9e8-1f2d95930075"
+                    quote: "🔑 Key Features include: 🧠 Generate UI components from natural language prompts, ⚡ Real-time code streaming (see code as it’s generated), 👀 Live preview without refreshing or rebuilding, 🧩 Clean, separated output: HTML, CSS, and JS, 📱 Responsive layout powered by Bootstrap, 🖥️ Backend built with Laravel, 🪶 Lightweight, fast, and developer-friendly interface, 🔓 Easy login (no email verification), and ♾️ Unlimited code generation requests.",
+                    src: "https://github.com/fikriaf/wekker/blob/main/Preview.png?raw=true"
                 },
                 {
-                    name: "Dashboard",
-                    quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae cum itaque quam eveniet tenetur. Nostrum, possimus! Inventore omnis eaque non magnam? Molestias, earum tempore! Porro nam ea consectetur officiis quam? Fuga rem vero eos eius itaque magni libero! Obcaecati quam quia dolor ratione necessitatibus culpa explicabo, est a aliquid sunt numquam nisi consequuntur nostrum cum molestias incidunt odio blanditiis ab.",
-                    src: "https://github.com/user-attachments/assets/5a729bd5-603c-49b4-b9e8-1f2d95930075"
+                    name: "File Manager",
+                    quote: "https://github.com/fikriaf/wekker/blob/main/Preview2.png?raw=true.",
+                    src: "https://github.com/fikriaf/wekker/blob/main/Preview2.png?raw=true"
                 },
                 {
-                    name: "Dashboard",
-                    quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae cum itaque quam eveniet tenetur. Nostrum, possimus! Inventore omnis eaque non magnam? Molestias, earum tempore! Porro nam ea consectetur officiis quam? Fuga rem vero eos eius itaque magni libero! Obcaecati quam quia dolor ratione necessitatibus culpa explicabo, est a aliquid sunt numquam nisi consequuntur nostrum cum molestias incidunt odio blanditiis ab.",
-                    src: "https://github.com/user-attachments/assets/5a729bd5-603c-49b4-b9e8-1f2d95930075"
+                    name: "API Management",
+                    quote: "The API Management panel allows users to securely manage their API keys for accessing the code generation service. You can generate, copy, or revoke your key with a single click. The interface is clean and straightforward, showing key status and creation time, making it easy to track and control access. It’s designed for developers who want to integrate Wekker’s features into their own applications with minimal setup.",
+                    src: "https://github.com/fikriaf/wekker/blob/main/Preview3.png?raw=true"
+                },
+                {
+                    name: "Tech Stack",
+                    quote: "🧰 The project is built using a modern and efficient tech stack. At the core, it uses the Laravel framework (PHP) to handle backend operations and routing. The frontend is crafted with JavaScript, CSS, and styled using Bootstrap for responsive design. Data is stored and managed through a MySQL database. For real-time interaction, the app uses a custom Laravel controller to handle code streaming seamlessly.",
+                    src: "https://github.com/fikriaf/wekker/blob/main/Preview4.png?raw=true"
                 }
             ]
         }
