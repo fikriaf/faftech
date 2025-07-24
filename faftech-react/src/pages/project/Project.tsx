@@ -82,8 +82,8 @@ const Project: React.FC = () => {
         {
             title: "Wekker",
             category: "Website",
-            tags: ["laravel", "filament", "mysql"],
-            url: "https://wekker.vercel.app",
+            tags: ["laravel", "javascript", "css", "mysql"],
+            url: "https://wekker.my.id",
             image: "https://github.com/user-attachments/assets/5a729bd5-603c-49b4-b9e8-1f2d95930075",
             logo: "https://raw.githubusercontent.com/fikriaf/wekker/refs/heads/main/public/wekker_dashboard/sources/logo/WEKKER.png",
             source: "wekker",
