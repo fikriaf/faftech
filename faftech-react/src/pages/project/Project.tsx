@@ -95,7 +95,7 @@ const Project: React.FC = () => {
                 },
                 {
                     name: "File Manager",
-                    quote: "https://github.com/fikriaf/wekker/blob/main/Preview2.png?raw=true.",
+                    quote: "The File Manager section provides an intuitive interface for uploading, renaming, and deleting your files. You can manage multiple files effortlessly with quick access buttons for actions like view, duplicate, or remove. Uploaded files are neatly listed with timestamp details, and you can open them instantly inside the editor. This feature streamlines your workflow by keeping all your assets organized and ready to use in your projects.",
                     src: "https://github.com/fikriaf/wekker/blob/main/Preview2.png?raw=true"
                 },
                 {
