@@ -6,6 +6,289 @@
     margin: 0 7rem;
 }
 
+/* Parallelogram Filter Button Styles */
+.filter-container {
+    padding: 1.5rem 4rem !important;
+    margin: 0 3rem;
+}
+
+.filter-btn {
+    position: relative;
+    padding: 0.7rem 1.5rem;
+    border: 1px blue;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+    
+    /* Jajar genjang shape */
+    transform: skew(-15deg);
+    border-radius: 4px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+/* Technology-specific colors */
+.filter-btn[data-tech="react"] {
+    color: #61DAFB;
+    border-color: rgba(97, 218, 251, 0.3);
+}
+
+.filter-btn[data-tech="typescript"] {
+    color: #3178C6;
+    border-color: rgba(49, 120, 198, 0.3);
+}
+
+.filter-btn[data-tech="javascript"] {
+    color: #F7DF1E;
+    border-color: rgba(247, 223, 30, 0.3);
+}
+
+.filter-btn[data-tech="vite"] {
+    color: #646CFF;
+    border-color: rgba(100, 108, 255, 0.3);
+}
+
+.filter-btn[data-tech="tailwind"] {
+    color: #06B6D4;
+    border-color: rgba(6, 182, 212, 0.3);
+}
+
+.filter-btn[data-tech="laravel"] {
+    color: #FF2D20;
+    border-color: rgba(255, 45, 32, 0.3);
+}
+
+.filter-btn[data-tech="bootstrap"] {
+    color: #7952B3;
+    border-color: rgba(121, 82, 179, 0.3);
+}
+
+.filter-btn[data-tech="express"] {
+    color: #68A063;
+    border-color: rgba(104, 160, 99, 0.3);
+}
+
+.filter-btn[data-tech="mongodb"] {
+    color: #47A248;
+    border-color: rgba(71, 162, 72, 0.3);
+}
+
+.filter-btn[data-tech="mysql"] {
+    color: #4479A1;
+    border-color: rgba(68, 121, 161, 0.3);
+}
+
+.filter-btn[data-tech="python"] {
+    color: #3776AB;
+    border-color: rgba(55, 118, 171, 0.3);
+}
+
+.filter-btn[data-tech="fast-api"] {
+    color: #009688;
+    border-color: rgba(0, 150, 136, 0.3);
+}
+
+.filter-btn[data-tech="css"] {
+    color: #1572B6;
+    border-color: rgba(21, 114, 182, 0.3);
+}
+
+/* Hover effects with tech colors */
+.filter-btn[data-tech="react"]:hover {
+    background: rgba(97, 218, 251, 0.2);
+    box-shadow: 0 4px 15px rgba(97, 218, 251, 0.3);
+}
+
+.filter-btn[data-tech="typescript"]:hover {
+    background: rgba(49, 120, 198, 0.2);
+    box-shadow: 0 4px 15px rgba(49, 120, 198, 0.3);
+}
+
+.filter-btn[data-tech="javascript"]:hover {
+    background: rgba(247, 223, 30, 0.2);
+    box-shadow: 0 4px 15px rgba(247, 223, 30, 0.3);
+}
+
+.filter-btn[data-tech="vite"]:hover {
+    background: rgba(100, 108, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(100, 108, 255, 0.3);
+}
+
+.filter-btn[data-tech="tailwind"]:hover {
+    background: rgba(6, 182, 212, 0.2);
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+}
+
+.filter-btn[data-tech="laravel"]:hover {
+    background: rgba(255, 45, 32, 0.2);
+    box-shadow: 0 4px 15px rgba(255, 45, 32, 0.3);
+}
+
+.filter-btn[data-tech="bootstrap"]:hover {
+    background: rgba(121, 82, 179, 0.2);
+    box-shadow: 0 4px 15px rgba(121, 82, 179, 0.3);
+}
+
+.filter-btn[data-tech="express"]:hover {
+    background: rgba(104, 160, 99, 0.2);
+    box-shadow: 0 4px 15px rgba(104, 160, 99, 0.3);
+}
+
+.filter-btn[data-tech="mongodb"]:hover {
+    background: rgba(71, 162, 72, 0.2);
+    box-shadow: 0 4px 15px rgba(71, 162, 72, 0.3);
+}
+
+.filter-btn[data-tech="mysql"]:hover {
+    background: rgba(68, 121, 161, 0.2);
+    box-shadow: 0 4px 15px rgba(68, 121, 161, 0.3);
+}
+
+.filter-btn[data-tech="python"]:hover {
+    background: rgba(55, 118, 171, 0.2);
+    box-shadow: 0 4px 15px rgba(55, 118, 171, 0.3);
+}
+
+.filter-btn[data-tech="fast-api"]:hover {
+    background: rgba(0, 150, 136, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 150, 136, 0.3);
+}
+
+.filter-btn[data-tech="css"]:hover {
+    background: rgba(21, 114, 182, 0.2);
+    box-shadow: 0 4px 15px rgba(21, 114, 182, 0.3);
+}
+
+/* Active state maintains tech color */
+.filter-btn.active {
+    transform: skew(-15deg) translateY(-2px);
+}
+
+.filter-btn[data-tech="react"].active {
+    background: #61DAFB;
+    color: #000;
+    border-color: #61DAFB;
+    box-shadow: 0 4px 15px rgba(97, 218, 251, 0.5);
+}
+
+.filter-btn[data-tech="typescript"].active {
+    background: #3178C6;
+    color: #fff;
+    border-color: #3178C6;
+    box-shadow: 0 4px 15px rgba(49, 120, 198, 0.5);
+}
+
+.filter-btn[data-tech="javascript"].active {
+    background: #F7DF1E;
+    color: #000;
+    border-color: #F7DF1E;
+    box-shadow: 0 4px 15px rgba(247, 223, 30, 0.5);
+}
+
+.filter-btn[data-tech="vite"].active {
+    background: #646CFF;
+    color: #fff;
+    border-color: #646CFF;
+    box-shadow: 0 4px 15px rgba(100, 108, 255, 0.5);
+}
+
+.filter-btn[data-tech="tailwind"].active {
+    background: #06B6D4;
+    color: #000;
+    border-color: #06B6D4;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.5);
+}
+
+.filter-btn[data-tech="laravel"].active {
+    background: #FF2D20;
+    color: #fff;
+    border-color: #FF2D20;
+    box-shadow: 0 4px 15px rgba(255, 45, 32, 0.5);
+}
+
+.filter-btn[data-tech="bootstrap"].active {
+    background: #7952B3;
+    color: #fff;
+    border-color: #7952B3;
+    box-shadow: 0 4px 15px rgba(121, 82, 179, 0.5);
+}
+
+.filter-btn[data-tech="express"].active {
+    background: #68A063;
+    color: #fff;
+    border-color: #68A063;
+    box-shadow: 0 4px 15px rgba(104, 160, 99, 0.5);
+}
+
+.filter-btn[data-tech="mongodb"].active {
+    background: #47A248;
+    color: #fff;
+    border-color: #47A248;
+    box-shadow: 0 4px 15px rgba(71, 162, 72, 0.5);
+}
+
+.filter-btn[data-tech="mysql"].active {
+    background: #4479A1;
+    color: #fff;
+    border-color: #4479A1;
+    box-shadow: 0 4px 15px rgba(68, 121, 161, 0.5);
+}
+
+.filter-btn[data-tech="python"].active {
+    background: #3776AB;
+    color: #fff;
+    border-color: #3776AB;
+    box-shadow: 0 4px 15px rgba(55, 118, 171, 0.5);
+}
+
+.filter-btn[data-tech="fast-api"].active {
+    background: #009688;
+    color: #fff;
+    border-color: #009688;
+    box-shadow: 0 4px 15px rgba(0, 150, 136, 0.5);
+}
+
+.filter-btn[data-tech="css"].active {
+    background: #1572B6;
+    color: #fff;
+    border-color: #1572B6;
+    box-shadow: 0 4px 15px rgba(21, 114, 182, 0.5);
+}
+
+/* Mengembalikan teks agar tidak miring */
+.filter-text {
+    display: inline-block;
+    transform: skew(15deg);
+    white-space: nowrap;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .filter-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+        transform: skew(-12deg);
+    }
+    
+    .filter-btn:hover {
+        transform: skew(-12deg) translateY(-1px);
+    }
+    
+    .filter-btn.active {
+        transform: skew(-12deg) translateY(-1px);
+    }
+    
+    .filter-text {
+        transform: skew(12deg);
+    }
+}
+
+
 @media screen and (max-width: 480px) {
     .cardProject {
         margin: 0;

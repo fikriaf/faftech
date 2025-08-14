@@ -9,6 +9,7 @@ import MyImageNoBg from "../../assets/fikri2-Photoroom.png"
 import ProfileCard from "../../components/ProfileCard";
 import Card3 from "../../components/Card3";
 import DarkVeil from "../../components/DarkVeil";
+import ExperienceComponent from "../../components/Experience";
 
 import {
     FaCode,
@@ -219,16 +220,8 @@ const About: React.FC = () => {
                 </div>
 
                 {/* My Education & Career Journey */}
-                <BackgroundCarousel title="My Education & Career Journey" />
                 <div className="w-100 d-flex justify-content-center">
-                    <div
-                    className="rounded"
-                    style={{
-                        width: "0.3rem",
-                        height: "800px",
-                        backgroundColor: "black",
-                    }}
-                    ></div>
+                    <ExperienceComponent />
                 </div>
 
                 {/* Skills */}
