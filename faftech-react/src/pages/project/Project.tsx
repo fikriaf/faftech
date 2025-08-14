@@ -8,6 +8,32 @@ const Project: React.FC = () => {
 
     const listProjects = [
         {
+            title: "AssistMind AI",
+            category: "Website | AI",
+            tags: ["vite", "react", "typescript"],
+            url: "#",
+            image: "",
+            logo: "https://raw.githubusercontent.com/fikriaf/AssistMind/main/logo.png",
+            source: "AssistMind",
+            content: [
+                {
+                    name: "About",
+                    quote: "This is a modern full-stack AI chat application called 'AssistMind AI' - an executive assistant for strategic insights and analysis. The application features a React frontend with TypeScript, Express.js backend, and PostgreSQL database with Drizzle ORM. It provides a sophisticated chat interface with features like file uploads, prompt templates, message management, and a real-time preview system.",
+                    src: "https://raw.githubusercontent.com/fikriaf/AssistMind/main/image.png"
+                },
+                {
+                    name: "Frontend Architecture",
+                    quote: "Framework: React 18 with TypeScript using Vite as the build tool. UI Library: Comprehensive design system built on Radix UI primitives with shadcn/ui components. Styling: Tailwind CSS with a custom dark theme using CSS variables for colors (obsidian, gold, platinum color palette). State Management: TanStack React Query for server state management and caching. Routing: Wouter for lightweight client-side routing. Form Handling: React Hook Form with Zod validation resolvers.",
+                    src: "https://raw.githubusercontent.com/fikriaf/AssistMind/main/image.png"
+                },
+                {
+                    name: "Backend Architecture",
+                    quote: "Runtime: Node.js with Express.js framework using ESM modules. Database ORM: Drizzle ORM with PostgreSQL dialect for type-safe database operations. Data Storage: Dual storage approach with in-memory storage (MemStorage) for development and PostgreSQL for production. API Design: RESTful API with structured error handling and request logging middleware. Development Tools: Vite integration for hot module replacement in development mode.",
+                    src: "https://raw.githubusercontent.com/fikriaf/AssistMind/main/image.png"
+                },
+            ]
+        },
+        {
             title: "AI Vision",
             category: "Website | AI",
             tags: ["react", "typescript", "express", "fast-api", "python"],
