@@ -13,39 +13,39 @@ const Project: React.FC = () => {
             category: "Website | AI",
             tags: ["vite", "react", "typescript", "tailwind"],
             url: "https://uixo.vercel.app",
-            image: "https://private-user-images.githubusercontent.com/143471086/477938245-e706e23c-ad21-403a-b52f-83cec78927a3.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTUxNjMzMjQsIm5iZiI6MTc1NTE2MzAyNCwicGF0aCI6Ii8xNDM0NzEwODYvNDc3OTM4MjQ1LWU3MDZlMjNjLWFkMjEtNDAzYS1iNTJmLTgzY2VjNzg5MjdhMy5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODE0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgxNFQwOTE3MDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hMTY5ZGQ1Y2RmYjM0NGVjOWUwN2Y0NmZlOGZlMTcxODJiNGZhNTA2ZGYyZjcxYmFlYTkxNjQwY2VhMGNlMzI4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.JUKATnFKXjcoAz94kwKlw7K1ez4-K5_Z_0ERMdBRVLc",
-            logo: "https://raw.githubusercontent.com/fikriaf/UIXO/main/logo-nobg.png?token=GHSAT0AAAAAADIS2SKJVINZEKPMORJPGMAO2E5TA5A",
+            image: "/uixo/PreviewPC.jpg",
+            logo: "/uixo/logo-nobg.png",
             source: "UIXO",
             content: [
                 {
                     name: "About",
                     quote: "UIXO is an AI-powered application that transforms your component descriptions into production-ready code — supporting React TSX, HTML, JavaScript, CSS, and more.",
-                    src: "https://private-user-images.githubusercontent.com/143471086/477938238-9a68156b-b9f2-4ded-81a4-6934f2a8a0c7.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTUxNjMzMjQsIm5iZiI6MTc1NTE2MzAyNCwicGF0aCI6Ii8xNDM0NzEwODYvNDc3OTM4MjM4LTlhNjgxNTZiLWI5ZjItNGRlZC04MWE0LTY5MzRmMmE4YTBjNy5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODE0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgxNFQwOTE3MDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mMzcyZDkzNjc4OWM1MTBjNmY0NjJjYzJhZmU4Y2NhMDdmMDczZWZkN2I0N2M2NzczNDM4NDVkNDgyZGI5MTkxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.YMrmhDiV7SGlOF2j5d60_OiE6wVb_HKy_dfxwXb9l4E"
+                    src: "/uixo/Prompt.jpg"
                 },
                 {
                     name: "Frontend Architecture",
                     quote: "React 18 with TypeScript using Vite as the build tool, Radix UI primitives with Tailwind CSS for styling, TanStack React Query for server state and caching, Wouter for routing, and React Hook Form for form handling.",
-                    src: "https://private-user-images.githubusercontent.com/143471086/477938245-e706e23c-ad21-403a-b52f-83cec78927a3.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTUxNjMzMjQsIm5iZiI6MTc1NTE2MzAyNCwicGF0aCI6Ii8xNDM0NzEwODYvNDc3OTM4MjQ1LWU3MDZlMjNjLWFkMjEtNDAzYS1iNTJmLTgzY2VjNzg5MjdhMy5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODE0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgxNFQwOTE3MDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hMTY5ZGQ1Y2RmYjM0NGVjOWUwN2Y0NmZlOGZlMTcxODJiNGZhNTA2ZGYyZjcxYmFlYTkxNjQwY2VhMGNlMzI4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.JUKATnFKXjcoAz94kwKlw7K1ez4-K5_Z_0ERMdBRVLc"
+                    src: "/uixo/Prompt.jpg"
                 },
                 {
                     name: "New Features",
                     quote: "Live Preview — Supports React DOM and HTML in real-time. Reduced Lag — Improved rendering and processing performance. Iframe Refresh — Automatically updates the preview when code changes.",
-                    src: "https://private-user-images.githubusercontent.com/143471086/477938260-e6038ace-ac27-4409-9f4a-dd604831e7a8.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTUxNjMzMjQsIm5iZiI6MTc1NTE2MzAyNCwicGF0aCI6Ii8xNDM0NzEwODYvNDc3OTM4MjYwLWU2MDM4YWNlLWFjMjctNDQwOS05ZjRhLWRkNjA0ODMxZTdhOC5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODE0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgxNFQwOTE3MDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yYTQ3OGE3MDgyOWJmZTU0ODNjNzM2NzgyYmQ2NDM5MWM0NThiNTgzYzY2Y2I1ODFjNzExN2E3ZGQwMzhjMWVmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.MhXURSgtTXJ-06JHW7HZmlZ8LKFk_inF_UTm2HHsCAU"
+                    src: "/uixo/LivePreviewPC.jpg"
                 },
                 {
                     name: "Output TSX",
                     quote: "Example output .tsx",
-                    src: "https://private-user-images.githubusercontent.com/143471086/477938224-92c4e128-475c-47c2-92fa-242c0f4ceebb.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTUxNjMzMjQsIm5iZiI6MTc1NTE2MzAyNCwicGF0aCI6Ii8xNDM0NzEwODYvNDc3OTM4MjI0LTkyYzRlMTI4LTQ3NWMtNDdjMi05MmZhLTI0MmMwZjRjZWViYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODE0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgxNFQwOTE3MDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wYWQzOGY2YTdkMDM0MzRjNTIyNTE2ZWEwMzEwM2I0YjM4NDc5YjFiM2JjZWJjZDRkOTYyN2NiMmJkMTIwY2Q4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.QwMAYLTEvD9a3Zjl-aXGytUkaaLpKnUFOBkX8TuKNX0"
+                    src: "/uixo/Output4.png"
                 },
                 {
                     name: "Output HTML",
                     quote: "Example output .html",
-                    src: "https://private-user-images.githubusercontent.com/143471086/477938282-e20960df-f8d8-436d-9b67-b7ba57e1dce4.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTUxNjMzMjQsIm5iZiI6MTc1NTE2MzAyNCwicGF0aCI6Ii8xNDM0NzEwODYvNDc3OTM4MjgyLWUyMDk2MGRmLWY4ZDgtNDM2ZC05YjY3LWI3YmE1N2UxZGNlNC5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODE0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgxNFQwOTE3MDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hMWE0ZmZkMGU5NzUyZjM2OTZjMGY1NmFmZWM4N2U3NjI4ZGE5ZjA4NTk5YTI4OTE1YTg2YmRiMTI0N2JhNzE1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.T0nrvpfziN6qTPREwd1bom-Wb5dK_2ivaCT3zswLIe8"
+                    src: "/uixo/Output1.jpg"
                 },
             ]
         },
         {
-            title: "MCP Agents Laravel UI",
+            title: "MCP Laravel UI",
             category: "MCP | AI",
             tags: ["python", "mcp"],
             url: "https://github.com/fikriaf/mcp_agents_create_laravel",
@@ -75,24 +75,24 @@ const Project: React.FC = () => {
             category: "Website | AI",
             tags: ["vite", "react", "typescript", "tailwind"],
             url: "#",
-            image: "https://private-user-images.githubusercontent.com/143471086/477940528-afde1068-1270-4d58-a372-5116bb1f7c96.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTUxNjM2NDEsIm5iZiI6MTc1NTE2MzM0MSwicGF0aCI6Ii8xNDM0NzEwODYvNDc3OTQwNTI4LWFmZGUxMDY4LTEyNzAtNGQ1OC1hMzcyLTUxMTZiYjFmN2M5Ni5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODE0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgxNFQwOTIyMjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jMmI1NmY4MDNlNjliMmM1NWRjNGUwZWJjZTNkYTMyMTA2YzFmZTQ0ZWYzY2IyNTUzY2VjYjNlZjBjMjBkYTUzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.r8DsAk7rULJkppjDo_wP7ysBq3lbDLPMaooYqBN6iII",
-            logo: "https://private-user-images.githubusercontent.com/143471086/477940539-9d858345-ce45-4514-9420-de6de10f2ed8.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTUxNjM2NDEsIm5iZiI6MTc1NTE2MzM0MSwicGF0aCI6Ii8xNDM0NzEwODYvNDc3OTQwNTM5LTlkODU4MzQ1LWNlNDUtNDUxNC05NDIwLWRlNmRlMTBmMmVkOC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODE0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgxNFQwOTIyMjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03ZGJjMjIwZjdhM2Y4MzUyOTUwMGQ4YzMzZGQzMTNmNzNiNDI1NGYwMDYwNGU2MTVlYzU0NjM5OGQzOTY2N2QyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.J_li1-pZDb04501kstJneUojd9UmuPJqQM3FGAuQAt0",
+            image: "/assistmind/image.png",
+            logo: "/assistmind/logo.png",
             source: "AssistMind",
             content: [
                 {
                     name: "About",
                     quote: "This is a modern full-stack AI chat application called 'AssistMind AI' - an executive assistant for strategic insights and analysis. The application features a React frontend with TypeScript, Express.js backend, and PostgreSQL database with Drizzle ORM. It provides a sophisticated chat interface with features like file uploads, prompt templates, message management, and a real-time preview system.",
-                    src: "https://private-user-images.githubusercontent.com/143471086/477940528-afde1068-1270-4d58-a372-5116bb1f7c96.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTUxNjM2NDEsIm5iZiI6MTc1NTE2MzM0MSwicGF0aCI6Ii8xNDM0NzEwODYvNDc3OTQwNTI4LWFmZGUxMDY4LTEyNzAtNGQ1OC1hMzcyLTUxMTZiYjFmN2M5Ni5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODE0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgxNFQwOTIyMjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jMmI1NmY4MDNlNjliMmM1NWRjNGUwZWJjZTNkYTMyMTA2YzFmZTQ0ZWYzY2IyNTUzY2VjYjNlZjBjMjBkYTUzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.r8DsAk7rULJkppjDo_wP7ysBq3lbDLPMaooYqBN6iII"
+                    src: "/assistmind/image.png"
                 },
                 {
                     name: "Frontend Architecture",
                     quote: "Framework: React 18 with TypeScript using Vite as the build tool. UI Library: Comprehensive design system built on Radix UI primitives with shadcn/ui components. Styling: Tailwind CSS with a custom dark theme using CSS variables for colors (obsidian, gold, platinum color palette). State Management: TanStack React Query for server state management and caching. Routing: Wouter for lightweight client-side routing. Form Handling: React Hook Form with Zod validation resolvers.",
-                    src: "https://private-user-images.githubusercontent.com/143471086/477940528-afde1068-1270-4d58-a372-5116bb1f7c96.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTUxNjM2NDEsIm5iZiI6MTc1NTE2MzM0MSwicGF0aCI6Ii8xNDM0NzEwODYvNDc3OTQwNTI4LWFmZGUxMDY4LTEyNzAtNGQ1OC1hMzcyLTUxMTZiYjFmN2M5Ni5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODE0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgxNFQwOTIyMjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jMmI1NmY4MDNlNjliMmM1NWRjNGUwZWJjZTNkYTMyMTA2YzFmZTQ0ZWYzY2IyNTUzY2VjYjNlZjBjMjBkYTUzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.r8DsAk7rULJkppjDo_wP7ysBq3lbDLPMaooYqBN6iII"
+                    src: "/assistmind/image.png"
                 },
                 {
                     name: "Backend Architecture",
                     quote: "Runtime: Node.js with Express.js framework using ESM modules. Database ORM: Drizzle ORM with PostgreSQL dialect for type-safe database operations. Data Storage: Dual storage approach with in-memory storage (MemStorage) for development and PostgreSQL for production. API Design: RESTful API with structured error handling and request logging middleware. Development Tools: Vite integration for hot module replacement in development mode.",
-                    src: "https://private-user-images.githubusercontent.com/143471086/477940528-afde1068-1270-4d58-a372-5116bb1f7c96.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTUxNjM2NDEsIm5iZiI6MTc1NTE2MzM0MSwicGF0aCI6Ii8xNDM0NzEwODYvNDc3OTQwNTI4LWFmZGUxMDY4LTEyNzAtNGQ1OC1hMzcyLTUxMTZiYjFmN2M5Ni5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODE0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgxNFQwOTIyMjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jMmI1NmY4MDNlNjliMmM1NWRjNGUwZWJjZTNkYTMyMTA2YzFmZTQ0ZWYzY2IyNTUzY2VjYjNlZjBjMjBkYTUzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.r8DsAk7rULJkppjDo_wP7ysBq3lbDLPMaooYqBN6iII"
+                    src: "/assistmind/image.png"
                 },
             ]
         },

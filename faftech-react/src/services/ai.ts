@@ -1,10 +1,22 @@
 // src/utils/groqText.ts
 import { streamText } from 'ai';
 import { createGroq } from '@ai-sdk/groq';
+import { createOpenAI } from '@ai-sdk/openai';
+import MistralClient from '@mistralai/mistralai';
 
 const groq = createGroq({
   apiKey: import.meta.env.VITE_GROQ_API_KEY!,
 });
+
+const openai = createOpenAI({
+  apiKey: import.meta.env.VITE_OPENAI_API_KEY!,
+});
+
+const apiKey = import.meta.env.VITE_MISTRAL_API_KEY!;
+const clientMistral = new MistralClient(apiKey);
+
+
+// ========================= GROQ =========================
 export async function streamVercelAI(
   model: string,
   prompt: string,
@@ -45,8 +57,62 @@ export async function streamVercelAI(
   }
 }
 
+// ========================= OpenAI =========================
+export async function streamOpenAIAI(
+  model: string,
+  prompt: string,
+  onDelta: (chunk: string) => void,
+  history: { role: 'user' | 'assistant' | 'system'; content: string }[] = []
+) {
+  const messages = [
+    ...history,
+    { role: 'user', content: prompt },
+  ];
 
-export async function streamOpenRouterAI(model: string, prompt: string, onDelta: (chunk: string) => void) {
+  const result = await streamText({
+    model: openai(model) as any,
+    // @ts-ignore
+    messages,
+  });
+
+  for await (const delta of result.textStream) {
+    if (delta) onDelta(delta);
+  }
+}
+
+// ========================= Mistral =========================
+export async function streamMistralAI(
+  model: string,
+  prompt: string,
+  onDelta: (chunk: string) => void,
+  history: { role: "user" | "assistant" | "system"; content: string }[] = []
+) {
+  const messages = [
+    ...history,
+    { role: "user", content: prompt },
+  ];
+      
+  // Streaming API Mistral
+  const stream = await clientMistral.chatStream({
+    model: model,
+    // @ts-ignore
+    messages,
+  });
+
+  for await (const chunk of stream) {
+    const delta = (chunk as any).choices?.[0]?.delta?.content;
+    if (delta) {
+      onDelta(delta);
+    }
+  }
+}
+
+// ========================= OpenRouter =========================
+export async function streamOpenRouterAI(
+  model: string,
+  prompt: string,
+  onDelta: (chunk: string) => void
+) {
   const apiKeyOpenRouter = import.meta.env.VITE_OPEN_ROUTER_API_KEY;
   const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
     method: 'POST',

@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect, useLayoutEffect } from 'react';
 import axios from 'axios';
 import { FiSend } from 'react-icons/fi';
 import './styles/modal.css'
-import { streamVercelAI } from '../services/ai';
+import { streamMistralAI } from '../services/ai';
 import { setHandleSend } from './sendHandler';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -83,8 +83,8 @@ const ConsultationModal: React.FC<Props> = ({ show, onClose }) => {
     }
   }, [show]);
 
-  const [selectedLLM, setSelectedLLM] = useState('deepseek-r1-distill-llama-70b');
-  const [selectedLabel, setSelectedLabel] = useState('DeepSeek-R1 70B')
+  const [selectedLLM, setSelectedLLM] = useState('mistral-medium');
+  const [selectedLabel, setSelectedLabel] = useState('Mistral Medium')
   
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState<Message[]>([]);
@@ -138,7 +138,7 @@ const ConsultationModal: React.FC<Props> = ({ show, onClose }) => {
       setScrollTrigger((prev) => prev + 1);
     };
 
-    await streamVercelAI(
+    await streamMistralAI(
       selectedLLM,
       content,
       updateAIMessage,
@@ -179,10 +179,10 @@ const ConsultationModal: React.FC<Props> = ({ show, onClose }) => {
             <div className="d-flex align-items-center gap-2 flex-wrap">
               <label className="text-info mb-0 small">Model:</label>
               {[
+                { value: 'mistral-medium', label: 'Mistral Medium' },
                 { value: 'deepseek-r1-distill-llama-70b', label: 'DeepSeek-R1 70B' },
                 { value: 'llama-3.3-70b-versatile', label: 'Llama-3.3 70B' },
                 { value: 'qwen/qwen3-32b', label: 'Qwen-3 32B' },
-                { value: 'mistral-saba-24b', label: 'Mistral 24B' },
               ].map((model) => (
                 <button
                   key={model.value}
