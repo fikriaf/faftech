@@ -35,7 +35,7 @@ const CarouselModal: React.FC<CarouselModalProps> = ({
     }, [isOpen]);
 
     return isOpen ? (
-        <div className="carousel-modal-backdrop" onClick={onClose}>
+        <div className="carousel-modal-backdrop w-100" onClick={onClose}>
         <div
             className="carousel-modal-dialog mx-3"
             onClick={(e) => e.stopPropagation()}

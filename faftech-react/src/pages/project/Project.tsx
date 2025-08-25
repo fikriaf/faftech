@@ -49,14 +49,14 @@ const Project: React.FC = () => {
             category: "MCP | AI",
             tags: ["python", "mcp"],
             url: "https://github.com/fikriaf/mcp_agents_create_laravel",
-            image: "https://github.com/fikriaf/mcp_agents_create_laravel/blob/main/image.png?raw=true",
+            image: "https://raw.githubusercontent.com/fikriaf/mcp_agents_create_laravel/refs/heads/main/image.png",
             logo: "/logo.webp",
             source: "AssistMind",
             content: [
                 {
                     name: "About",
                     quote: "An intelligent multi-agent system that automatically generates Laravel UI components from natural language prompts using AI agents.",
-                    src: "https://github.com/fikriaf/mcp_agents_create_laravel/blob/main/image.png?raw=true"
+                    src: "https://raw.githubusercontent.com/fikriaf/mcp_agents_create_laravel/refs/heads/main/image.png"
                 },
                 {
                     name: "Feature",
@@ -74,7 +74,7 @@ const Project: React.FC = () => {
             title: "AssistMind AI",
             category: "Website | AI",
             tags: ["vite", "react", "typescript", "tailwind"],
-            url: "#",
+            url: "https://shorturl.at/eyrsc",
             image: "/assistmind/image.png",
             logo: "/assistmind/logo.png",
             source: "AssistMind",
@@ -101,7 +101,7 @@ const Project: React.FC = () => {
             category: "Backend | API",
             tags: ["express", "typescript"],
             url: "https://github.com/fikriaf/Music-API",
-            image: "https://github.com/fikriaf/Music-API/blob/main/Preview.png?raw=true",
+            image: "https://github.com/fikriaf/Music-API/blob/main/image.png?raw=true",
             logo: "/logo.webp",
             source: "AssistMind",
             content: [
@@ -245,7 +245,7 @@ const Project: React.FC = () => {
     return (
         <PageWrapper direction="left">
             {/* CONTENT */}
-            <div className="container-fluid min-vh-100 bg-transparent mb-5">
+            <div className="container-fluid min-vh-100 bg-transparent mb-5 overflow-x-hidden">
                 <div className="container-fluid indukProject">
                     {/* Heading */}
                     <div className="mb-5" style={{ width: "100%" }}>
@@ -259,7 +259,7 @@ const Project: React.FC = () => {
                         />
                     </div>
 
-                                        {/* Filter Buttons */}
+                    {/* Filter Buttons */}
                     <div className="filter-container d-flex px-3 flex-wrap gap-3 justify-content-center mb-4">
                         <button 
                             className={`filter-btn ${selectedTag === "all" ? "active bg-dark text-white" : ""}`}
@@ -300,7 +300,7 @@ const Project: React.FC = () => {
                     {/* Card */}
                     <div className="mt-2 row g-md-5 cardProject">
                         {filteredProjects.map((item, idx) => (
-                            <div key={idx} className="col-md-4 col-12 listProject" style={{height: "15rem", margin: "5rem 0"}}>
+                            <div key={idx} className="col-md-4 col-12 listProject" style={{height: "15rem", margin: "3% 0"}}>
                                 <Card2 title={item.title} category={item.category} content={item.content}
                                 tags={item.tags} img={item.image} url={item.url} logo={item.logo} source={item.source} />
                             </div>
