@@ -149,10 +149,8 @@ const About: React.FC = () => {
                         status="Online"
                         contactText="Contact Me"
                         avatarUrl={MyImageNoBg}
-                        iconUrl={MyImage}
                         miniAvatarUrl={MyImage}
                         showUserInfo={true}
-                        enableTilt={false}
                         onContactClick={() => console.log('Contact clicked')}
                         />
                         <ul className="d-grid shadow shadow-lg gap-3 mt-3 list-unstyled ms-3" style={{
