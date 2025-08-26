@@ -104,7 +104,7 @@ const Card: React.FC<CardProps> = ({title, category, tags, img, url, logo, sourc
                     </div>
                 </div>
                 </div>
-                <div className='d-flex gap-1'>
+                <div className='d-flex gap-1 tags-wrapper'>
                     {tags?.map((tag, index) => (
                         <div className="btns">
                             <div className="tags">
@@ -264,6 +264,14 @@ const StyledWrapper = styled.div`
         transition: .2s ease-in-out;
     }
 
+    .tags-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em;
+        max-width: 100%;
+        margin-top: 0.5em;
+    }
+
     .tags {
         display: flex;
         align-items: center;
@@ -275,6 +283,9 @@ const StyledWrapper = styled.div`
         opacity: 0;
         background-color: #444857;
         transition: .2s ease-in-out;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .tags_text {

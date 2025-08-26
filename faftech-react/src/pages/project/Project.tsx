@@ -125,7 +125,7 @@ const Project: React.FC = () => {
         {
             title: "AI Vision",
             category: "Website | AI",
-            tags: ["vite", "react", "typescript", "tailwind", "express", "fast-api", "python"],
+            tags: ["vite", "react", "typescript", "tailwind", "express", "fast-api"],
             url: "https://ai-vision-web.vercel.app/",
             image: "https://raw.githubusercontent.com/fikriaf/AI-Vision-Web/main/Preview.png",
             logo: "https://ai-vision-web.vercel.app/logo.png",
@@ -156,7 +156,7 @@ const Project: React.FC = () => {
         {
             title: "GPALytics",
             category: "Website",
-            tags: ["vite", "react", "typescript", "bootstrap", "express", "mongodb"],
+            tags: ["vite", "react", "bootstrap", "express", "mongodb"],
             url: "https://gpalytics-two.vercel.app/",
             image: "https://raw.githubusercontent.com/fikriaf/GPAlytics_FrontEnd/main/Preview.png",
             logo: "https://gpalytics-two.vercel.app/assets/logo-B8MVdj6B.png",
@@ -300,7 +300,7 @@ const Project: React.FC = () => {
                     {/* Card */}
                     <div className="mt-2 row g-md-5 cardProject">
                         {filteredProjects.map((item, idx) => (
-                            <div key={idx} className="col-md-4 col-12 listProject" style={{height: "15rem", margin: "3% 0"}}>
+                            <div key={idx} className="col-md-4 col-12 listProject" style={{height: "15rem", margin: "4% 0"}}>
                                 <Card2 title={item.title} category={item.category} content={item.content}
                                 tags={item.tags} img={item.image} url={item.url} logo={item.logo} source={item.source} />
                             </div>
