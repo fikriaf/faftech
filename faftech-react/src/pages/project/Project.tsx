@@ -51,7 +51,7 @@ const Project: React.FC = () => {
             url: "https://github.com/fikriaf/mcp_agents_create_laravel",
             image: "https://raw.githubusercontent.com/fikriaf/mcp_agents_create_laravel/refs/heads/main/image.png",
             logo: "/logo.webp",
-            source: "AssistMind",
+            source: "mcp_agents_create_laravel",
             content: [
                 {
                     name: "About",
@@ -103,7 +103,7 @@ const Project: React.FC = () => {
             url: "https://github.com/fikriaf/Music-API",
             image: "https://github.com/fikriaf/Music-API/blob/main/image.png?raw=true",
             logo: "/logo.webp",
-            source: "AssistMind",
+            source: "Music-API",
             content: [
                 {
                     name: "About",
