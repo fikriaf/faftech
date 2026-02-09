@@ -2,6 +2,18 @@ import React, { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import "./styles/Experience.css";
 import { FiChevronLeft, FiChevronRight, FiX } from 'react-icons/fi';
+import { api, type Experience } from '../services/api';
+
+interface ExperienceItem {
+  date: string;
+  title: string;
+  company: string;
+  type: string;
+  typeTime: string;
+  images: string[];
+  description: string[];
+  skills: string[];
+}
 
 const ExperienceComponent = () => {
   const timelineItemsRef = useRef<HTMLDivElement[]>([]);
@@ -38,55 +50,33 @@ const ExperienceComponent = () => {
     };
   }, []);
 
-  const experiences = [
-    {
-      date: "July 2025 - Now",
-      title: "Robotic and AI Engineer",
-      company: "Informatika - Universitas Pembangunan Jaya.",
-      type: "Job",
-      typeTime: "Part-time",
-      images: ["/experience/robot1.jpeg", "/experience/robot2.jpeg", "/experience/robot3.jpeg", "/experience/robot4.jpeg"],
-      description: [
-        "Developing an AI-based waste sorting system using YOLO and CNN.",
-        "The AI classifies mixed waste: can, glass, plastic, and other.",
-        "Now in the training phase for the AI model.",
-        "Simultaneously building a user interface (UI) to visualize and control the robotic system.",
-        "Robotic arms or delta robots will execute real-time waste sorting based on AI output.",
-        "Goal: boost recycling efficiency, reduce manual labor, and offer a replicable model for sustainable waste management."
-      ],
-      skills: ["YOLO", "Arduino", "Tkinter"]
-    },
-    {
-      date: "Juny 2025 - August 2025",
-      title: "Front-End Developer (Website Company Profile UPJ) Internship",
-      company: "KHI - Universitas Pembangunan Jaya",
-      type: "Internship",
-      typeTime: "Full-time",
-      images: ["/experience/frontend1.jpeg", "/experience/frontend2.jpeg", "/experience/frontend1.jpeg"],
-      description: [
-        "Contributed to the UI/UX improvement of UPJ’s official website (upj.ac.id) by conducting page reviews and identifying visual and responsive design issues.",
-        "Reviewed and reported layout inconsistencies, such as misaligned text (lack of justified alignment), oversized images, and poor mobile responsiveness.",
-        "Provided recommendations to improve the visual structure of various static pages, including Program & Fees, Admission Pathway, Campus Visit, Alumni, and Student Organizations.",
-        "Focused on enhancing user accessibility and experience across desktop and mobile views."
-      ],
-      skills: ["CMS", "HTML", "CSS", "JS", "Figma"]
-    },
-    {
-      date: "Sep 2024 - Feb 2025",
-      title: "Academic Achievement Division",
-      company: "Informatics Student Association",
-      type: "Organization",
-      typeTime: "Part-time",
-      images: ["/experience/hima1.jpeg", "/experience/hima2.jpeg", "/experience/hima3.jpeg", "/experience/hima4.jpeg", "/experience/hima5.jpeg"],
-      description: [
-        "I actively served as a member of the Academic Achievement Division in the Informatics Student Association at Universitas Pembangunan Jaya.",
-        "Responsible for supporting student academic development by organizing study groups, academic workshops, and peer tutoring sessions.",
-        "Participated in planning initiatives to improve overall academic performance among informatics students and helped facilitate student involvement in academic competitions.",
-        "Developed strong collaboration, communication, and organizational skills while promoting a culture of academic excellence within the department."
-      ],
-      skills: ["Organizational Development", "Organization Skills", "Organizational Leadership"]
-    }
-  ];
+  const [experiences, setExperiences] = useState<ExperienceItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchExperiences = async () => {
+      try {
+        const data = await api.getExperiences();
+        const transformedData: ExperienceItem[] = data.map((exp: Experience) => ({
+          date: exp.date_range,
+          title: exp.title,
+          company: exp.company,
+          type: exp.type,
+          typeTime: exp.type_time,
+          images: exp.images?.map(img => img.image_url) || [],
+          description: exp.description,
+          skills: exp.skills
+        }));
+        setExperiences(transformedData);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to load experiences');
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchExperiences();
+  }, []);
 
   const openModal = (exp: any) => {
     setModalData(exp);
@@ -139,14 +129,38 @@ const ExperienceComponent = () => {
     };
   }, [modalOpen]);
 
-return (
+  if (loading) {
+    return (
+      <div className="experience-container" style={{ minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="text-center">
+          <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <p className="mt-3 text-muted">Loading experiences...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="experience-container" style={{ minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="text-center text-danger">
+          <p>Failed to load experiences</p>
+          <small>{error}</small>
+        </div>
+      </div>
+    );
+  }
+
+  return (
     <div className="experience-container">
       <div className="floating-elements">
         <div className="floating-element" style={{ width: '100px', height: '100px', top: '10%', left: '5%', animationDuration: '20s' }}></div>
         <div className="floating-element" style={{ width: '70px', height: '70px', top: '70%', left: '80%', animationDuration: '25s' }}></div>
         <div className="floating-element" style={{ width: '50px', height: '50px', top: '40%', left: '90%', animationDuration: '18s' }}></div>
       </div>
-      
+
       <div className="experience-header">
         <h1 className="experience-title">My Experience</h1>
         <p className="experience-subtitle">A journey through my professional career and achievements</p>

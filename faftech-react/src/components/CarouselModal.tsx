@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import ReactDOM from "react-dom";
 import "./styles/CarouselModal.css";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaGithub } from 'react-icons/fa';
@@ -34,7 +35,7 @@ const CarouselModal: React.FC<CarouselModalProps> = ({
         }
     }, [isOpen]);
 
-    return isOpen ? (
+    const modalContent = isOpen ? (
         <div className="carousel-modal-backdrop w-100" onClick={onClose}>
         <div
             className="carousel-modal-dialog mx-3"
@@ -67,6 +68,8 @@ const CarouselModal: React.FC<CarouselModalProps> = ({
         </div>
         </div>
     ) : null;
+
+    return modalContent ? ReactDOM.createPortal(modalContent, document.body) : null;
 };
 
 export default CarouselModal;

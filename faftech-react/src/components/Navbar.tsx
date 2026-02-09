@@ -99,6 +99,9 @@ const Navbar: React.FC = () => {
                                         <Link to="/project" className="nav-link py-3">PROJECT</Link>
                                     </li>
                                     <li className="nav-item">
+                                        <Link to="/achievements" className="nav-link py-3">ACHIEVEMENTS</Link>
+                                    </li>
+                                    <li className="nav-item">
                                         <Link to="/contact" className="nav-link py-3">CONTACT</Link>
                                     </li>
                                 </ul>
@@ -119,6 +122,11 @@ const Navbar: React.FC = () => {
                                     <li className="nav-item">
                                         <ToolTip text="Explore my best works and projects">
                                         <Link to="/project" className="nav-link py-3">PROJECT</Link>
+                                        </ToolTip>
+                                    </li>
+                                    <li className="nav-item">
+                                        <ToolTip text="View my certificates and achievements">
+                                        <Link to="/achievements" className="nav-link py-3">ACHIEVEMENTS</Link>
                                         </ToolTip>
                                     </li>
                                     <li className="nav-item">

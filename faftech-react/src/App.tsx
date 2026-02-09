@@ -12,6 +12,7 @@ import { useDeviceStore } from './services/useDeviceStore';
 const Home = lazy(() => import('./pages/home/Home'));
 const About = lazy(() => import('./pages/about/About'));
 const Project = lazy(() => import('./pages/project/Project'));
+const Achievements = lazy(() => import('./pages/achievement/Achievements'));
 const Contact = lazy(() => import('./pages/contact/Contact'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
@@ -96,6 +97,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/project" element={<Project />} />
+            <Route path="/achievements" element={<Achievements />} />
             <Route path="/contact" element={<Contact />} />
           </Route>
           <Route path="*" element={<NotFound />} />

@@ -143,14 +143,9 @@ const About: React.FC = () => {
 
                     <div className="d-flex flex-column flex-md-row justify-content-center align-items-center foto" style={{ fontFamily: "Heebo" }} >
                         <ProfileCard
-                        name="Fikri Armia Fahmi"
-                        title="Full-Stack Web & AI Engineer"
-                        handle="fikriaf"
-                        status="Online"
-                        contactText="Contact Me"
                         avatarUrl={MyImageNoBg}
                         miniAvatarUrl={MyImage}
-                        showUserInfo={true}
+                        contactText="Contact Me"
                         onContactClick={() => console.log('Contact clicked')}
                         />
                         <ul className="d-grid shadow shadow-lg gap-3 mt-3 list-unstyled ms-3" style={{
@@ -269,7 +264,7 @@ const About: React.FC = () => {
                             <div className="accordion-item bg-transparent" key={category}>
                                 <h2 className="accordion-header bg-transparent shadow shadow-bottom" id={`heading-${category}`}>
                                     <button
-                                    className={`d-flex align-items-center gap-2 accordion-button border-0 bg-transparent shadow-none text-primary p-3 ${isLanguage ? '' : 'collapsed'}`}
+                                    className={`d-flex align-items-center gap-2 accordion-button border-0 bg-transparent shadow-none text-primary p-3 skill-accordion-btn ${isLanguage ? '' : 'collapsed'}`}
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target={`#collapse-${category}`}
@@ -277,8 +272,8 @@ const About: React.FC = () => {
                                     aria-controls={`collapse-${category}`}
                                     style={{fontSize: "1.5rem", fontFamily: "Heebo", fontWeight: "600"}}
                                     >
-                                        <div className="d-flex align-items-center text-white rounded"
-                                        style={{padding: "1rem", backgroundColor: bgLogo?.[index]}}
+                                        <div className="d-flex align-items-center text-white rounded skill-icon-wrapper"
+                                        style={{padding: "1rem", backgroundColor: bgLogo?.[index], transition: "all 0.3s ease"}}
                                         >
                                             {logoCategory?.[index]}
                                         </div>

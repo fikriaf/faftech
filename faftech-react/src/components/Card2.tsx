@@ -21,6 +21,14 @@ const Card: React.FC<CardProps> = ({title, category, tags, img, url, logo, sourc
     const [showModal, setShowModal] = useState(false);
     const [infoRepo, setInfoRepo] = useState<any>([]);
 
+    // Truncate title to max 20 characters
+    const truncateTitle = (str: string, maxLength: number = 20) => {
+        if (str.length <= maxLength) return str;
+        return str.substring(0, maxLength) + '...';
+    };
+
+    const displayTitle = truncateTitle(title);
+
     useEffect(() => {
         const fetchRepo = async () => {
             try {
@@ -95,7 +103,7 @@ const Card: React.FC<CardProps> = ({title, category, tags, img, url, logo, sourc
                 </div>
                 <div className='d-flex justify-content-between w-100'>
                     <div className="text">
-                        <div className="text_m">{title}</div>
+                        <div className="text_m">{displayTitle}</div>
                         <div className="text_s">{category}</div>
                     </div>
                     <div className='d-flex flex-column'>
@@ -208,7 +216,7 @@ const StyledWrapper = styled.div`
     .main:hover .card_back {
         margin-top: -0.2rem;
         margin-left: 0;
-        scale: 1.1;
+        transform: scale(1.1);
         aspect-ratio: 16 / 14;
         height: auto;
         width: 100%;
