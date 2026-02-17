@@ -1,0 +1,97 @@
+# Music API Documentation (faftech-music-v2)
+
+## Base URL
+```
+https://music-api-v2.vercel.app
+```
+
+## Endpoints
+
+---
+
+### 1. Get All Music
+
+**Endpoint:** `GET /api/music`
+
+**Description:** Retrieve list of all uploaded music files with metadata.
+
+**Response:**
+```json
+[
+  {
+    "id": 1,
+    "title": "Song Title",
+    "file": "filename.mp3",
+    "url": "/audio/filename.mp3",
+    "duration": "3:45"
+  }
+]
+```
+
+**Response Fields:**
+| Field | Type | Description |
+|-------|------|-------------|
+| id | number | Unique identifier |
+| title | string | Song title (capitalized, spaces instead of - or _) |
+| file | string | Original filename |
+| url | string | Audio file URL path |
+| duration | string | Duration in MM:SS format |
+
+---
+
+### 2. Upload Music
+
+**Endpoint:** `POST /api/upload`
+
+**Description:** Upload a new MP3 music file.
+
+**Content-Type:** `multipart/form-data`
+
+**Request Body:**
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| file | binary | Yes | MP3 audio file |
+
+**Success Response (200):**
+```json
+{
+  "message": "Upload berhasil",
+  "file": "filename.mp3"
+}
+```
+
+**Error Response (400):**
+```json
+{
+  "error": "File tidak ditemukan"
+}
+```
+
+**Notes:**
+- Only `.mp3` files with `audio/mpeg` mimetype are accepted
+- Files are saved to `public/audio/` directory
+
+---
+
+### 3. Stream Audio
+
+**Endpoint:** `GET /audio/{filename}.mp3`
+
+**Description:** Stream the audio file directly.
+
+**Example:**
+```
+GET /audio/song.mp3
+```
+
+**Content-Type:** `audio/mpeg`
+
+---
+
+## Error Responses
+
+All endpoints may return standard HTTP status codes:
+- `200` - Success
+- `400` - Bad Request
+- `404` - Not Found
+- `500` - Internal Server Error
