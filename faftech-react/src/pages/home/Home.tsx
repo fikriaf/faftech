@@ -27,10 +27,20 @@ import img3 from "../../assets/ai1.webp";
 import img4 from "../../assets/kuantum1.webp";
 import img5 from "../../assets/kuantum2.webp";
 import fotoHima from "../../assets/fikri5.jpg";
+import newImg1 from "../../assets/new_image/IMG-20260126-WA0025.jpg.jpeg";
+import newImg2 from "../../assets/new_image/IMG-20251212-WA0068.jpg.jpeg";
+import newImg3 from "../../assets/new_image/IMG_20251216_125933_320.jpg.jpeg";
+import newImg4 from "../../assets/new_image/IMG_20251210_175414_194.jpg.jpeg";
+import newImg5 from "../../assets/new_image/IMG_20251208_124201_437.jpg.jpeg";
+import newImg6 from "../../assets/new_image/IMG_20251124_172906_868.jpg.jpeg";
+import newImg7 from "../../assets/new_image/IMG_20251005_171318_676.jpg.jpeg";
+import newImg8 from "../../assets/new_image/IMG_20251002_134920_227.jpg.jpeg";
+import newImg9 from "../../assets/new_image/IMG_20250915_195652_573.jpg.jpeg";
+import newImg10 from "../../assets/new_image/fikri0.jpg";
 
 
 const Index: React.FC = () => {
-    const images = [img1, img2, img3, img4, img5];
+    const images = [img1, img2, img3, img4, img5, newImg1, newImg2, newImg3, newImg4, newImg5, newImg6, newImg7, newImg8, newImg9, newImg10];
     const el = useRef<HTMLSpanElement | null>(null);
     const typedInstance = useRef<Typed | null>(null);
 
