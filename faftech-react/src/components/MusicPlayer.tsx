@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getCurrentTrack, getMusicList, next } from "../services/music";
+import { getCurrentTrack, getMusicList, next, play } from "../services/music";
 
 export function useMusicPlayer(audio: HTMLAudioElement) {
     const [currentTime, setCurrentTime] = useState(0);
@@ -13,6 +13,11 @@ export function useMusicPlayer(audio: HTMLAudioElement) {
         try {
         const list = await getMusicList();
         setMusicList(list);
+        
+        const autoPlayIndex = list.findIndex((m: any) => m.title === "@andhh2k Musicaldown.com 1728575555");
+        if (autoPlayIndex !== -1) {
+            play(autoPlayIndex);
+        }
         } catch (err) {
         console.error("❌ Gagal ambil daftar lagu:", err);
         }
