@@ -40,7 +40,7 @@ import newImg10 from "../../assets/new_image/fikri0.jpg";
 
 
 const Index: React.FC = () => {
-    const images = [img1, newImg1, newImg2, newImg3, newImg4, newImg5, newImg6, newImg7, newImg8, newImg9, newImg10];
+    const images = [img1, newImg7, newImg1, newImg2, newImg3, newImg4, newImg5, newImg6, newImg8, newImg9, newImg10];
     const el = useRef<HTMLSpanElement | null>(null);
     const typedInstance = useRef<Typed | null>(null);
 
@@ -143,7 +143,7 @@ const Index: React.FC = () => {
                                         className={`carousel-item ${index === 0 ? 'active' : ''}`}
                                     >
                                         <div className="custom-carousel-item">
-                                            <img src={img} className="img-fluid w-100" style={{ height: '400px', objectFit: 'cover' }} alt={`Slide ${index + 1}`} />
+                                            <img src={img} className="img-fluid w-100" alt={`Slide ${index + 1}`} />
                                         </div>
                                     </div>
                                     ))}
