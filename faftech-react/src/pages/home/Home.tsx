@@ -40,7 +40,7 @@ import newImg10 from "../../assets/new_image/fikri0.jpg";
 
 
 const Index: React.FC = () => {
-    const images = [img1, img3, img4, img5, newImg1, newImg2, newImg3, newImg4, newImg5, newImg6, newImg7, newImg8, newImg9, newImg10];
+    const images = [img1, newImg1, newImg2, newImg3, newImg4, newImg5, newImg6, newImg7, newImg8, newImg9, newImg10];
     const el = useRef<HTMLSpanElement | null>(null);
     const typedInstance = useRef<Typed | null>(null);
 
