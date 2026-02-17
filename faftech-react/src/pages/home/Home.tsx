@@ -143,7 +143,7 @@ const Index: React.FC = () => {
                                         className={`carousel-item ${index === 0 ? 'active' : ''}`}
                                     >
                                         <div className="custom-carousel-item">
-                                            <img src={img} className="img-fluid w-100" alt={`Slide ${index + 1}`} />
+                                            <img src={img} className="img-fluid w-100" style={{ height: '400px', objectFit: 'cover' }} alt={`Slide ${index + 1}`} />
                                         </div>
                                     </div>
                                     ))}
