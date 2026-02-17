@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { getCurrentTrack, getMusicList, next, play } from "../services/music";
+import { usePlayerStore } from "./UsePlayerStore";
 
 export function useMusicPlayer(audio: HTMLAudioElement) {
     const [currentTime, setCurrentTime] = useState(0);
@@ -10,6 +11,7 @@ export function useMusicPlayer(audio: HTMLAudioElement) {
     const [showMusicOverlay, setShowMusicOverlay] = useState(false);
     const [musicChoiceMade, setMusicChoiceMade] = useState(false);
     const hasInitialized = useRef(false);
+    const setIsPlaying = usePlayerStore((state) => state.setIsPlaying);
 
     useEffect(() => {
         if (hasInitialized.current) return;
@@ -30,6 +32,7 @@ export function useMusicPlayer(audio: HTMLAudioElement) {
         const autoPlayIndex = musicList.findIndex((m: any) => m.title === "@andhh2k Musicaldown.com 1728575555");
         if (autoPlayIndex !== -1) {
             play(autoPlayIndex);
+            setIsPlaying(true);
         }
         setShowMusicOverlay(false);
         setMusicChoiceMade(true);

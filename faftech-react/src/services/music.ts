@@ -1,3 +1,5 @@
+import { usePlayerStore } from "../components/UsePlayerStore";
+
 type Music = {
   id: number;
   title: string;
@@ -43,7 +45,9 @@ export function play(index: number = currentIndex) {
   audio.src = `${apiUrl}${musicList[currentIndex].url}`;
   console.log("🎵 Playing:", musicList[currentIndex].title);
 
-  audio.play().catch((err) => {
+  audio.play().then(() => {
+    usePlayerStore.getState().setIsPlaying(true);
+  }).catch((err) => {
     console.error("❌ Gagal play:", err);
   });
 }
@@ -67,6 +71,7 @@ export function prev() {
 /** Pause lagu */
 export function pause() {
   audio.pause();
+  usePlayerStore.getState().setIsPlaying(false);
 }
 
 /** Dapatkan info lagu yang sedang diputar */
