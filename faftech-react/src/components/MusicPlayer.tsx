@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { getCurrentTrack, getMusicList, next, play } from "../services/music";
 
 export function useMusicPlayer(audio: HTMLAudioElement) {
@@ -7,22 +7,38 @@ export function useMusicPlayer(audio: HTMLAudioElement) {
     const [progressPercent, setProgressPercent] = useState(0);
     const [currentTrack, setCurrentTrack] = useState(getCurrentTrack());
     const [musicList, setMusicList] = useState<any[]>([]);
+    const [showMusicOverlay, setShowMusicOverlay] = useState(false);
+    const [musicChoiceMade, setMusicChoiceMade] = useState(false);
+    const hasInitialized = useRef(false);
 
     useEffect(() => {
-    (async () => {
-        try {
-        const list = await getMusicList();
-        setMusicList(list);
-        
-        const autoPlayIndex = list.findIndex((m: any) => m.title === "@andhh2k Musicaldown.com 1728575555");
+        if (hasInitialized.current) return;
+        hasInitialized.current = true;
+
+        (async () => {
+            try {
+                const list = await getMusicList();
+                setMusicList(list);
+                setShowMusicOverlay(true);
+            } catch (err) {
+                console.error("❌ Gagal ambil daftar lagu:", err);
+            }
+        })();
+    }, []);
+
+    const handlePlayMusic = () => {
+        const autoPlayIndex = musicList.findIndex((m: any) => m.title === "@andhh2k Musicaldown.com 1728575555");
         if (autoPlayIndex !== -1) {
             play(autoPlayIndex);
         }
-        } catch (err) {
-        console.error("❌ Gagal ambil daftar lagu:", err);
-        }
-    })();
-    }, []);
+        setShowMusicOverlay(false);
+        setMusicChoiceMade(true);
+    };
+
+    const handleWithoutMusic = () => {
+        setShowMusicOverlay(false);
+        setMusicChoiceMade(true);
+    };
 
     
     useEffect(() => {
@@ -48,5 +64,15 @@ export function useMusicPlayer(audio: HTMLAudioElement) {
         };
     }, [audio]);
 
-    return { currentTrack, currentTime, duration, progressPercent, musicList };
+    return { 
+        currentTrack, 
+        currentTime, 
+        duration, 
+        progressPercent, 
+        musicList,
+        showMusicOverlay,
+        handlePlayMusic,
+        handleWithoutMusic,
+        musicChoiceMade
+    };
 }

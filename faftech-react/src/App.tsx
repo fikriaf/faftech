@@ -5,6 +5,7 @@ import { AnimatePresence } from 'framer-motion';
 import './App.css';
 import Layout from './components/Layout';
 import { useMusicPlayer } from './components/MusicPlayer';
+import MusicOverlay from './components/MusicOverlay';
 import { audio } from './services/music';
 import { useDeviceStore } from './services/useDeviceStore';
 
@@ -32,7 +33,7 @@ function App() {
   const location = useLocation();
   const [ready, setReady] = useState(false);
   const [dotIndex, setDotIndex] = useState(1);
-  const { musicList } = useMusicPlayer(audio);
+  const { musicList, showMusicOverlay, handlePlayMusic, handleWithoutMusic, musicChoiceMade } = useMusicPlayer(audio);
   const [fakeLength, setFakeLength] = useState(0);
 
   useEffect(() => {
@@ -90,20 +91,27 @@ function App() {
     return <Loader text={`Initialyzing${dots}`} />
 
   return (
-    <Suspense fallback={<Loader />}>
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route element={<Layout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/project" element={<Project />} />
-            <Route path="/achievements" element={<Achievements />} />
-            <Route path="/contact" element={<Contact />} />
-          </Route>
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </AnimatePresence>
-    </Suspense>
+    <>
+      <MusicOverlay 
+        show={showMusicOverlay && !musicChoiceMade} 
+        onPlayMusic={handlePlayMusic}
+        onWithoutMusic={handleWithoutMusic}
+      />
+      <Suspense fallback={<Loader />}>
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route element={<Layout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/project" element={<Project />} />
+              <Route path="/achievements" element={<Achievements />} />
+              <Route path="/contact" element={<Contact />} />
+            </Route>
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </AnimatePresence>
+      </Suspense>
+    </>
   );
 }
 
