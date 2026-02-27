@@ -340,7 +340,7 @@ const Achievements: React.FC = () => {
                   } as React.CSSProperties}
                   onMouseEnter={() => setHoveredCard(achievement.id)}
                   onMouseLeave={() => setHoveredCard(null)}
-                  onClick={() => achievement.certificate_file_url && window.open(achievement.certificate_file_url, '_blank')}
+                  onClick={() => achievement.certificate_file_url && window.open(`https://faftech-be.vercel.app/certificates/${achievement.certificate_file_url}`, '_blank')}
                 >
                   {/* Background Icon */}
                   <div className="card-bg-icon">
@@ -409,7 +409,7 @@ const Achievements: React.FC = () => {
                     </div>
                     {achievement.certificate_file_url && (
                       <a
-                        href={achievement.certificate_file_url} 
+                        href={`https://faftech-be.vercel.app/certificates/${achievement.certificate_file_url}`} 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="view-btn"
