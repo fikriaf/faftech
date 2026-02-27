@@ -340,6 +340,7 @@ const Achievements: React.FC = () => {
                   } as React.CSSProperties}
                   onMouseEnter={() => setHoveredCard(achievement.id)}
                   onMouseLeave={() => setHoveredCard(null)}
+                  onClick={() => achievement.certificate_file_url && window.open(achievement.certificate_file_url, '_blank')}
                 >
                   {/* Background Icon */}
                   <div className="card-bg-icon">
